@@ -17,7 +17,7 @@ class UtilSecurityApi {
     String versionPath = "/api/v1"
 
     def getUserLocationLog ( Integer userId, Integer size, Integer page, String order, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/security/country-log"
 
         // query params
@@ -26,7 +26,7 @@ class UtilSecurityApi {
     
 
         if (!"null".equals(String.valueOf(userId)))
-            queryParams.put("userId", String.valueOf(userId))
+            queryParams.put("user_id", String.valueOf(userId))
 if (!"null".equals(String.valueOf(size)))
             queryParams.put("size", String.valueOf(size))
 if (!"null".equals(String.valueOf(page)))
@@ -35,13 +35,15 @@ if (!"null".equals(String.valueOf(order)))
             queryParams.put("order", String.valueOf(order))
 
 
+        // Also still TODO: form params, body param
+
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "GET", "",
                     PageResourceLocationLogResource.class )
                     
     }
     def getUserTokenDetails ( Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/me"
 
         // query params
@@ -50,6 +52,8 @@ if (!"null".equals(String.valueOf(order)))
     
 
         
+
+        // Also still TODO: form params, body param
 
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "GET", "",

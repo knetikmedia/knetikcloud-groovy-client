@@ -18,7 +18,7 @@ class UtilBatchApi {
     String versionPath = "/api/v1"
 
     def getBatch ( String token, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/batch/{token}"
 
         // query params
@@ -32,13 +32,15 @@ class UtilBatchApi {
 
         
 
+        // Also still TODO: form params, body param
+
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "GET", "array",
                     BatchReturn.class )
                     
     }
     def sendBatch ( Batch batch, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/batch"
 
         // query params
@@ -47,6 +49,8 @@ class UtilBatchApi {
     
 
         
+
+        // Also still TODO: form params, body param
 
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "POST", "array",

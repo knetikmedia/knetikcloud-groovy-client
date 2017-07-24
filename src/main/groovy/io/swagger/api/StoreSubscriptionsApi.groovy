@@ -19,7 +19,7 @@ class StoreSubscriptionsApi {
     String versionPath = "/api/v1"
 
     def createSubscription ( SubscriptionResource subscriptionResource, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/subscriptions"
 
         // query params
@@ -29,13 +29,15 @@ class StoreSubscriptionsApi {
 
         
 
+        // Also still TODO: form params, body param
+
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "POST", "",
                     SubscriptionResource.class )
                     
     }
     def createSubscriptionTemplate ( SubscriptionTemplateResource subscriptionTemplateResource, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/subscriptions/templates"
 
         // query params
@@ -45,13 +47,15 @@ class StoreSubscriptionsApi {
 
         
 
+        // Also still TODO: form params, body param
+
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "POST", "",
                     SubscriptionTemplateResource.class )
                     
     }
     def deleteSubscription ( Integer id, String planId, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/subscriptions/{id}/plans/{plan_id}"
 
         // query params
@@ -69,13 +73,15 @@ class StoreSubscriptionsApi {
 
         
 
+        // Also still TODO: form params, body param
+
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "DELETE", "",
                     null )
                     
     }
     def deleteSubscriptionTemplate ( String id, String cascade, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/subscriptions/templates/{id}"
 
         // query params
@@ -91,13 +97,15 @@ class StoreSubscriptionsApi {
             queryParams.put("cascade", String.valueOf(cascade))
 
 
+        // Also still TODO: form params, body param
+
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "DELETE", "",
                     null )
                     
     }
     def getSubscription ( Integer id, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/subscriptions/{id}"
 
         // query params
@@ -111,13 +119,15 @@ class StoreSubscriptionsApi {
 
         
 
+        // Also still TODO: form params, body param
+
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "GET", "",
                     SubscriptionResource.class )
                     
     }
     def getSubscriptionTemplate ( String id, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/subscriptions/templates/{id}"
 
         // query params
@@ -131,13 +141,15 @@ class StoreSubscriptionsApi {
 
         
 
+        // Also still TODO: form params, body param
+
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "GET", "",
                     SubscriptionTemplateResource.class )
                     
     }
     def getSubscriptionTemplates ( Integer size, Integer page, String order, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/subscriptions/templates"
 
         // query params
@@ -153,13 +165,15 @@ if (!"null".equals(String.valueOf(order)))
             queryParams.put("order", String.valueOf(order))
 
 
+        // Also still TODO: form params, body param
+
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "GET", "",
                     PageResourceSubscriptionTemplateResource.class )
                     
     }
     def getSubscriptions ( Integer size, Integer page, String order, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/subscriptions"
 
         // query params
@@ -175,13 +189,15 @@ if (!"null".equals(String.valueOf(order)))
             queryParams.put("order", String.valueOf(order))
 
 
+        // Also still TODO: form params, body param
+
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "GET", "",
                     PageResourceSubscriptionResource.class )
                     
     }
     def processSubscriptions ( Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/subscriptions/process"
 
         // query params
@@ -191,13 +207,15 @@ if (!"null".equals(String.valueOf(order)))
 
         
 
+        // Also still TODO: form params, body param
+
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "POST", "",
                     null )
                     
     }
     def updateSubscription ( Integer id, SubscriptionResource subscriptionResource, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/subscriptions/{id}"
 
         // query params
@@ -211,13 +229,15 @@ if (!"null".equals(String.valueOf(order)))
 
         
 
+        // Also still TODO: form params, body param
+
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "PUT", "",
                     null )
                     
     }
     def updateSubscriptionTemplate ( String id, SubscriptionTemplateResource subscriptionTemplateResource, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/subscriptions/templates/{id}"
 
         // query params
@@ -230,6 +250,8 @@ if (!"null".equals(String.valueOf(order)))
         }
 
         
+
+        // Also still TODO: form params, body param
 
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "PUT", "",

@@ -19,7 +19,7 @@ class PaymentsTransactionsApi {
     String versionPath = "/api/v1"
 
     def getTransaction ( Integer id, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/transactions/{id}"
 
         // query params
@@ -33,13 +33,15 @@ class PaymentsTransactionsApi {
 
         
 
+        // Also still TODO: form params, body param
+
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "GET", "",
                     TransactionResource.class )
                     
     }
     def getTransactions ( Integer filterInvoice, Integer size, Integer page, String order, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/transactions"
 
         // query params
@@ -48,7 +50,7 @@ class PaymentsTransactionsApi {
     
 
         if (!"null".equals(String.valueOf(filterInvoice)))
-            queryParams.put("filterInvoice", String.valueOf(filterInvoice))
+            queryParams.put("filter_invoice", String.valueOf(filterInvoice))
 if (!"null".equals(String.valueOf(size)))
             queryParams.put("size", String.valueOf(size))
 if (!"null".equals(String.valueOf(page)))
@@ -57,13 +59,15 @@ if (!"null".equals(String.valueOf(order)))
             queryParams.put("order", String.valueOf(order))
 
 
+        // Also still TODO: form params, body param
+
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "GET", "",
                     PageResourceTransactionResource.class )
                     
     }
     def refundTransaction ( Integer id, RefundRequest request, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/transactions/{id}/refunds"
 
         // query params
@@ -76,6 +80,8 @@ if (!"null".equals(String.valueOf(order)))
         }
 
         
+
+        // Also still TODO: form params, body param
 
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "POST", "",

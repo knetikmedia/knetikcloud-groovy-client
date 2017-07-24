@@ -19,7 +19,7 @@ class BRERuleEngineCategoriesApi {
     String versionPath = "/api/v1"
 
     def createBRECategoryTemplate ( TemplateResource template, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/bre/categories/templates"
 
         // query params
@@ -29,13 +29,15 @@ class BRERuleEngineCategoriesApi {
 
         
 
+        // Also still TODO: form params, body param
+
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "POST", "",
                     TemplateResource.class )
                     
     }
     def deleteBRECategoryTemplate ( String id, String cascade, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/bre/categories/templates/{id}"
 
         // query params
@@ -51,13 +53,15 @@ class BRERuleEngineCategoriesApi {
             queryParams.put("cascade", String.valueOf(cascade))
 
 
+        // Also still TODO: form params, body param
+
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "DELETE", "",
                     null )
                     
     }
     def getBRECategories ( Integer size, Integer page, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/bre/categories"
 
         // query params
@@ -71,13 +75,15 @@ if (!"null".equals(String.valueOf(page)))
             queryParams.put("page", String.valueOf(page))
 
 
+        // Also still TODO: form params, body param
+
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "GET", "",
                     PageResourceBreCategoryResource.class )
                     
     }
     def getBRECategory ( String name, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/bre/categories/{name}"
 
         // query params
@@ -91,13 +97,15 @@ if (!"null".equals(String.valueOf(page)))
 
         
 
+        // Also still TODO: form params, body param
+
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "GET", "",
                     BreCategoryResource.class )
                     
     }
     def getBRECategoryTemplate ( String id, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/bre/categories/templates/{id}"
 
         // query params
@@ -111,13 +119,15 @@ if (!"null".equals(String.valueOf(page)))
 
         
 
+        // Also still TODO: form params, body param
+
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "GET", "",
                     TemplateResource.class )
                     
     }
     def getBRECategoryTemplates ( Integer size, Integer page, String order, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/bre/categories/templates"
 
         // query params
@@ -133,13 +143,15 @@ if (!"null".equals(String.valueOf(order)))
             queryParams.put("order", String.valueOf(order))
 
 
+        // Also still TODO: form params, body param
+
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "GET", "",
                     PageResourceTemplateResource.class )
                     
     }
     def updateBRECategory ( String name, BreCategoryResource category, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/bre/categories/{name}"
 
         // query params
@@ -153,13 +165,15 @@ if (!"null".equals(String.valueOf(order)))
 
         
 
+        // Also still TODO: form params, body param
+
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "PUT", "",
                     BreCategoryResource.class )
                     
     }
     def updateBRECategoryTemplate ( String id, TemplateResource template, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/bre/categories/templates/{id}"
 
         // query params
@@ -172,6 +186,8 @@ if (!"null".equals(String.valueOf(order)))
         }
 
         
+
+        // Also still TODO: form params, body param
 
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "PUT", "",

@@ -5,12 +5,13 @@ import static groovyx.net.http.ContentType.*
 import static groovyx.net.http.Method.*
 import io.swagger.api.ApiUtils
 
-import io.swagger.model.AOccurrenceOfAnActivityTheActualGameForExampleUsedToTrackScoresParticipantsAndProvideSettings
 import io.swagger.model.ActivityOccurrenceCreationFailure
+import io.swagger.model.ActivityOccurrenceResource
 import io.swagger.model.ActivityOccurrenceResults
+import io.swagger.model.ActivityOccurrenceResultsResource
+import io.swagger.model.ActivityResource
 import io.swagger.model.PageResourceBareActivityResource
 import io.swagger.model.PageResourceTemplateResource
-import io.swagger.model.RepresentsAnActivityThatCanBeParameterizedAndTrackedThroughMetricsScoresEtc
 import io.swagger.model.Result
 import io.swagger.model.TemplateResource
 
@@ -21,8 +22,8 @@ class ActivitiesApi {
     String basePath = "https://sandbox.knetikcloud.com"
     String versionPath = "/api/v1"
 
-    def createActivity ( RepresentsAnActivityThatCanBeParameterizedAndTrackedThroughMetricsScoresEtc activityResource, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+    def createActivity ( ActivityResource activityResource, Closure onSuccess, Closure onFailure)  {
+        // create path and map path parameters (TODO)
         String resourcePath = "/activities"
 
         // query params
@@ -32,13 +33,15 @@ class ActivitiesApi {
 
         
 
+        // Also still TODO: form params, body param
+
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "POST", "",
-                    RepresentsAnActivityThatCanBeParameterizedAndTrackedThroughMetricsScoresEtc.class )
+                    ActivityResource.class )
                     
     }
-    def createActivityOccurrence ( Boolean test, AOccurrenceOfAnActivityTheActualGameForExampleUsedToTrackScoresParticipantsAndProvideSettings activityOccurrenceResource, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+    def createActivityOccurrence ( Boolean test, ActivityOccurrenceResource activityOccurrenceResource, Closure onSuccess, Closure onFailure)  {
+        // create path and map path parameters (TODO)
         String resourcePath = "/activity-occurrences"
 
         // query params
@@ -50,13 +53,15 @@ class ActivitiesApi {
             queryParams.put("test", String.valueOf(test))
 
 
+        // Also still TODO: form params, body param
+
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "POST", "",
-                    AOccurrenceOfAnActivityTheActualGameForExampleUsedToTrackScoresParticipantsAndProvideSettings.class )
+                    ActivityOccurrenceResource.class )
                     
     }
     def createActivityTemplate ( TemplateResource activityTemplateResource, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/activities/templates"
 
         // query params
@@ -66,13 +71,15 @@ class ActivitiesApi {
 
         
 
+        // Also still TODO: form params, body param
+
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "POST", "",
                     TemplateResource.class )
                     
     }
     def deleteActivity ( Long id, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/activities/{id}"
 
         // query params
@@ -86,13 +93,15 @@ class ActivitiesApi {
 
         
 
+        // Also still TODO: form params, body param
+
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "DELETE", "",
                     null )
                     
     }
     def deleteActivityTemplate ( String id, String cascade, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/activities/templates/{id}"
 
         // query params
@@ -108,13 +117,15 @@ class ActivitiesApi {
             queryParams.put("cascade", String.valueOf(cascade))
 
 
+        // Also still TODO: form params, body param
+
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "DELETE", "",
                     null )
                     
     }
-    def getActivities ( Boolean filterTemplate, String filterName, Object filterId, Integer size, Integer page, String order, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+    def getActivities ( Boolean filterTemplate, String filterName, String filterId, Integer size, Integer page, String order, Closure onSuccess, Closure onFailure)  {
+        // create path and map path parameters (TODO)
         String resourcePath = "/activities"
 
         // query params
@@ -123,11 +134,11 @@ class ActivitiesApi {
     
 
         if (!"null".equals(String.valueOf(filterTemplate)))
-            queryParams.put("filterTemplate", String.valueOf(filterTemplate))
+            queryParams.put("filter_template", String.valueOf(filterTemplate))
 if (!"null".equals(String.valueOf(filterName)))
-            queryParams.put("filterName", String.valueOf(filterName))
+            queryParams.put("filter_name", String.valueOf(filterName))
 if (!"null".equals(String.valueOf(filterId)))
-            queryParams.put("filterId", String.valueOf(filterId))
+            queryParams.put("filter_id", String.valueOf(filterId))
 if (!"null".equals(String.valueOf(size)))
             queryParams.put("size", String.valueOf(size))
 if (!"null".equals(String.valueOf(page)))
@@ -136,13 +147,15 @@ if (!"null".equals(String.valueOf(order)))
             queryParams.put("order", String.valueOf(order))
 
 
+        // Also still TODO: form params, body param
+
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "GET", "",
                     PageResourceBareActivityResource.class )
                     
     }
     def getActivity ( Long id, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/activities/{id}"
 
         // query params
@@ -156,13 +169,15 @@ if (!"null".equals(String.valueOf(order)))
 
         
 
+        // Also still TODO: form params, body param
+
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "GET", "",
-                    RepresentsAnActivityThatCanBeParameterizedAndTrackedThroughMetricsScoresEtc.class )
+                    ActivityResource.class )
                     
     }
     def getActivityTemplate ( String id, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/activities/templates/{id}"
 
         // query params
@@ -176,13 +191,15 @@ if (!"null".equals(String.valueOf(order)))
 
         
 
+        // Also still TODO: form params, body param
+
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "GET", "",
                     TemplateResource.class )
                     
     }
     def getActivityTemplates ( Integer size, Integer page, String order, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/activities/templates"
 
         // query params
@@ -198,13 +215,15 @@ if (!"null".equals(String.valueOf(order)))
             queryParams.put("order", String.valueOf(order))
 
 
+        // Also still TODO: form params, body param
+
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "GET", "",
                     PageResourceTemplateResource.class )
                     
     }
-    def setActivityOccurrenceResults ( Long activityOccurrenceId, ActivityOccurrenceResults activityOccurrenceResults, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+    def setActivityOccurrenceResults ( Long activityOccurrenceId, ActivityOccurrenceResultsResource activityOccurrenceResults, Closure onSuccess, Closure onFailure)  {
+        // create path and map path parameters (TODO)
         String resourcePath = "/activity-occurrences/{activity_occurrence_id}/results"
 
         // query params
@@ -218,13 +237,15 @@ if (!"null".equals(String.valueOf(order)))
 
         
 
+        // Also still TODO: form params, body param
+
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "POST", "",
                     ActivityOccurrenceResults.class )
                     
     }
-    def updateActivity ( Long id, RepresentsAnActivityThatCanBeParameterizedAndTrackedThroughMetricsScoresEtc activityResource, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+    def updateActivity ( Long id, ActivityResource activityResource, Closure onSuccess, Closure onFailure)  {
+        // create path and map path parameters (TODO)
         String resourcePath = "/activities/{id}"
 
         // query params
@@ -238,13 +259,15 @@ if (!"null".equals(String.valueOf(order)))
 
         
 
+        // Also still TODO: form params, body param
+
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "PUT", "",
-                    RepresentsAnActivityThatCanBeParameterizedAndTrackedThroughMetricsScoresEtc.class )
+                    ActivityResource.class )
                     
     }
     def updateActivityOccurrence ( Long activityOccurrenceId, String activityCccurrenceStatus, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/activity-occurrences/{activity_occurrence_id}/status"
 
         // query params
@@ -258,13 +281,15 @@ if (!"null".equals(String.valueOf(order)))
 
         
 
+        // Also still TODO: form params, body param
+
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "PUT", "",
                     null )
                     
     }
     def updateActivityTemplate ( String id, TemplateResource activityTemplateResource, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/activities/templates/{id}"
 
         // query params
@@ -277,6 +302,8 @@ if (!"null".equals(String.valueOf(order)))
         }
 
         
+
+        // Also still TODO: form params, body param
 
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "PUT", "",

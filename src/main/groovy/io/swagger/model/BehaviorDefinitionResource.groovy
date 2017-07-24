@@ -5,7 +5,7 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import io.swagger.model.ArrayList;
 import io.swagger.model.Behavior;
-import io.swagger.model.PropertyDefinitionResource;
+import io.swagger.model.PropertyFieldResource;
 import java.util.List;
 @Canonical
 class BehaviorDefinitionResource {
@@ -17,7 +17,7 @@ class BehaviorDefinitionResource {
   List<Behavior> prerequisiteBehaviors = new ArrayList<Behavior>()
 
   /* Configurable properties of the behavior */
-  List<PropertyDefinitionResource> properties = new ArrayList<PropertyDefinitionResource>()
+  List<PropertyFieldResource> properties = new ArrayList<PropertyFieldResource>()
 
   /* The behavior type */
   String typeHint = null

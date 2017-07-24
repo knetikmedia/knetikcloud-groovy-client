@@ -16,7 +16,7 @@ class TemplatesPropertiesApi {
     String versionPath = "/api/v1"
 
     def getTemplatePropertyType ( String type, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/templates/properties/{type}"
 
         // query params
@@ -30,13 +30,15 @@ class TemplatesPropertiesApi {
 
         
 
+        // Also still TODO: form params, body param
+
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "GET", "",
                     PropertyFieldListResource.class )
                     
     }
     def getTemplatePropertyTypes ( Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/templates/properties"
 
         // query params
@@ -45,6 +47,8 @@ class TemplatesPropertiesApi {
     
 
         
+
+        // Also still TODO: form params, body param
 
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "GET", "array",

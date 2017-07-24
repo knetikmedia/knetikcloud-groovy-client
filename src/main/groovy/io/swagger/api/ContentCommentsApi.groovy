@@ -18,7 +18,7 @@ class ContentCommentsApi {
     String versionPath = "/api/v1"
 
     def addComment ( CommentResource commentResource, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/comments"
 
         // query params
@@ -28,13 +28,15 @@ class ContentCommentsApi {
 
         
 
+        // Also still TODO: form params, body param
+
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "POST", "",
                     CommentResource.class )
                     
     }
     def deleteComment ( Long id, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/comments/{id}"
 
         // query params
@@ -47,6 +49,8 @@ class ContentCommentsApi {
         }
 
         
+
+        // Also still TODO: form params, body param
 
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "DELETE", "",
@@ -54,7 +58,7 @@ class ContentCommentsApi {
                     
     }
     def getComment ( Long id, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/comments/{id}"
 
         // query params
@@ -68,13 +72,15 @@ class ContentCommentsApi {
 
         
 
+        // Also still TODO: form params, body param
+
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "GET", "",
                     CommentResource.class )
                     
     }
     def getComments ( String context, Integer contextId, Integer size, Integer page, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/comments"
 
         // query params
@@ -93,12 +99,14 @@ class ContentCommentsApi {
         if (!"null".equals(String.valueOf(context)))
             queryParams.put("context", String.valueOf(context))
 if (!"null".equals(String.valueOf(contextId)))
-            queryParams.put("contextId", String.valueOf(contextId))
+            queryParams.put("context_id", String.valueOf(contextId))
 if (!"null".equals(String.valueOf(size)))
             queryParams.put("size", String.valueOf(size))
 if (!"null".equals(String.valueOf(page)))
             queryParams.put("page", String.valueOf(page))
 
+
+        // Also still TODO: form params, body param
 
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "GET", "",
@@ -106,7 +114,7 @@ if (!"null".equals(String.valueOf(page)))
                     
     }
     def searchComments ( Object query, Integer size, Integer page, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/comments/search"
 
         // query params
@@ -120,13 +128,15 @@ if (!"null".equals(String.valueOf(page)))
             queryParams.put("page", String.valueOf(page))
 
 
+        // Also still TODO: form params, body param
+
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "POST", "",
                     CommentSearch.class )
                     
     }
     def updateComment ( Long id, String content, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/comments/{id}/content"
 
         // query params
@@ -139,6 +149,8 @@ if (!"null".equals(String.valueOf(page)))
         }
 
         
+
+        // Also still TODO: form params, body param
 
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "PUT", "",

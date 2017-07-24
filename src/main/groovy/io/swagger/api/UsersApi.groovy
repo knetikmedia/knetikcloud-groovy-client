@@ -5,10 +5,10 @@ import static groovyx.net.http.ContentType.*
 import static groovyx.net.http.Method.*
 import io.swagger.api.ApiUtils
 
-import io.swagger.model.ARequestToResetAUsersPasswordByUsingAKnownUserProperty
 import io.swagger.model.NewPasswordRequest
 import io.swagger.model.PageResourceTemplateResource
 import io.swagger.model.PageResourceUserBaseResource
+import io.swagger.model.PasswordResetRequest
 import io.swagger.model.Result
 import io.swagger.model.TemplateResource
 import io.swagger.model.UserResource
@@ -21,7 +21,7 @@ class UsersApi {
     String versionPath = "/api/v1"
 
     def addUserTag ( Integer userId, String tag, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/users/{user_id}/tags"
 
         // query params
@@ -39,13 +39,15 @@ class UsersApi {
 
         
 
+        // Also still TODO: form params, body param
+
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "POST", "",
                     null )
                     
     }
     def createUserTemplate ( TemplateResource userTemplateResource, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/users/templates"
 
         // query params
@@ -55,13 +57,15 @@ class UsersApi {
 
         
 
+        // Also still TODO: form params, body param
+
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "POST", "",
                     TemplateResource.class )
                     
     }
     def deleteUserTemplate ( String id, String cascade, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/users/templates/{id}"
 
         // query params
@@ -77,13 +81,15 @@ class UsersApi {
             queryParams.put("cascade", String.valueOf(cascade))
 
 
+        // Also still TODO: form params, body param
+
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "DELETE", "",
                     null )
                     
     }
     def getUser ( String id, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/users/{id}"
 
         // query params
@@ -97,13 +103,15 @@ class UsersApi {
 
         
 
+        // Also still TODO: form params, body param
+
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "GET", "",
                     UserResource.class )
                     
     }
     def getUserTags ( Integer userId, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/users/{user_id}/tags"
 
         // query params
@@ -117,13 +125,15 @@ class UsersApi {
 
         
 
+        // Also still TODO: form params, body param
+
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "GET", "array",
                     String.class )
                     
     }
     def getUserTemplate ( String id, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/users/templates/{id}"
 
         // query params
@@ -137,13 +147,15 @@ class UsersApi {
 
         
 
+        // Also still TODO: form params, body param
+
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "GET", "",
                     TemplateResource.class )
                     
     }
     def getUserTemplates ( Integer size, Integer page, String order, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/users/templates"
 
         // query params
@@ -159,13 +171,15 @@ if (!"null".equals(String.valueOf(order)))
             queryParams.put("order", String.valueOf(order))
 
 
+        // Also still TODO: form params, body param
+
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "GET", "",
                     PageResourceTemplateResource.class )
                     
     }
     def getUsers ( String filterDisplayname, String filterEmail, String filterFirstname, String filterFullname, String filterLastname, String filterUsername, String filterTag, String filterGroup, String filterRole, String filterSearch, Integer size, Integer page, String order, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/users"
 
         // query params
@@ -174,25 +188,25 @@ if (!"null".equals(String.valueOf(order)))
     
 
         if (!"null".equals(String.valueOf(filterDisplayname)))
-            queryParams.put("filterDisplayname", String.valueOf(filterDisplayname))
+            queryParams.put("filter_displayname", String.valueOf(filterDisplayname))
 if (!"null".equals(String.valueOf(filterEmail)))
-            queryParams.put("filterEmail", String.valueOf(filterEmail))
+            queryParams.put("filter_email", String.valueOf(filterEmail))
 if (!"null".equals(String.valueOf(filterFirstname)))
-            queryParams.put("filterFirstname", String.valueOf(filterFirstname))
+            queryParams.put("filter_firstname", String.valueOf(filterFirstname))
 if (!"null".equals(String.valueOf(filterFullname)))
-            queryParams.put("filterFullname", String.valueOf(filterFullname))
+            queryParams.put("filter_fullname", String.valueOf(filterFullname))
 if (!"null".equals(String.valueOf(filterLastname)))
-            queryParams.put("filterLastname", String.valueOf(filterLastname))
+            queryParams.put("filter_lastname", String.valueOf(filterLastname))
 if (!"null".equals(String.valueOf(filterUsername)))
-            queryParams.put("filterUsername", String.valueOf(filterUsername))
+            queryParams.put("filter_username", String.valueOf(filterUsername))
 if (!"null".equals(String.valueOf(filterTag)))
-            queryParams.put("filterTag", String.valueOf(filterTag))
+            queryParams.put("filter_tag", String.valueOf(filterTag))
 if (!"null".equals(String.valueOf(filterGroup)))
-            queryParams.put("filterGroup", String.valueOf(filterGroup))
+            queryParams.put("filter_group", String.valueOf(filterGroup))
 if (!"null".equals(String.valueOf(filterRole)))
-            queryParams.put("filterRole", String.valueOf(filterRole))
+            queryParams.put("filter_role", String.valueOf(filterRole))
 if (!"null".equals(String.valueOf(filterSearch)))
-            queryParams.put("filterSearch", String.valueOf(filterSearch))
+            queryParams.put("filter_search", String.valueOf(filterSearch))
 if (!"null".equals(String.valueOf(size)))
             queryParams.put("size", String.valueOf(size))
 if (!"null".equals(String.valueOf(page)))
@@ -201,13 +215,15 @@ if (!"null".equals(String.valueOf(order)))
             queryParams.put("order", String.valueOf(order))
 
 
+        // Also still TODO: form params, body param
+
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "GET", "",
                     PageResourceUserBaseResource.class )
                     
     }
     def passwordReset ( Integer id, NewPasswordRequest newPasswordRequest, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/users/{id}/password-reset"
 
         // query params
@@ -221,13 +237,15 @@ if (!"null".equals(String.valueOf(order)))
 
         
 
+        // Also still TODO: form params, body param
+
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "PUT", "",
                     null )
                     
     }
     def registerUser ( UserResource userResource, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/users"
 
         // query params
@@ -237,13 +255,15 @@ if (!"null".equals(String.valueOf(order)))
 
         
 
+        // Also still TODO: form params, body param
+
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "POST", "",
                     UserResource.class )
                     
     }
     def removeUserTag ( Integer userId, String tag, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/users/{user_id}/tags/{tag}"
 
         // query params
@@ -261,13 +281,15 @@ if (!"null".equals(String.valueOf(order)))
 
         
 
+        // Also still TODO: form params, body param
+
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "DELETE", "",
                     null )
                     
     }
     def setPassword ( Integer id, String password, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/users/{id}/password"
 
         // query params
@@ -281,13 +303,15 @@ if (!"null".equals(String.valueOf(order)))
 
         
 
+        // Also still TODO: form params, body param
+
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "PUT", "",
                     null )
                     
     }
     def startPasswordReset ( Integer id, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/users/{id}/password-reset"
 
         // query params
@@ -301,13 +325,15 @@ if (!"null".equals(String.valueOf(order)))
 
         
 
+        // Also still TODO: form params, body param
+
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "POST", "",
                     null )
                     
     }
-    def submitPasswordReset ( ARequestToResetAUsersPasswordByUsingAKnownUserProperty passwordReset, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+    def submitPasswordReset ( PasswordResetRequest passwordReset, Closure onSuccess, Closure onFailure)  {
+        // create path and map path parameters (TODO)
         String resourcePath = "/users/password-reset"
 
         // query params
@@ -317,13 +343,15 @@ if (!"null".equals(String.valueOf(order)))
 
         
 
+        // Also still TODO: form params, body param
+
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "POST", "",
                     null )
                     
     }
     def updateUser ( String id, UserResource userResource, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/users/{id}"
 
         // query params
@@ -337,13 +365,15 @@ if (!"null".equals(String.valueOf(order)))
 
         
 
+        // Also still TODO: form params, body param
+
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "PUT", "",
                     null )
                     
     }
     def updateUserTemplate ( String id, TemplateResource userTemplateResource, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/users/templates/{id}"
 
         // query params
@@ -356,6 +386,8 @@ if (!"null".equals(String.valueOf(order)))
         }
 
         
+
+        // Also still TODO: form params, body param
 
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "PUT", "",

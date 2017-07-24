@@ -17,7 +17,7 @@ class MediaModerationApi {
     String versionPath = "/api/v1"
 
     def getModerationReport ( Long id, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/moderation/reports/{id}"
 
         // query params
@@ -31,13 +31,15 @@ class MediaModerationApi {
 
         
 
+        // Also still TODO: form params, body param
+
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "GET", "",
                     FlagReportResource.class )
                     
     }
     def getModerationReports ( Boolean excludeResolved, String filterContext, Integer size, Integer page, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/moderation/reports"
 
         // query params
@@ -46,14 +48,16 @@ class MediaModerationApi {
     
 
         if (!"null".equals(String.valueOf(excludeResolved)))
-            queryParams.put("excludeResolved", String.valueOf(excludeResolved))
+            queryParams.put("exclude_resolved", String.valueOf(excludeResolved))
 if (!"null".equals(String.valueOf(filterContext)))
-            queryParams.put("filterContext", String.valueOf(filterContext))
+            queryParams.put("filter_context", String.valueOf(filterContext))
 if (!"null".equals(String.valueOf(size)))
             queryParams.put("size", String.valueOf(size))
 if (!"null".equals(String.valueOf(page)))
             queryParams.put("page", String.valueOf(page))
 
+
+        // Also still TODO: form params, body param
 
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "GET", "",
@@ -61,7 +65,7 @@ if (!"null".equals(String.valueOf(page)))
                     
     }
     def updateModerationReport ( Long id, FlagReportResource flagReportResource, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/moderation/reports/{id}"
 
         // query params
@@ -74,6 +78,8 @@ if (!"null".equals(String.valueOf(page)))
         }
 
         
+
+        // Also still TODO: form params, body param
 
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "PUT", "",

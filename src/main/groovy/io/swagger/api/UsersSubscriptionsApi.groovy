@@ -9,6 +9,7 @@ import io.swagger.model.InventorySubscriptionResource
 import io.swagger.model.InvoiceResource
 import io.swagger.model.ReactivateSubscriptionRequest
 import io.swagger.model.Result
+import io.swagger.model.SubscriptionPriceOverrideRequest
 
 import java.util.*;
 
@@ -18,7 +19,7 @@ class UsersSubscriptionsApi {
     String versionPath = "/api/v1"
 
     def getUserSubscriptionDetails ( Integer userId, Integer inventoryId, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/users/{user_id}/subscriptions/{inventory_id}"
 
         // query params
@@ -36,13 +37,15 @@ class UsersSubscriptionsApi {
 
         
 
+        // Also still TODO: form params, body param
+
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "GET", "",
                     InventorySubscriptionResource.class )
                     
     }
     def getUsersSubscriptionDetails ( Integer userId, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/users/{user_id}/subscriptions"
 
         // query params
@@ -56,13 +59,15 @@ class UsersSubscriptionsApi {
 
         
 
+        // Also still TODO: form params, body param
+
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "GET", "array",
                     InventorySubscriptionResource.class )
                     
     }
     def reactivateUserSubscription ( Integer userId, Integer inventoryId, ReactivateSubscriptionRequest reactivateSubscriptionRequest, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/users/{user_id}/subscriptions/{inventory_id}/reactivate"
 
         // query params
@@ -80,13 +85,15 @@ class UsersSubscriptionsApi {
 
         
 
+        // Also still TODO: form params, body param
+
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "POST", "",
                     InvoiceResource.class )
                     
     }
     def setSubscriptionBillDate ( Integer userId, Integer inventoryId, Long billDate, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/users/{user_id}/subscriptions/{inventory_id}/bill-date"
 
         // query params
@@ -108,13 +115,15 @@ class UsersSubscriptionsApi {
 
         
 
+        // Also still TODO: form params, body param
+
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "PUT", "",
                     null )
                     
     }
     def setSubscriptionPaymentMethod ( Integer userId, Integer inventoryId, Integer paymentMethodId, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/users/{user_id}/subscriptions/{inventory_id}/payment-method"
 
         // query params
@@ -132,13 +141,15 @@ class UsersSubscriptionsApi {
 
         
 
+        // Also still TODO: form params, body param
+
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "PUT", "",
                     null )
                     
     }
     def setSubscriptionStatus ( Integer userId, Integer inventoryId, String status, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/users/{user_id}/subscriptions/{inventory_id}/status"
 
         // query params
@@ -160,13 +171,15 @@ class UsersSubscriptionsApi {
 
         
 
+        // Also still TODO: form params, body param
+
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "PUT", "",
                     null )
                     
     }
     def setUserSubscriptionPlan ( Integer userId, Integer inventoryId, String planId, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/users/{user_id}/subscriptions/{inventory_id}/plan"
 
         // query params
@@ -183,6 +196,34 @@ class UsersSubscriptionsApi {
         }
 
         
+
+        // Also still TODO: form params, body param
+
+        invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
+                    "PUT", "",
+                    null )
+                    
+    }
+    def setUserSubscriptionPrice ( Integer userId, Integer inventoryId, SubscriptionPriceOverrideRequest theOverrideDetails, Closure onSuccess, Closure onFailure)  {
+        // create path and map path parameters (TODO)
+        String resourcePath = "/users/{user_id}/subscriptions/{inventory_id}/price-override"
+
+        // query params
+        def queryParams = [:]
+        def headerParams = [:]
+    
+        // verify required params are set
+        if (userId == null) {
+            throw new RuntimeException("missing required params userId")
+        }
+        // verify required params are set
+        if (inventoryId == null) {
+            throw new RuntimeException("missing required params inventoryId")
+        }
+
+        
+
+        // Also still TODO: form params, body param
 
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "PUT", "",

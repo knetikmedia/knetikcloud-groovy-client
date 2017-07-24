@@ -17,7 +17,7 @@ class PaymentsApi {
     String versionPath = "/api/v1"
 
     def createPaymentMethod ( Integer userId, PaymentMethodResource paymentMethod, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/users/{user_id}/payment-methods"
 
         // query params
@@ -30,6 +30,8 @@ class PaymentsApi {
         }
 
         
+
+        // Also still TODO: form params, body param
 
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "POST", "",
@@ -37,7 +39,7 @@ class PaymentsApi {
                     
     }
     def deletePaymentMethod ( Integer userId, Integer id, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/users/{user_id}/payment-methods/{id}"
 
         // query params
@@ -54,6 +56,8 @@ class PaymentsApi {
         }
 
         
+
+        // Also still TODO: form params, body param
 
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "DELETE", "",
@@ -61,7 +65,7 @@ class PaymentsApi {
                     
     }
     def getPaymentMethod ( Integer userId, Integer id, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/users/{user_id}/payment-methods/{id}"
 
         // query params
@@ -79,13 +83,15 @@ class PaymentsApi {
 
         
 
+        // Also still TODO: form params, body param
+
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "GET", "",
                     PaymentMethodResource.class )
                     
     }
-    def getPaymentMethods ( Integer userId, Integer size, Integer page, String order, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+    def getPaymentMethods ( Integer userId, String filterName, String filterPaymentType, Integer filterPaymentMethodTypeId, String filterPaymentMethodTypeName, Integer size, Integer page, String order, Closure onSuccess, Closure onFailure)  {
+        // create path and map path parameters (TODO)
         String resourcePath = "/users/{user_id}/payment-methods"
 
         // query params
@@ -97,7 +103,15 @@ class PaymentsApi {
             throw new RuntimeException("missing required params userId")
         }
 
-        if (!"null".equals(String.valueOf(size)))
+        if (!"null".equals(String.valueOf(filterName)))
+            queryParams.put("filter_name", String.valueOf(filterName))
+if (!"null".equals(String.valueOf(filterPaymentType)))
+            queryParams.put("filter_payment_type", String.valueOf(filterPaymentType))
+if (!"null".equals(String.valueOf(filterPaymentMethodTypeId)))
+            queryParams.put("filter_payment_method_type_id", String.valueOf(filterPaymentMethodTypeId))
+if (!"null".equals(String.valueOf(filterPaymentMethodTypeName)))
+            queryParams.put("filter_payment_method_type_name", String.valueOf(filterPaymentMethodTypeName))
+if (!"null".equals(String.valueOf(size)))
             queryParams.put("size", String.valueOf(size))
 if (!"null".equals(String.valueOf(page)))
             queryParams.put("page", String.valueOf(page))
@@ -105,13 +119,15 @@ if (!"null".equals(String.valueOf(order)))
             queryParams.put("order", String.valueOf(order))
 
 
+        // Also still TODO: form params, body param
+
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "GET", "array",
                     PaymentMethodResource.class )
                     
     }
     def paymentAuthorization ( PaymentAuthorizationResource request, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/payment/authorizations"
 
         // query params
@@ -121,13 +137,15 @@ if (!"null".equals(String.valueOf(order)))
 
         
 
+        // Also still TODO: form params, body param
+
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "POST", "",
                     PaymentAuthorizationResource.class )
                     
     }
     def paymentCapture ( Integer id, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/payment/authorizations/{id}/capture"
 
         // query params
@@ -141,13 +159,15 @@ if (!"null".equals(String.valueOf(order)))
 
         
 
+        // Also still TODO: form params, body param
+
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "POST", "",
                     null )
                     
     }
     def updatePaymentMethod ( Integer userId, Integer id, PaymentMethodResource paymentMethod, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/users/{user_id}/payment-methods/{id}"
 
         // query params
@@ -164,6 +184,8 @@ if (!"null".equals(String.valueOf(order)))
         }
 
         
+
+        // Also still TODO: form params, body param
 
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "PUT", "",

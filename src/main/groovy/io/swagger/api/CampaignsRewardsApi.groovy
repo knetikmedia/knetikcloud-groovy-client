@@ -17,7 +17,7 @@ class CampaignsRewardsApi {
     String versionPath = "/api/v1"
 
     def createRewardSet ( RewardSetResource rewardSetResource, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/rewards"
 
         // query params
@@ -27,13 +27,15 @@ class CampaignsRewardsApi {
 
         
 
+        // Also still TODO: form params, body param
+
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "POST", "",
                     RewardSetResource.class )
                     
     }
     def deleteRewardSet ( Integer id, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/rewards/{id}"
 
         // query params
@@ -46,6 +48,8 @@ class CampaignsRewardsApi {
         }
 
         
+
+        // Also still TODO: form params, body param
 
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "DELETE", "",
@@ -53,7 +57,7 @@ class CampaignsRewardsApi {
                     
     }
     def getRewardSet ( Integer id, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/rewards/{id}"
 
         // query params
@@ -67,13 +71,15 @@ class CampaignsRewardsApi {
 
         
 
+        // Also still TODO: form params, body param
+
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "GET", "",
                     RewardSetResource.class )
                     
     }
     def getRewardSets ( Integer size, Integer page, String order, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/rewards"
 
         // query params
@@ -89,13 +95,15 @@ if (!"null".equals(String.valueOf(order)))
             queryParams.put("order", String.valueOf(order))
 
 
+        // Also still TODO: form params, body param
+
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "GET", "",
                     PageResourceRewardSetResource.class )
                     
     }
     def updateRewardSet ( Integer id, RewardSetResource rewardSetResource, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/rewards/{id}"
 
         // query params
@@ -108,6 +116,8 @@ if (!"null".equals(String.valueOf(order)))
         }
 
         
+
+        // Also still TODO: form params, body param
 
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "PUT", "",

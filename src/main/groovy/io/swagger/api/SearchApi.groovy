@@ -17,7 +17,7 @@ class SearchApi {
     String versionPath = "/api/v1"
 
     def addSearchIndex ( String type, String id, Object object, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/search/index/{type}/{id}"
 
         // query params
@@ -35,13 +35,15 @@ class SearchApi {
 
         
 
+        // Also still TODO: form params, body param
+
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "POST", "",
                     null )
                     
     }
     def addSearchMappings ( List<SearchReferenceMapping> mappings, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/search/mappings"
 
         // query params
@@ -51,13 +53,15 @@ class SearchApi {
 
         
 
+        // Also still TODO: form params, body param
+
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "POST", "",
                     null )
                     
     }
     def deleteSearchIndex ( String type, String id, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/search/index/{type}/{id}"
 
         // query params
@@ -75,13 +79,15 @@ class SearchApi {
 
         
 
+        // Also still TODO: form params, body param
+
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "DELETE", "",
                     null )
                     
     }
     def deleteSearchIndexes ( String type, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/search/index/{type}"
 
         // query params
@@ -95,13 +101,15 @@ class SearchApi {
 
         
 
+        // Also still TODO: form params, body param
+
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "DELETE", "",
                     null )
                     
     }
     def searchIndex ( String type, Object query, Integer size, Integer page, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/search/index/{type}"
 
         // query params
@@ -118,6 +126,8 @@ class SearchApi {
 if (!"null".equals(String.valueOf(page)))
             queryParams.put("page", String.valueOf(page))
 
+
+        // Also still TODO: form params, body param
 
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "POST", "",

@@ -17,7 +17,7 @@ class BRERuleEngineGlobalsApi {
     String versionPath = "/api/v1"
 
     def createBREGlobal ( BreGlobalResource breGlobalResource, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/bre/globals/definitions"
 
         // query params
@@ -27,13 +27,15 @@ class BRERuleEngineGlobalsApi {
 
         
 
+        // Also still TODO: form params, body param
+
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "POST", "",
                     BreGlobalResource.class )
                     
     }
     def deleteBREGlobal ( String id, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/bre/globals/definitions/{id}"
 
         // query params
@@ -46,6 +48,8 @@ class BRERuleEngineGlobalsApi {
         }
 
         
+
+        // Also still TODO: form params, body param
 
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "DELETE", "",
@@ -53,7 +57,7 @@ class BRERuleEngineGlobalsApi {
                     
     }
     def getBREGlobal ( String id, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/bre/globals/definitions/{id}"
 
         // query params
@@ -67,13 +71,15 @@ class BRERuleEngineGlobalsApi {
 
         
 
+        // Also still TODO: form params, body param
+
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "GET", "",
                     BreGlobalResource.class )
                     
     }
     def getBREGlobals ( Boolean filterSystem, Integer size, Integer page, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/bre/globals/definitions"
 
         // query params
@@ -82,12 +88,14 @@ class BRERuleEngineGlobalsApi {
     
 
         if (!"null".equals(String.valueOf(filterSystem)))
-            queryParams.put("filterSystem", String.valueOf(filterSystem))
+            queryParams.put("filter_system", String.valueOf(filterSystem))
 if (!"null".equals(String.valueOf(size)))
             queryParams.put("size", String.valueOf(size))
 if (!"null".equals(String.valueOf(page)))
             queryParams.put("page", String.valueOf(page))
 
+
+        // Also still TODO: form params, body param
 
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "GET", "",
@@ -95,7 +103,7 @@ if (!"null".equals(String.valueOf(page)))
                     
     }
     def updateBREGlobal ( String id, BreGlobalResource breGlobalResource, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/bre/globals/definitions/{id}"
 
         // query params
@@ -108,6 +116,8 @@ if (!"null".equals(String.valueOf(page)))
         }
 
         
+
+        // Also still TODO: form params, body param
 
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "PUT", "",

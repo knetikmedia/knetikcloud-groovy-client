@@ -5,14 +5,14 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import io.swagger.model.ActivityEntitlementResource;
 import io.swagger.model.ArrayList;
+import io.swagger.model.AvailableSettingResource;
 import io.swagger.model.HashMap;
 import io.swagger.model.Map;
 import io.swagger.model.Property;
 import io.swagger.model.RewardSetResource;
-import io.swagger.model.TheDefinitionOfAnActivityParametersExDifficultyLevel;
 import java.util.List;
 @Canonical
-class RepresentsAnActivityThatCanBeParameterizedAndTrackedThroughMetricsScoresEtc {
+class ActivityResource {
 
   /* A map of additional properties keyed on the property name. Used to further describe an activity. While settings will vary from one activity occurrence (a game) to another, additional properties are shared by all the occurrences of this activity. Ex: Activity Logo, Disclaimer, Greeting, etc. Validated against template if one exists for activities */
   Map<String, Property> additionalProperties = new HashMap<String, Property>()
@@ -39,7 +39,7 @@ class RepresentsAnActivityThatCanBeParameterizedAndTrackedThroughMetricsScoresEt
   RewardSetResource rewardSet = null
 
   /* Define what parameters are required/available to start and run an activity. For example: Difficulty, Number of Questions, Character name, Avatar, Duration, etc. Not populated when getting listing */
-  List<TheDefinitionOfAnActivityParametersExDifficultyLevel> settings = new ArrayList<TheDefinitionOfAnActivityParametersExDifficultyLevel>()
+  List<AvailableSettingResource> settings = new ArrayList<AvailableSettingResource>()
 
   /* The user friendly name of that resource. Defaults to blank string */
   String shortDescription = null

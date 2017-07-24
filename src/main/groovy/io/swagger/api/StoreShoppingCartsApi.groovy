@@ -23,7 +23,7 @@ class StoreShoppingCartsApi {
     String versionPath = "/api/v1"
 
     def addCustomDiscount ( String id, CouponDefinition customDiscount, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/carts/{id}/custom-discounts"
 
         // query params
@@ -37,13 +37,15 @@ class StoreShoppingCartsApi {
 
         
 
+        // Also still TODO: form params, body param
+
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "POST", "",
                     null )
                     
     }
     def addDiscountToCart ( String id, SkuRequest skuRequest, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/carts/{id}/discounts"
 
         // query params
@@ -57,13 +59,15 @@ class StoreShoppingCartsApi {
 
         
 
+        // Also still TODO: form params, body param
+
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "POST", "",
                     null )
                     
     }
     def addItemToCart ( String id, CartItemRequest cartItemRequest, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/carts/{id}/items"
 
         // query params
@@ -77,13 +81,15 @@ class StoreShoppingCartsApi {
 
         
 
+        // Also still TODO: form params, body param
+
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "POST", "",
                     null )
                     
     }
     def createCart ( Integer owner, String currencyCode, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/carts"
 
         // query params
@@ -94,8 +100,10 @@ class StoreShoppingCartsApi {
         if (!"null".equals(String.valueOf(owner)))
             queryParams.put("owner", String.valueOf(owner))
 if (!"null".equals(String.valueOf(currencyCode)))
-            queryParams.put("currencyCode", String.valueOf(currencyCode))
+            queryParams.put("currency_code", String.valueOf(currencyCode))
 
+
+        // Also still TODO: form params, body param
 
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "POST", "",
@@ -103,7 +111,7 @@ if (!"null".equals(String.valueOf(currencyCode)))
                     
     }
     def getCart ( String id, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/carts/{id}"
 
         // query params
@@ -117,13 +125,15 @@ if (!"null".equals(String.valueOf(currencyCode)))
 
         
 
+        // Also still TODO: form params, body param
+
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "GET", "",
                     Cart.class )
                     
     }
     def getCarts ( Integer filterOwnerId, Integer size, Integer page, String order, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/carts"
 
         // query params
@@ -132,7 +142,7 @@ if (!"null".equals(String.valueOf(currencyCode)))
     
 
         if (!"null".equals(String.valueOf(filterOwnerId)))
-            queryParams.put("filterOwnerId", String.valueOf(filterOwnerId))
+            queryParams.put("filter_owner_id", String.valueOf(filterOwnerId))
 if (!"null".equals(String.valueOf(size)))
             queryParams.put("size", String.valueOf(size))
 if (!"null".equals(String.valueOf(page)))
@@ -141,13 +151,15 @@ if (!"null".equals(String.valueOf(order)))
             queryParams.put("order", String.valueOf(order))
 
 
+        // Also still TODO: form params, body param
+
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "GET", "",
                     PageResourceCartSummary.class )
                     
     }
     def getShippable ( String id, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/carts/{id}/shippable"
 
         // query params
@@ -161,13 +173,15 @@ if (!"null".equals(String.valueOf(order)))
 
         
 
+        // Also still TODO: form params, body param
+
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "GET", "",
                     CartShippableResponse.class )
                     
     }
     def getShippingCountries ( String id, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/carts/{id}/countries"
 
         // query params
@@ -181,13 +195,15 @@ if (!"null".equals(String.valueOf(order)))
 
         
 
+        // Also still TODO: form params, body param
+
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "GET", "",
                     SampleCountriesResponse.class )
                     
     }
     def removeDiscountFromCart ( String id, String code, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/carts/{id}/discounts/{code}"
 
         // query params
@@ -205,13 +221,15 @@ if (!"null".equals(String.valueOf(order)))
 
         
 
+        // Also still TODO: form params, body param
+
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "DELETE", "",
                     null )
                     
     }
     def setCartCurrency ( String id, String currencyCode, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/carts/{id}/currency"
 
         // query params
@@ -225,13 +243,15 @@ if (!"null".equals(String.valueOf(order)))
 
         
 
+        // Also still TODO: form params, body param
+
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "PUT", "",
                     null )
                     
     }
     def setCartOwner ( String id, Integer userId, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/carts/{id}/owner"
 
         // query params
@@ -245,13 +265,15 @@ if (!"null".equals(String.valueOf(order)))
 
         
 
+        // Also still TODO: form params, body param
+
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "PUT", "",
                     null )
                     
     }
     def updateItemInCart ( String id, CartItemRequest cartItemRequest, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/carts/{id}/items"
 
         // query params
@@ -265,13 +287,15 @@ if (!"null".equals(String.valueOf(order)))
 
         
 
+        // Also still TODO: form params, body param
+
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "PUT", "",
                     null )
                     
     }
     def updateShippingAddress ( String id, CartShippingAddressRequest cartShippingAddressRequest, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/carts/{id}/shipping-address"
 
         // query params
@@ -284,6 +308,8 @@ if (!"null".equals(String.valueOf(order)))
         }
 
         
+
+        // Also still TODO: form params, body param
 
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "PUT", "",

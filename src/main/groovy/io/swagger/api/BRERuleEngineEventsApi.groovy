@@ -16,7 +16,7 @@ class BRERuleEngineEventsApi {
     String versionPath = "/api/v1"
 
     def sendBREEvent ( BreEvent breEvent, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/bre/events"
 
         // query params
@@ -25,6 +25,8 @@ class BRERuleEngineEventsApi {
     
 
         
+
+        // Also still TODO: form params, body param
 
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "POST", "",

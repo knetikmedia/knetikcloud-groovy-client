@@ -21,6 +21,9 @@ class UserBaseResource {
   /* The id of the user */
   Integer id = null
 
+  /* The date the user last interacted with the API (private) */
+  Long lastActivity = null
+
   /* The date the user's info was last updated as a unix timestamp */
   Long lastUpdated = null
 

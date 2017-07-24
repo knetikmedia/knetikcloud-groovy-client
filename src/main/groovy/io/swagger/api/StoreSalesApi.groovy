@@ -17,7 +17,7 @@ class StoreSalesApi {
     String versionPath = "/api/v1"
 
     def createCatalogSale ( CatalogSale catalogSale, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/store/sales"
 
         // query params
@@ -27,13 +27,15 @@ class StoreSalesApi {
 
         
 
+        // Also still TODO: form params, body param
+
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "POST", "",
                     CatalogSale.class )
                     
     }
     def deleteCatalogSale ( Integer id, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/store/sales/{id}"
 
         // query params
@@ -46,6 +48,8 @@ class StoreSalesApi {
         }
 
         
+
+        // Also still TODO: form params, body param
 
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "DELETE", "",
@@ -53,7 +57,7 @@ class StoreSalesApi {
                     
     }
     def getCatalogSale ( Integer id, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/store/sales/{id}"
 
         // query params
@@ -67,13 +71,15 @@ class StoreSalesApi {
 
         
 
+        // Also still TODO: form params, body param
+
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "GET", "",
                     CatalogSale.class )
                     
     }
     def getCatalogSales ( Integer size, Integer page, String order, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/store/sales"
 
         // query params
@@ -89,13 +95,15 @@ if (!"null".equals(String.valueOf(order)))
             queryParams.put("order", String.valueOf(order))
 
 
+        // Also still TODO: form params, body param
+
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "GET", "",
                     PageResourceCatalogSale.class )
                     
     }
     def updateCatalogSale ( Integer id, CatalogSale catalogSale, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/store/sales/{id}"
 
         // query params
@@ -108,6 +116,8 @@ if (!"null".equals(String.valueOf(order)))
         }
 
         
+
+        // Also still TODO: form params, body param
 
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "PUT", "",

@@ -63,6 +63,9 @@ class UserResource {
   /* The ISO3 code for the user's currency (private) */
   String languageCode = null
 
+  /* The date the user last interacted with the API (private) */
+  Long lastActivity = null
+
   /* The user's last name (private) */
   String lastName = null
 

@@ -24,7 +24,7 @@ class GamificationTriviaApi {
     String versionPath = "/api/v1"
 
     def addQuestionAnswers ( String questionId, AnswerResource answer, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/trivia/questions/{question_id}/answers"
 
         // query params
@@ -38,13 +38,15 @@ class GamificationTriviaApi {
 
         
 
+        // Also still TODO: form params, body param
+
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "POST", "",
                     AnswerResource.class )
                     
     }
     def addQuestionTag ( String id, String tag, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/trivia/questions/{id}/tags"
 
         // query params
@@ -58,13 +60,15 @@ class GamificationTriviaApi {
 
         
 
+        // Also still TODO: form params, body param
+
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "POST", "",
                     null )
                     
     }
     def addTagToQuestionsBatch ( String tag, String filterSearch, String filterIdset, String filterCategory, String filterTag, String filterTagset, String filterType, Boolean filterPublished, Long filterImportId, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/trivia/questions/tags"
 
         // query params
@@ -73,22 +77,24 @@ class GamificationTriviaApi {
     
 
         if (!"null".equals(String.valueOf(filterSearch)))
-            queryParams.put("filterSearch", String.valueOf(filterSearch))
+            queryParams.put("filter_search", String.valueOf(filterSearch))
 if (!"null".equals(String.valueOf(filterIdset)))
-            queryParams.put("filterIdset", String.valueOf(filterIdset))
+            queryParams.put("filter_idset", String.valueOf(filterIdset))
 if (!"null".equals(String.valueOf(filterCategory)))
-            queryParams.put("filterCategory", String.valueOf(filterCategory))
+            queryParams.put("filter_category", String.valueOf(filterCategory))
 if (!"null".equals(String.valueOf(filterTag)))
-            queryParams.put("filterTag", String.valueOf(filterTag))
+            queryParams.put("filter_tag", String.valueOf(filterTag))
 if (!"null".equals(String.valueOf(filterTagset)))
-            queryParams.put("filterTagset", String.valueOf(filterTagset))
+            queryParams.put("filter_tagset", String.valueOf(filterTagset))
 if (!"null".equals(String.valueOf(filterType)))
-            queryParams.put("filterType", String.valueOf(filterType))
+            queryParams.put("filter_type", String.valueOf(filterType))
 if (!"null".equals(String.valueOf(filterPublished)))
-            queryParams.put("filterPublished", String.valueOf(filterPublished))
+            queryParams.put("filter_published", String.valueOf(filterPublished))
 if (!"null".equals(String.valueOf(filterImportId)))
-            queryParams.put("filterImportId", String.valueOf(filterImportId))
+            queryParams.put("filter_import_id", String.valueOf(filterImportId))
 
+
+        // Also still TODO: form params, body param
 
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "POST", "",
@@ -96,7 +102,7 @@ if (!"null".equals(String.valueOf(filterImportId)))
                     
     }
     def createImportJob ( ImportJobResource request, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/trivia/import"
 
         // query params
@@ -106,13 +112,15 @@ if (!"null".equals(String.valueOf(filterImportId)))
 
         
 
+        // Also still TODO: form params, body param
+
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "POST", "",
                     ImportJobResource.class )
                     
     }
     def createQuestion ( QuestionResource question, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/trivia/questions"
 
         // query params
@@ -122,13 +130,15 @@ if (!"null".equals(String.valueOf(filterImportId)))
 
         
 
+        // Also still TODO: form params, body param
+
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "POST", "",
                     QuestionResource.class )
                     
     }
     def createQuestionTemplate ( QuestionTemplateResource questionTemplateResource, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/trivia/questions/templates"
 
         // query params
@@ -138,13 +148,15 @@ if (!"null".equals(String.valueOf(filterImportId)))
 
         
 
+        // Also still TODO: form params, body param
+
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "POST", "",
                     QuestionTemplateResource.class )
                     
     }
     def deleteImportJob ( Long id, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/trivia/import/{id}"
 
         // query params
@@ -158,13 +170,15 @@ if (!"null".equals(String.valueOf(filterImportId)))
 
         
 
+        // Also still TODO: form params, body param
+
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "DELETE", "",
                     null )
                     
     }
     def deleteQuestion ( String id, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/trivia/questions/{id}"
 
         // query params
@@ -178,13 +192,15 @@ if (!"null".equals(String.valueOf(filterImportId)))
 
         
 
+        // Also still TODO: form params, body param
+
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "DELETE", "",
                     null )
                     
     }
     def deleteQuestionAnswers ( String questionId, String id, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/trivia/questions/{question_id}/answers/{id}"
 
         // query params
@@ -202,13 +218,15 @@ if (!"null".equals(String.valueOf(filterImportId)))
 
         
 
+        // Also still TODO: form params, body param
+
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "DELETE", "",
                     null )
                     
     }
     def deleteQuestionTemplate ( String id, String cascade, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/trivia/questions/templates/{id}"
 
         // query params
@@ -224,13 +242,15 @@ if (!"null".equals(String.valueOf(filterImportId)))
             queryParams.put("cascade", String.valueOf(cascade))
 
 
+        // Also still TODO: form params, body param
+
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "DELETE", "",
                     null )
                     
     }
     def getImportJob ( Long id, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/trivia/import/{id}"
 
         // query params
@@ -244,13 +264,15 @@ if (!"null".equals(String.valueOf(filterImportId)))
 
         
 
+        // Also still TODO: form params, body param
+
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "GET", "",
                     ImportJobResource.class )
                     
     }
     def getImportJobs ( String filterVendor, String filterCategory, String filterName, String filterStatus, Integer size, Integer page, String order, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/trivia/import"
 
         // query params
@@ -259,13 +281,13 @@ if (!"null".equals(String.valueOf(filterImportId)))
     
 
         if (!"null".equals(String.valueOf(filterVendor)))
-            queryParams.put("filterVendor", String.valueOf(filterVendor))
+            queryParams.put("filter_vendor", String.valueOf(filterVendor))
 if (!"null".equals(String.valueOf(filterCategory)))
-            queryParams.put("filterCategory", String.valueOf(filterCategory))
+            queryParams.put("filter_category", String.valueOf(filterCategory))
 if (!"null".equals(String.valueOf(filterName)))
-            queryParams.put("filterName", String.valueOf(filterName))
+            queryParams.put("filter_name", String.valueOf(filterName))
 if (!"null".equals(String.valueOf(filterStatus)))
-            queryParams.put("filterStatus", String.valueOf(filterStatus))
+            queryParams.put("filter_status", String.valueOf(filterStatus))
 if (!"null".equals(String.valueOf(size)))
             queryParams.put("size", String.valueOf(size))
 if (!"null".equals(String.valueOf(page)))
@@ -274,13 +296,15 @@ if (!"null".equals(String.valueOf(order)))
             queryParams.put("order", String.valueOf(order))
 
 
+        // Also still TODO: form params, body param
+
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "GET", "",
                     PageResourceImportJobResource.class )
                     
     }
     def getQuestion ( String id, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/trivia/questions/{id}"
 
         // query params
@@ -294,13 +318,15 @@ if (!"null".equals(String.valueOf(order)))
 
         
 
+        // Also still TODO: form params, body param
+
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "GET", "",
                     QuestionResource.class )
                     
     }
     def getQuestionAnswer ( String questionId, String id, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/trivia/questions/{question_id}/answers/{id}"
 
         // query params
@@ -318,13 +344,15 @@ if (!"null".equals(String.valueOf(order)))
 
         
 
+        // Also still TODO: form params, body param
+
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "GET", "",
                     AnswerResource.class )
                     
     }
     def getQuestionAnswers ( String questionId, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/trivia/questions/{question_id}/answers"
 
         // query params
@@ -338,13 +366,15 @@ if (!"null".equals(String.valueOf(order)))
 
         
 
+        // Also still TODO: form params, body param
+
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "GET", "array",
                     AnswerResource.class )
                     
     }
     def getQuestionDeltas ( Long since, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/trivia/questions/delta"
 
         // query params
@@ -356,13 +386,15 @@ if (!"null".equals(String.valueOf(order)))
             queryParams.put("since", String.valueOf(since))
 
 
+        // Also still TODO: form params, body param
+
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "GET", "array",
                     DeltaResource.class )
                     
     }
     def getQuestionTags ( String id, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/trivia/questions/{id}/tags"
 
         // query params
@@ -376,13 +408,15 @@ if (!"null".equals(String.valueOf(order)))
 
         
 
+        // Also still TODO: form params, body param
+
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "GET", "array",
                     String.class )
                     
     }
     def getQuestionTemplate ( String id, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/trivia/questions/templates/{id}"
 
         // query params
@@ -396,13 +430,15 @@ if (!"null".equals(String.valueOf(order)))
 
         
 
+        // Also still TODO: form params, body param
+
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "GET", "",
                     QuestionTemplateResource.class )
                     
     }
     def getQuestionTemplates ( Integer size, Integer page, String order, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/trivia/questions/templates"
 
         // query params
@@ -418,13 +454,15 @@ if (!"null".equals(String.valueOf(order)))
             queryParams.put("order", String.valueOf(order))
 
 
+        // Also still TODO: form params, body param
+
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "GET", "",
                     PageResourceQuestionTemplateResource.class )
                     
     }
     def getQuestions ( Integer size, Integer page, String order, String filterSearch, String filterIdset, String filterCategory, String filterTagset, String filterTag, String filterType, Boolean filterPublished, Long filterImportId, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/trivia/questions"
 
         // query params
@@ -439,22 +477,24 @@ if (!"null".equals(String.valueOf(page)))
 if (!"null".equals(String.valueOf(order)))
             queryParams.put("order", String.valueOf(order))
 if (!"null".equals(String.valueOf(filterSearch)))
-            queryParams.put("filterSearch", String.valueOf(filterSearch))
+            queryParams.put("filter_search", String.valueOf(filterSearch))
 if (!"null".equals(String.valueOf(filterIdset)))
-            queryParams.put("filterIdset", String.valueOf(filterIdset))
+            queryParams.put("filter_idset", String.valueOf(filterIdset))
 if (!"null".equals(String.valueOf(filterCategory)))
-            queryParams.put("filterCategory", String.valueOf(filterCategory))
+            queryParams.put("filter_category", String.valueOf(filterCategory))
 if (!"null".equals(String.valueOf(filterTagset)))
-            queryParams.put("filterTagset", String.valueOf(filterTagset))
+            queryParams.put("filter_tagset", String.valueOf(filterTagset))
 if (!"null".equals(String.valueOf(filterTag)))
-            queryParams.put("filterTag", String.valueOf(filterTag))
+            queryParams.put("filter_tag", String.valueOf(filterTag))
 if (!"null".equals(String.valueOf(filterType)))
-            queryParams.put("filterType", String.valueOf(filterType))
+            queryParams.put("filter_type", String.valueOf(filterType))
 if (!"null".equals(String.valueOf(filterPublished)))
-            queryParams.put("filterPublished", String.valueOf(filterPublished))
+            queryParams.put("filter_published", String.valueOf(filterPublished))
 if (!"null".equals(String.valueOf(filterImportId)))
-            queryParams.put("filterImportId", String.valueOf(filterImportId))
+            queryParams.put("filter_import_id", String.valueOf(filterImportId))
 
+
+        // Also still TODO: form params, body param
 
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "GET", "",
@@ -462,7 +502,7 @@ if (!"null".equals(String.valueOf(filterImportId)))
                     
     }
     def getQuestionsCount ( String filterSearch, String filterIdset, String filterCategory, String filterTag, String filterTagset, String filterType, Boolean filterPublished, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/trivia/questions/count"
 
         // query params
@@ -471,20 +511,22 @@ if (!"null".equals(String.valueOf(filterImportId)))
     
 
         if (!"null".equals(String.valueOf(filterSearch)))
-            queryParams.put("filterSearch", String.valueOf(filterSearch))
+            queryParams.put("filter_search", String.valueOf(filterSearch))
 if (!"null".equals(String.valueOf(filterIdset)))
-            queryParams.put("filterIdset", String.valueOf(filterIdset))
+            queryParams.put("filter_idset", String.valueOf(filterIdset))
 if (!"null".equals(String.valueOf(filterCategory)))
-            queryParams.put("filterCategory", String.valueOf(filterCategory))
+            queryParams.put("filter_category", String.valueOf(filterCategory))
 if (!"null".equals(String.valueOf(filterTag)))
-            queryParams.put("filterTag", String.valueOf(filterTag))
+            queryParams.put("filter_tag", String.valueOf(filterTag))
 if (!"null".equals(String.valueOf(filterTagset)))
-            queryParams.put("filterTagset", String.valueOf(filterTagset))
+            queryParams.put("filter_tagset", String.valueOf(filterTagset))
 if (!"null".equals(String.valueOf(filterType)))
-            queryParams.put("filterType", String.valueOf(filterType))
+            queryParams.put("filter_type", String.valueOf(filterType))
 if (!"null".equals(String.valueOf(filterPublished)))
-            queryParams.put("filterPublished", String.valueOf(filterPublished))
+            queryParams.put("filter_published", String.valueOf(filterPublished))
 
+
+        // Also still TODO: form params, body param
 
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "GET", "",
@@ -492,7 +534,7 @@ if (!"null".equals(String.valueOf(filterPublished)))
                     
     }
     def processImportJob ( Long id, Boolean publishNow, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/trivia/import/{id}/process"
 
         // query params
@@ -509,8 +551,10 @@ if (!"null".equals(String.valueOf(filterPublished)))
         }
 
         if (!"null".equals(String.valueOf(publishNow)))
-            queryParams.put("publishNow", String.valueOf(publishNow))
+            queryParams.put("publish_now", String.valueOf(publishNow))
 
+
+        // Also still TODO: form params, body param
 
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "POST", "",
@@ -518,7 +562,7 @@ if (!"null".equals(String.valueOf(filterPublished)))
                     
     }
     def removeQuestionTag ( String id, String tag, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/trivia/questions/{id}/tags/{tag}"
 
         // query params
@@ -536,13 +580,15 @@ if (!"null".equals(String.valueOf(filterPublished)))
 
         
 
+        // Also still TODO: form params, body param
+
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "DELETE", "",
                     null )
                     
     }
     def removeTagToQuestionsBatch ( String tag, String filterSearch, String filterIdset, String filterCategory, String filterTag, String filterTagset, String filterType, Boolean filterPublished, Long filterImportId, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/trivia/questions/tags/{tag}"
 
         // query params
@@ -555,22 +601,24 @@ if (!"null".equals(String.valueOf(filterPublished)))
         }
 
         if (!"null".equals(String.valueOf(filterSearch)))
-            queryParams.put("filterSearch", String.valueOf(filterSearch))
+            queryParams.put("filter_search", String.valueOf(filterSearch))
 if (!"null".equals(String.valueOf(filterIdset)))
-            queryParams.put("filterIdset", String.valueOf(filterIdset))
+            queryParams.put("filter_idset", String.valueOf(filterIdset))
 if (!"null".equals(String.valueOf(filterCategory)))
-            queryParams.put("filterCategory", String.valueOf(filterCategory))
+            queryParams.put("filter_category", String.valueOf(filterCategory))
 if (!"null".equals(String.valueOf(filterTag)))
-            queryParams.put("filterTag", String.valueOf(filterTag))
+            queryParams.put("filter_tag", String.valueOf(filterTag))
 if (!"null".equals(String.valueOf(filterTagset)))
-            queryParams.put("filterTagset", String.valueOf(filterTagset))
+            queryParams.put("filter_tagset", String.valueOf(filterTagset))
 if (!"null".equals(String.valueOf(filterType)))
-            queryParams.put("filterType", String.valueOf(filterType))
+            queryParams.put("filter_type", String.valueOf(filterType))
 if (!"null".equals(String.valueOf(filterPublished)))
-            queryParams.put("filterPublished", String.valueOf(filterPublished))
+            queryParams.put("filter_published", String.valueOf(filterPublished))
 if (!"null".equals(String.valueOf(filterImportId)))
-            queryParams.put("filterImportId", String.valueOf(filterImportId))
+            queryParams.put("filter_import_id", String.valueOf(filterImportId))
 
+
+        // Also still TODO: form params, body param
 
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "DELETE", "",
@@ -578,7 +626,7 @@ if (!"null".equals(String.valueOf(filterImportId)))
                     
     }
     def searchQuestionTags ( String filterSearch, String filterCategory, Long filterImportId, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/trivia/tags"
 
         // query params
@@ -587,12 +635,14 @@ if (!"null".equals(String.valueOf(filterImportId)))
     
 
         if (!"null".equals(String.valueOf(filterSearch)))
-            queryParams.put("filterSearch", String.valueOf(filterSearch))
+            queryParams.put("filter_search", String.valueOf(filterSearch))
 if (!"null".equals(String.valueOf(filterCategory)))
-            queryParams.put("filterCategory", String.valueOf(filterCategory))
+            queryParams.put("filter_category", String.valueOf(filterCategory))
 if (!"null".equals(String.valueOf(filterImportId)))
-            queryParams.put("filterImportId", String.valueOf(filterImportId))
+            queryParams.put("filter_import_id", String.valueOf(filterImportId))
 
+
+        // Also still TODO: form params, body param
 
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "GET", "",
@@ -600,7 +650,7 @@ if (!"null".equals(String.valueOf(filterImportId)))
                     
     }
     def updateImportJob ( Long id, ImportJobResource request, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/trivia/import/{id}"
 
         // query params
@@ -614,13 +664,15 @@ if (!"null".equals(String.valueOf(filterImportId)))
 
         
 
+        // Also still TODO: form params, body param
+
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "PUT", "",
                     ImportJobResource.class )
                     
     }
     def updateQuestion ( String id, QuestionResource question, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/trivia/questions/{id}"
 
         // query params
@@ -634,13 +686,15 @@ if (!"null".equals(String.valueOf(filterImportId)))
 
         
 
+        // Also still TODO: form params, body param
+
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "PUT", "",
                     QuestionResource.class )
                     
     }
     def updateQuestionAnswer ( String questionId, String id, AnswerResource answer, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/trivia/questions/{question_id}/answers/{id}"
 
         // query params
@@ -658,13 +712,15 @@ if (!"null".equals(String.valueOf(filterImportId)))
 
         
 
+        // Also still TODO: form params, body param
+
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "PUT", "",
                     null )
                     
     }
     def updateQuestionTemplate ( String id, QuestionTemplateResource questionTemplateResource, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/trivia/questions/templates/{id}"
 
         // query params
@@ -678,13 +734,15 @@ if (!"null".equals(String.valueOf(filterImportId)))
 
         
 
+        // Also still TODO: form params, body param
+
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "PUT", "",
                     QuestionTemplateResource.class )
                     
     }
     def updateQuestionsInBulk ( QuestionResource question, String filterSearch, String filterIdset, String filterCategory, String filterTagset, String filterType, Boolean filterPublished, Long filterImportId, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/trivia/questions"
 
         // query params
@@ -693,20 +751,22 @@ if (!"null".equals(String.valueOf(filterImportId)))
     
 
         if (!"null".equals(String.valueOf(filterSearch)))
-            queryParams.put("filterSearch", String.valueOf(filterSearch))
+            queryParams.put("filter_search", String.valueOf(filterSearch))
 if (!"null".equals(String.valueOf(filterIdset)))
-            queryParams.put("filterIdset", String.valueOf(filterIdset))
+            queryParams.put("filter_idset", String.valueOf(filterIdset))
 if (!"null".equals(String.valueOf(filterCategory)))
-            queryParams.put("filterCategory", String.valueOf(filterCategory))
+            queryParams.put("filter_category", String.valueOf(filterCategory))
 if (!"null".equals(String.valueOf(filterTagset)))
-            queryParams.put("filterTagset", String.valueOf(filterTagset))
+            queryParams.put("filter_tagset", String.valueOf(filterTagset))
 if (!"null".equals(String.valueOf(filterType)))
-            queryParams.put("filterType", String.valueOf(filterType))
+            queryParams.put("filter_type", String.valueOf(filterType))
 if (!"null".equals(String.valueOf(filterPublished)))
-            queryParams.put("filterPublished", String.valueOf(filterPublished))
+            queryParams.put("filter_published", String.valueOf(filterPublished))
 if (!"null".equals(String.valueOf(filterImportId)))
-            queryParams.put("filterImportId", String.valueOf(filterImportId))
+            queryParams.put("filter_import_id", String.valueOf(filterImportId))
 
+
+        // Also still TODO: form params, body param
 
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "PUT", "",

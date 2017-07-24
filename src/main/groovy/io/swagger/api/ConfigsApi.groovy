@@ -17,7 +17,7 @@ class ConfigsApi {
     String versionPath = "/api/v1"
 
     def createConfig ( Config config, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/configs"
 
         // query params
@@ -27,13 +27,15 @@ class ConfigsApi {
 
         
 
+        // Also still TODO: form params, body param
+
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "POST", "",
                     Config.class )
                     
     }
     def deleteConfig ( String name, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/configs/{name}"
 
         // query params
@@ -46,6 +48,8 @@ class ConfigsApi {
         }
 
         
+
+        // Also still TODO: form params, body param
 
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "DELETE", "",
@@ -53,7 +57,7 @@ class ConfigsApi {
                     
     }
     def getConfig ( String name, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/configs/{name}"
 
         // query params
@@ -67,13 +71,15 @@ class ConfigsApi {
 
         
 
+        // Also still TODO: form params, body param
+
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "GET", "",
                     Config.class )
                     
     }
     def getConfigs ( String filterSearch, Integer size, Integer page, String order, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/configs"
 
         // query params
@@ -82,7 +88,7 @@ class ConfigsApi {
     
 
         if (!"null".equals(String.valueOf(filterSearch)))
-            queryParams.put("filterSearch", String.valueOf(filterSearch))
+            queryParams.put("filter_search", String.valueOf(filterSearch))
 if (!"null".equals(String.valueOf(size)))
             queryParams.put("size", String.valueOf(size))
 if (!"null".equals(String.valueOf(page)))
@@ -91,13 +97,15 @@ if (!"null".equals(String.valueOf(order)))
             queryParams.put("order", String.valueOf(order))
 
 
+        // Also still TODO: form params, body param
+
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "GET", "",
                     PageResourceConfig.class )
                     
     }
     def updateConfig ( String name, Config config, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/configs/{name}"
 
         // query params
@@ -110,6 +118,8 @@ if (!"null".equals(String.valueOf(order)))
         }
 
         
+
+        // Also still TODO: form params, body param
 
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "PUT", "",

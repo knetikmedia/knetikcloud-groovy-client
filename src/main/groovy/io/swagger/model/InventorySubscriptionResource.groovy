@@ -35,10 +35,16 @@ class InventorySubscriptionResource {
   /* The payment method object */
   PaymentMethodResource paymentMethod = null
 
-  /* The recurring price */
+  /* The recurring price that has been set to override the base price. Null if not overriding */
+  Double priceOverride = null
+
+  /* An explanation for the reason the price is being overridden */
+  String priceOverrideReason = null
+
+  /* The default recurring price */
   Double recurringPrice = null
 
-  /* The sku of the subscription */
+  /* The recurring sku of the subscription */
   String sku = null
 
   /* The date the subscription will start */

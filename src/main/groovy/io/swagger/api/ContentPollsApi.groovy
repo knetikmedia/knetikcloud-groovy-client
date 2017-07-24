@@ -20,7 +20,7 @@ class ContentPollsApi {
     String versionPath = "/api/v1"
 
     def answerPoll ( String id, String answerKey, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/media/polls/{id}/response"
 
         // query params
@@ -34,13 +34,15 @@ class ContentPollsApi {
 
         
 
+        // Also still TODO: form params, body param
+
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "POST", "",
                     PollResponseResource.class )
                     
     }
     def createPoll ( PollResource pollResource, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/media/polls"
 
         // query params
@@ -50,13 +52,15 @@ class ContentPollsApi {
 
         
 
+        // Also still TODO: form params, body param
+
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "POST", "",
                     PollResource.class )
                     
     }
     def createPollTemplate ( TemplateResource pollTemplateResource, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/media/polls/templates"
 
         // query params
@@ -66,13 +70,15 @@ class ContentPollsApi {
 
         
 
+        // Also still TODO: form params, body param
+
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "POST", "",
                     TemplateResource.class )
                     
     }
     def deletePoll ( String id, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/media/polls/{id}"
 
         // query params
@@ -86,13 +92,15 @@ class ContentPollsApi {
 
         
 
+        // Also still TODO: form params, body param
+
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "DELETE", "",
                     null )
                     
     }
     def deletePollTemplate ( String id, String cascade, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/media/polls/templates/{id}"
 
         // query params
@@ -108,13 +116,15 @@ class ContentPollsApi {
             queryParams.put("cascade", String.valueOf(cascade))
 
 
+        // Also still TODO: form params, body param
+
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "DELETE", "",
                     null )
                     
     }
     def getPoll ( String id, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/media/polls/{id}"
 
         // query params
@@ -128,13 +138,15 @@ class ContentPollsApi {
 
         
 
+        // Also still TODO: form params, body param
+
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "GET", "",
                     PollResource.class )
                     
     }
     def getPollAnswer ( String id, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/media/polls/{id}/response"
 
         // query params
@@ -148,13 +160,15 @@ class ContentPollsApi {
 
         
 
+        // Also still TODO: form params, body param
+
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "GET", "",
                     PollResponseResource.class )
                     
     }
     def getPollTemplate ( String id, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/media/polls/templates/{id}"
 
         // query params
@@ -168,13 +182,15 @@ class ContentPollsApi {
 
         
 
+        // Also still TODO: form params, body param
+
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "GET", "",
                     TemplateResource.class )
                     
     }
     def getPollTemplates ( Integer size, Integer page, String order, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/media/polls/templates"
 
         // query params
@@ -190,13 +206,15 @@ if (!"null".equals(String.valueOf(order)))
             queryParams.put("order", String.valueOf(order))
 
 
+        // Also still TODO: form params, body param
+
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "GET", "",
                     PageResourceTemplateResource.class )
                     
     }
     def getPolls ( String filterCategory, String filterTagset, String filterText, Integer size, Integer page, String order, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/media/polls"
 
         // query params
@@ -205,11 +223,11 @@ if (!"null".equals(String.valueOf(order)))
     
 
         if (!"null".equals(String.valueOf(filterCategory)))
-            queryParams.put("filterCategory", String.valueOf(filterCategory))
+            queryParams.put("filter_category", String.valueOf(filterCategory))
 if (!"null".equals(String.valueOf(filterTagset)))
-            queryParams.put("filterTagset", String.valueOf(filterTagset))
+            queryParams.put("filter_tagset", String.valueOf(filterTagset))
 if (!"null".equals(String.valueOf(filterText)))
-            queryParams.put("filterText", String.valueOf(filterText))
+            queryParams.put("filter_text", String.valueOf(filterText))
 if (!"null".equals(String.valueOf(size)))
             queryParams.put("size", String.valueOf(size))
 if (!"null".equals(String.valueOf(page)))
@@ -218,13 +236,15 @@ if (!"null".equals(String.valueOf(order)))
             queryParams.put("order", String.valueOf(order))
 
 
+        // Also still TODO: form params, body param
+
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "GET", "",
                     PageResourcePollResource.class )
                     
     }
     def updatePoll ( String id, PollResource pollResource, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/media/polls/{id}"
 
         // query params
@@ -238,13 +258,15 @@ if (!"null".equals(String.valueOf(order)))
 
         
 
+        // Also still TODO: form params, body param
+
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "PUT", "",
                     PollResource.class )
                     
     }
     def updatePollTemplate ( String id, TemplateResource pollTemplateResource, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/media/polls/templates/{id}"
 
         // query params
@@ -257,6 +279,8 @@ if (!"null".equals(String.valueOf(order)))
         }
 
         
+
+        // Also still TODO: form params, body param
 
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "PUT", "",

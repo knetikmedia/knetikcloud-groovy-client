@@ -19,7 +19,7 @@ class TaxesApi {
     String versionPath = "/api/v1"
 
     def createCountryTax ( CountryTaxResource taxResource, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/tax/countries"
 
         // query params
@@ -29,13 +29,15 @@ class TaxesApi {
 
         
 
+        // Also still TODO: form params, body param
+
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "POST", "",
                     CountryTaxResource.class )
                     
     }
     def createStateTax ( String countryCodeIso3, StateTaxResource taxResource, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/tax/countries/{country_code_iso3}/states"
 
         // query params
@@ -49,13 +51,15 @@ class TaxesApi {
 
         
 
+        // Also still TODO: form params, body param
+
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "POST", "",
                     StateTaxResource.class )
                     
     }
     def deleteCountryTax ( String countryCodeIso3, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/tax/countries/{country_code_iso3}"
 
         // query params
@@ -69,13 +73,15 @@ class TaxesApi {
 
         
 
+        // Also still TODO: form params, body param
+
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "DELETE", "",
                     null )
                     
     }
     def deleteStateTax ( String countryCodeIso3, String stateCode, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/tax/countries/{country_code_iso3}/states/{state_code}"
 
         // query params
@@ -93,13 +99,15 @@ class TaxesApi {
 
         
 
+        // Also still TODO: form params, body param
+
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "DELETE", "",
                     null )
                     
     }
     def getCountryTax ( String countryCodeIso3, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/tax/countries/{country_code_iso3}"
 
         // query params
@@ -113,13 +121,15 @@ class TaxesApi {
 
         
 
+        // Also still TODO: form params, body param
+
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "GET", "",
                     CountryTaxResource.class )
                     
     }
     def getCountryTaxes ( Integer size, Integer page, String order, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/tax/countries"
 
         // query params
@@ -135,13 +145,15 @@ if (!"null".equals(String.valueOf(order)))
             queryParams.put("order", String.valueOf(order))
 
 
+        // Also still TODO: form params, body param
+
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "GET", "",
                     PageResourceCountryTaxResource.class )
                     
     }
     def getStateTax ( String countryCodeIso3, String stateCode, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/tax/countries/{country_code_iso3}/states/{state_code}"
 
         // query params
@@ -159,13 +171,15 @@ if (!"null".equals(String.valueOf(order)))
 
         
 
+        // Also still TODO: form params, body param
+
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "GET", "",
                     StateTaxResource.class )
                     
     }
     def getStateTaxesForCountries ( Integer size, Integer page, String order, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/tax/states"
 
         // query params
@@ -181,13 +195,15 @@ if (!"null".equals(String.valueOf(order)))
             queryParams.put("order", String.valueOf(order))
 
 
+        // Also still TODO: form params, body param
+
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "GET", "",
                     PageResourceStateTaxResource.class )
                     
     }
     def getStateTaxesForCountry ( String countryCodeIso3, Integer size, Integer page, String order, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/tax/countries/{country_code_iso3}/states"
 
         // query params
@@ -207,13 +223,15 @@ if (!"null".equals(String.valueOf(order)))
             queryParams.put("order", String.valueOf(order))
 
 
+        // Also still TODO: form params, body param
+
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "GET", "",
                     PageResourceStateTaxResource.class )
                     
     }
     def updateCountryTax ( String countryCodeIso3, CountryTaxResource taxResource, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/tax/countries/{country_code_iso3}"
 
         // query params
@@ -227,13 +245,15 @@ if (!"null".equals(String.valueOf(order)))
 
         
 
+        // Also still TODO: form params, body param
+
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "PUT", "",
                     CountryTaxResource.class )
                     
     }
     def updateStateTax ( String countryCodeIso3, String stateCode, StateTaxResource taxResource, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/tax/countries/{country_code_iso3}/states/{state_code}"
 
         // query params
@@ -250,6 +270,8 @@ if (!"null".equals(String.valueOf(order)))
         }
 
         
+
+        // Also still TODO: form params, body param
 
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "PUT", "",

@@ -18,7 +18,7 @@ class LocationsApi {
     String versionPath = "/api/v1"
 
     def getCountries ( Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/location/countries"
 
         // query params
@@ -28,13 +28,15 @@ class LocationsApi {
 
         
 
+        // Also still TODO: form params, body param
+
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "GET", "array",
                     CountryResource.class )
                     
     }
     def getCountryByGeoLocation ( Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/location/geolocation/country"
 
         // query params
@@ -44,13 +46,15 @@ class LocationsApi {
 
         
 
+        // Also still TODO: form params, body param
+
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "GET", "",
                     String.class )
                     
     }
     def getCountryStates ( String countryCodeIso3, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/location/countries/{country_code_iso3}/states"
 
         // query params
@@ -64,13 +68,15 @@ class LocationsApi {
 
         
 
+        // Also still TODO: form params, body param
+
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "GET", "array",
                     StateResource.class )
                     
     }
     def getCurrencyByGeoLocation ( Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/location/geolocation/currency"
 
         // query params
@@ -79,6 +85,8 @@ class LocationsApi {
     
 
         
+
+        // Also still TODO: form params, body param
 
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "GET", "",

@@ -19,7 +19,7 @@ class AuthRolesApi {
     String versionPath = "/api/v1"
 
     def createRole ( RoleResource roleResource, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/auth/roles"
 
         // query params
@@ -29,13 +29,15 @@ class AuthRolesApi {
 
         
 
+        // Also still TODO: form params, body param
+
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "POST", "",
                     RoleResource.class )
                     
     }
     def deleteRole ( String role, Boolean force, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/auth/roles/{role}"
 
         // query params
@@ -51,13 +53,15 @@ class AuthRolesApi {
             queryParams.put("force", String.valueOf(force))
 
 
+        // Also still TODO: form params, body param
+
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "DELETE", "",
                     null )
                     
     }
     def getClientRoles ( String clientKey, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/auth/clients/{client_key}/roles"
 
         // query params
@@ -71,13 +75,15 @@ class AuthRolesApi {
 
         
 
+        // Also still TODO: form params, body param
+
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "GET", "array",
                     RoleResource.class )
                     
     }
     def getRole ( String role, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/auth/roles/{role}"
 
         // query params
@@ -91,13 +97,15 @@ class AuthRolesApi {
 
         
 
+        // Also still TODO: form params, body param
+
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "GET", "",
                     RoleResource.class )
                     
     }
     def getRoles ( Integer size, Integer page, String order, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/auth/roles"
 
         // query params
@@ -113,13 +121,15 @@ if (!"null".equals(String.valueOf(order)))
             queryParams.put("order", String.valueOf(order))
 
 
+        // Also still TODO: form params, body param
+
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "GET", "",
                     PageResourceRoleResource.class )
                     
     }
     def getUserRoles ( Integer userId, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/auth/users/{user_id}/roles"
 
         // query params
@@ -133,13 +143,15 @@ if (!"null".equals(String.valueOf(order)))
 
         
 
+        // Also still TODO: form params, body param
+
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "GET", "array",
                     RoleResource.class )
                     
     }
     def setClientRoles ( String clientKey, List<String> rolesList, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/auth/clients/{client_key}/roles"
 
         // query params
@@ -153,13 +165,15 @@ if (!"null".equals(String.valueOf(order)))
 
         
 
+        // Also still TODO: form params, body param
+
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "PUT", "",
                     ClientResource.class )
                     
     }
     def setPermissionsForRole ( String role, List<String> permissionsList, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/auth/roles/{role}/permissions"
 
         // query params
@@ -173,13 +187,15 @@ if (!"null".equals(String.valueOf(order)))
 
         
 
+        // Also still TODO: form params, body param
+
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "PUT", "",
                     RoleResource.class )
                     
     }
     def setUserRoles ( Integer userId, List<String> rolesList, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/auth/users/{user_id}/roles"
 
         // query params
@@ -193,13 +209,15 @@ if (!"null".equals(String.valueOf(order)))
 
         
 
+        // Also still TODO: form params, body param
+
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "PUT", "",
                     UserResource.class )
                     
     }
     def updateRole ( String role, RoleResource roleResource, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/auth/roles/{role}"
 
         // query params
@@ -212,6 +230,8 @@ if (!"null".equals(String.valueOf(order)))
         }
 
         
+
+        // Also still TODO: form params, body param
 
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "PUT", "",

@@ -19,7 +19,7 @@ class MessagingApi {
     String versionPath = "/api/v1"
 
     def sendRawEmail ( RawEmailResource rawEmailResource, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/messaging/raw-email"
 
         // query params
@@ -29,13 +29,15 @@ class MessagingApi {
 
         
 
+        // Also still TODO: form params, body param
+
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "POST", "",
                     null )
                     
     }
     def sendRawSMS ( RawSMSResource rawSMSResource, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/messaging/raw-sms"
 
         // query params
@@ -45,13 +47,15 @@ class MessagingApi {
 
         
 
+        // Also still TODO: form params, body param
+
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "POST", "",
                     null )
                     
     }
     def sendTemplatedEmail ( TemplateEmailResource messageResource, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/messaging/templated-email"
 
         // query params
@@ -61,13 +65,15 @@ class MessagingApi {
 
         
 
+        // Also still TODO: form params, body param
+
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "POST", "",
                     null )
                     
     }
     def sendTemplatedSMS ( TemplateSMSResource templateSMSResource, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/messaging/templated-sms"
 
         // query params
@@ -76,6 +82,8 @@ class MessagingApi {
     
 
         
+
+        // Also still TODO: form params, body param
 
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "POST", "",

@@ -18,7 +18,7 @@ class DispositionsApi {
     String versionPath = "/api/v1"
 
     def addDisposition ( DispositionResource disposition, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/dispositions"
 
         // query params
@@ -28,13 +28,15 @@ class DispositionsApi {
 
         
 
+        // Also still TODO: form params, body param
+
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "POST", "",
                     DispositionResource.class )
                     
     }
     def deleteDisposition ( Long id, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/dispositions/{id}"
 
         // query params
@@ -47,6 +49,8 @@ class DispositionsApi {
         }
 
         
+
+        // Also still TODO: form params, body param
 
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "DELETE", "",
@@ -54,7 +58,7 @@ class DispositionsApi {
                     
     }
     def getDisposition ( Long id, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/dispositions/{id}"
 
         // query params
@@ -68,13 +72,15 @@ class DispositionsApi {
 
         
 
+        // Also still TODO: form params, body param
+
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "GET", "",
                     DispositionResource.class )
                     
     }
     def getDispositionCounts ( String filterContext, String filterOwner, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/dispositions/count"
 
         // query params
@@ -83,10 +89,12 @@ class DispositionsApi {
     
 
         if (!"null".equals(String.valueOf(filterContext)))
-            queryParams.put("filterContext", String.valueOf(filterContext))
+            queryParams.put("filter_context", String.valueOf(filterContext))
 if (!"null".equals(String.valueOf(filterOwner)))
-            queryParams.put("filterOwner", String.valueOf(filterOwner))
+            queryParams.put("filter_owner", String.valueOf(filterOwner))
 
+
+        // Also still TODO: form params, body param
 
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "GET", "array",
@@ -94,7 +102,7 @@ if (!"null".equals(String.valueOf(filterOwner)))
                     
     }
     def getDispositions ( String filterContext, String filterOwner, Integer size, Integer page, String order, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/dispositions"
 
         // query params
@@ -103,9 +111,9 @@ if (!"null".equals(String.valueOf(filterOwner)))
     
 
         if (!"null".equals(String.valueOf(filterContext)))
-            queryParams.put("filterContext", String.valueOf(filterContext))
+            queryParams.put("filter_context", String.valueOf(filterContext))
 if (!"null".equals(String.valueOf(filterOwner)))
-            queryParams.put("filterOwner", String.valueOf(filterOwner))
+            queryParams.put("filter_owner", String.valueOf(filterOwner))
 if (!"null".equals(String.valueOf(size)))
             queryParams.put("size", String.valueOf(size))
 if (!"null".equals(String.valueOf(page)))
@@ -113,6 +121,8 @@ if (!"null".equals(String.valueOf(page)))
 if (!"null".equals(String.valueOf(order)))
             queryParams.put("order", String.valueOf(order))
 
+
+        // Also still TODO: form params, body param
 
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "GET", "",

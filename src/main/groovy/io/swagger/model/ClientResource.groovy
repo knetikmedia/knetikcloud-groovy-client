@@ -14,7 +14,7 @@ class ClientResource {
   /* The client_id field of the oauth token request */
   String clientKey = null
 
-  /* The oauth grant type as in: password (username/password auth), client_credentials (server-to-server, private clients), refresh_token (to allow clients to refresh their initial token), facebook, google, etc) See documentation for a complete list. use dedicated endpoint PUT /grant-types to edit this list */
+  /* The oauth grant type as in: password (username/password auth), client_credentials (server-to-server, private clients), refresh_token (to allow clients to refresh their initial token), facebook, google, etc) See documentation for a complete list. Use dedicated endpoint PUT /grant-types to edit this list */
   List<String> grantTypes = new ArrayList<String>()
 
   /* Generated unique ID for the client */

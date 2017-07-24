@@ -16,7 +16,7 @@ class SocialFacebookApi {
     String versionPath = "/api/v1"
 
     def linkAccounts ( FacebookToken facebookToken, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/social/facebook/users"
 
         // query params
@@ -25,6 +25,8 @@ class SocialFacebookApi {
     
 
         
+
+        // Also still TODO: form params, body param
 
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "POST", "",

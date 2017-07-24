@@ -16,7 +16,7 @@ class UtilMaintenanceApi {
     String versionPath = "/api/v1"
 
     def deleteMaintenance ( Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/maintenance"
 
         // query params
@@ -25,6 +25,8 @@ class UtilMaintenanceApi {
     
 
         
+
+        // Also still TODO: form params, body param
 
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "DELETE", "",
@@ -32,7 +34,7 @@ class UtilMaintenanceApi {
                     
     }
     def getMaintenance ( Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/maintenance"
 
         // query params
@@ -41,6 +43,8 @@ class UtilMaintenanceApi {
     
 
         
+
+        // Also still TODO: form params, body param
 
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "GET", "",
@@ -48,7 +52,7 @@ class UtilMaintenanceApi {
                     
     }
     def setMaintenance ( Maintenance maintenance, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/maintenance"
 
         // query params
@@ -57,6 +61,8 @@ class UtilMaintenanceApi {
     
 
         
+
+        // Also still TODO: form params, body param
 
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "POST", "",
@@ -64,7 +70,7 @@ class UtilMaintenanceApi {
                     
     }
     def updateMaintenance ( Maintenance maintenance, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/maintenance"
 
         // query params
@@ -73,6 +79,8 @@ class UtilMaintenanceApi {
     
 
         
+
+        // Also still TODO: form params, body param
 
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "PUT", "",

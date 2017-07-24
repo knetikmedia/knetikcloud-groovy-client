@@ -19,7 +19,7 @@ class MediaArtistsApi {
     String versionPath = "/api/v1"
 
     def addArtist ( ArtistResource artistResource, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/media/artists"
 
         // query params
@@ -29,13 +29,15 @@ class MediaArtistsApi {
 
         
 
+        // Also still TODO: form params, body param
+
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "POST", "",
                     ArtistResource.class )
                     
     }
     def createArtistTemplate ( TemplateResource artistTemplateResource, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/media/artists/templates"
 
         // query params
@@ -45,13 +47,15 @@ class MediaArtistsApi {
 
         
 
+        // Also still TODO: form params, body param
+
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "POST", "",
                     TemplateResource.class )
                     
     }
     def deleteArtist ( Long id, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/media/artists/{id}"
 
         // query params
@@ -65,13 +69,15 @@ class MediaArtistsApi {
 
         
 
+        // Also still TODO: form params, body param
+
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "DELETE", "",
                     null )
                     
     }
     def deleteArtistTemplate ( String id, String cascade, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/media/artists/templates/{id}"
 
         // query params
@@ -87,13 +93,15 @@ class MediaArtistsApi {
             queryParams.put("cascade", String.valueOf(cascade))
 
 
+        // Also still TODO: form params, body param
+
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "DELETE", "",
                     null )
                     
     }
     def getArtist ( Long id, Integer showContributions, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/media/artists/{id}"
 
         // query params
@@ -106,8 +114,10 @@ class MediaArtistsApi {
         }
 
         if (!"null".equals(String.valueOf(showContributions)))
-            queryParams.put("showContributions", String.valueOf(showContributions))
+            queryParams.put("show_contributions", String.valueOf(showContributions))
 
+
+        // Also still TODO: form params, body param
 
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "GET", "",
@@ -115,7 +125,7 @@ class MediaArtistsApi {
                     
     }
     def getArtistTemplate ( String id, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/media/artists/templates/{id}"
 
         // query params
@@ -129,13 +139,15 @@ class MediaArtistsApi {
 
         
 
+        // Also still TODO: form params, body param
+
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "GET", "",
                     TemplateResource.class )
                     
     }
     def getArtistTemplates ( Integer size, Integer page, String order, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/media/artists/templates"
 
         // query params
@@ -151,13 +163,15 @@ if (!"null".equals(String.valueOf(order)))
             queryParams.put("order", String.valueOf(order))
 
 
+        // Also still TODO: form params, body param
+
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "GET", "",
                     PageResourceTemplateResource.class )
                     
     }
     def getArtists ( String filterArtistsByName, Integer size, Integer page, String order, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/media/artists"
 
         // query params
@@ -166,7 +180,7 @@ if (!"null".equals(String.valueOf(order)))
     
 
         if (!"null".equals(String.valueOf(filterArtistsByName)))
-            queryParams.put("filterArtistsByName", String.valueOf(filterArtistsByName))
+            queryParams.put("filter_artists_by_name", String.valueOf(filterArtistsByName))
 if (!"null".equals(String.valueOf(size)))
             queryParams.put("size", String.valueOf(size))
 if (!"null".equals(String.valueOf(page)))
@@ -175,13 +189,15 @@ if (!"null".equals(String.valueOf(order)))
             queryParams.put("order", String.valueOf(order))
 
 
+        // Also still TODO: form params, body param
+
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "GET", "",
                     PageResourceArtistResource.class )
                     
     }
     def updateArtist ( Long id, ArtistResource artistResource, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/media/artists/{id}"
 
         // query params
@@ -195,13 +211,15 @@ if (!"null".equals(String.valueOf(order)))
 
         
 
+        // Also still TODO: form params, body param
+
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "PUT", "",
                     null )
                     
     }
     def updateArtistTemplate ( String id, TemplateResource artistTemplateResource, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/media/artists/templates/{id}"
 
         // query params
@@ -214,6 +232,8 @@ if (!"null".equals(String.valueOf(order)))
         }
 
         
+
+        // Also still TODO: form params, body param
 
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "PUT", "",

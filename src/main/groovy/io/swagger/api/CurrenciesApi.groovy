@@ -17,7 +17,7 @@ class CurrenciesApi {
     String versionPath = "/api/v1"
 
     def createCurrency ( CurrencyResource currency, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/currencies"
 
         // query params
@@ -27,13 +27,15 @@ class CurrenciesApi {
 
         
 
+        // Also still TODO: form params, body param
+
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "POST", "",
                     CurrencyResource.class )
                     
     }
     def deleteCurrency ( String code, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/currencies/{code}"
 
         // query params
@@ -47,13 +49,15 @@ class CurrenciesApi {
 
         
 
+        // Also still TODO: form params, body param
+
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "DELETE", "",
                     null )
                     
     }
     def getCurrencies ( Boolean filterEnabledCurrencies, String filterType, Integer size, Integer page, String order, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/currencies"
 
         // query params
@@ -62,9 +66,9 @@ class CurrenciesApi {
     
 
         if (!"null".equals(String.valueOf(filterEnabledCurrencies)))
-            queryParams.put("filterEnabledCurrencies", String.valueOf(filterEnabledCurrencies))
+            queryParams.put("filter_enabled_currencies", String.valueOf(filterEnabledCurrencies))
 if (!"null".equals(String.valueOf(filterType)))
-            queryParams.put("filterType", String.valueOf(filterType))
+            queryParams.put("filter_type", String.valueOf(filterType))
 if (!"null".equals(String.valueOf(size)))
             queryParams.put("size", String.valueOf(size))
 if (!"null".equals(String.valueOf(page)))
@@ -73,13 +77,15 @@ if (!"null".equals(String.valueOf(order)))
             queryParams.put("order", String.valueOf(order))
 
 
+        // Also still TODO: form params, body param
+
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "GET", "",
                     PageResourceCurrencyResource.class )
                     
     }
     def getCurrency ( String code, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/currencies/{code}"
 
         // query params
@@ -92,6 +98,8 @@ if (!"null".equals(String.valueOf(order)))
         }
 
         
+
+        // Also still TODO: form params, body param
 
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "GET", "",
@@ -99,7 +107,7 @@ if (!"null".equals(String.valueOf(order)))
                     
     }
     def updateCurrency ( String code, CurrencyResource currency, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/currencies/{code}"
 
         // query params
@@ -112,6 +120,8 @@ if (!"null".equals(String.valueOf(order)))
         }
 
         
+
+        // Also still TODO: form params, body param
 
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "PUT", "",

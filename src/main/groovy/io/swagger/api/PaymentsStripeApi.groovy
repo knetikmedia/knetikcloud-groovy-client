@@ -18,7 +18,7 @@ class PaymentsStripeApi {
     String versionPath = "/api/v1"
 
     def createStripePaymentMethod ( StripeCreatePaymentMethod request, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/payment/provider/stripe/payment-methods"
 
         // query params
@@ -28,13 +28,15 @@ class PaymentsStripeApi {
 
         
 
+        // Also still TODO: form params, body param
+
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "POST", "",
                     PaymentMethodResource.class )
                     
     }
     def payStripeInvoice ( StripePaymentRequest request, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/payment/provider/stripe/payments"
 
         // query params
@@ -43,6 +45,8 @@ class PaymentsStripeApi {
     
 
         
+
+        // Also still TODO: form params, body param
 
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "POST", "",

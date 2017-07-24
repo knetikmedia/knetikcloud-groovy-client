@@ -18,7 +18,7 @@ class StoreCouponsApi {
     String versionPath = "/api/v1"
 
     def createCouponItem ( Boolean cascade, CouponItem couponItem, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/store/coupons"
 
         // query params
@@ -30,13 +30,15 @@ class StoreCouponsApi {
             queryParams.put("cascade", String.valueOf(cascade))
 
 
+        // Also still TODO: form params, body param
+
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "POST", "",
                     CouponItem.class )
                     
     }
     def createCouponTemplate ( ItemTemplateResource couponTemplateResource, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/store/coupons/templates"
 
         // query params
@@ -46,13 +48,15 @@ class StoreCouponsApi {
 
         
 
+        // Also still TODO: form params, body param
+
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "POST", "",
                     ItemTemplateResource.class )
                     
     }
     def deleteCouponItem ( Integer id, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/store/coupons/{id}"
 
         // query params
@@ -66,13 +70,15 @@ class StoreCouponsApi {
 
         
 
+        // Also still TODO: form params, body param
+
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "DELETE", "",
                     null )
                     
     }
     def deleteCouponTemplate ( String id, String cascade, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/store/coupons/templates/{id}"
 
         // query params
@@ -88,13 +94,15 @@ class StoreCouponsApi {
             queryParams.put("cascade", String.valueOf(cascade))
 
 
+        // Also still TODO: form params, body param
+
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "DELETE", "",
                     null )
                     
     }
     def getCouponItem ( Integer id, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/store/coupons/{id}"
 
         // query params
@@ -108,13 +116,15 @@ class StoreCouponsApi {
 
         
 
+        // Also still TODO: form params, body param
+
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "GET", "",
                     CouponItem.class )
                     
     }
     def getCouponTemplate ( String id, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/store/coupons/templates/{id}"
 
         // query params
@@ -128,13 +138,15 @@ class StoreCouponsApi {
 
         
 
+        // Also still TODO: form params, body param
+
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "GET", "",
                     ItemTemplateResource.class )
                     
     }
     def getCouponTemplates ( Integer size, Integer page, String order, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/store/coupons/templates"
 
         // query params
@@ -150,13 +162,15 @@ if (!"null".equals(String.valueOf(order)))
             queryParams.put("order", String.valueOf(order))
 
 
+        // Also still TODO: form params, body param
+
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "GET", "",
                     PageResourceItemTemplateResource.class )
                     
     }
     def updateCouponItem ( Integer id, Boolean cascade, CouponItem couponItem, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/store/coupons/{id}"
 
         // query params
@@ -172,13 +186,15 @@ if (!"null".equals(String.valueOf(order)))
             queryParams.put("cascade", String.valueOf(cascade))
 
 
+        // Also still TODO: form params, body param
+
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "PUT", "",
                     CouponItem.class )
                     
     }
     def updateCouponTemplate ( String id, ItemTemplateResource couponTemplateResource, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/store/coupons/templates/{id}"
 
         // query params
@@ -191,6 +207,8 @@ if (!"null".equals(String.valueOf(order)))
         }
 
         
+
+        // Also still TODO: form params, body param
 
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "PUT", "",

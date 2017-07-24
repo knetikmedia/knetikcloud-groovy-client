@@ -16,7 +16,7 @@ class ReportingUsageApi {
     String versionPath = "/api/v1"
 
     def getUsageByDay ( Long startDate, Long endDate, Boolean combineEndpoints, String method, String url, Integer size, Integer page, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/reporting/usage/day"
 
         // query params
@@ -33,11 +33,11 @@ class ReportingUsageApi {
         }
 
         if (!"null".equals(String.valueOf(startDate)))
-            queryParams.put("startDate", String.valueOf(startDate))
+            queryParams.put("start_date", String.valueOf(startDate))
 if (!"null".equals(String.valueOf(endDate)))
-            queryParams.put("endDate", String.valueOf(endDate))
+            queryParams.put("end_date", String.valueOf(endDate))
 if (!"null".equals(String.valueOf(combineEndpoints)))
-            queryParams.put("combineEndpoints", String.valueOf(combineEndpoints))
+            queryParams.put("combine_endpoints", String.valueOf(combineEndpoints))
 if (!"null".equals(String.valueOf(method)))
             queryParams.put("method", String.valueOf(method))
 if (!"null".equals(String.valueOf(url)))
@@ -48,13 +48,15 @@ if (!"null".equals(String.valueOf(page)))
             queryParams.put("page", String.valueOf(page))
 
 
+        // Also still TODO: form params, body param
+
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "GET", "",
                     PageResourceUsageInfo.class )
                     
     }
     def getUsageByHour ( Long startDate, Long endDate, Boolean combineEndpoints, String method, String url, Integer size, Integer page, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/reporting/usage/hour"
 
         // query params
@@ -71,11 +73,11 @@ if (!"null".equals(String.valueOf(page)))
         }
 
         if (!"null".equals(String.valueOf(startDate)))
-            queryParams.put("startDate", String.valueOf(startDate))
+            queryParams.put("start_date", String.valueOf(startDate))
 if (!"null".equals(String.valueOf(endDate)))
-            queryParams.put("endDate", String.valueOf(endDate))
+            queryParams.put("end_date", String.valueOf(endDate))
 if (!"null".equals(String.valueOf(combineEndpoints)))
-            queryParams.put("combineEndpoints", String.valueOf(combineEndpoints))
+            queryParams.put("combine_endpoints", String.valueOf(combineEndpoints))
 if (!"null".equals(String.valueOf(method)))
             queryParams.put("method", String.valueOf(method))
 if (!"null".equals(String.valueOf(url)))
@@ -86,13 +88,15 @@ if (!"null".equals(String.valueOf(page)))
             queryParams.put("page", String.valueOf(page))
 
 
+        // Also still TODO: form params, body param
+
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "GET", "",
                     PageResourceUsageInfo.class )
                     
     }
     def getUsageByMinute ( Long startDate, Long endDate, Boolean combineEndpoints, String method, String url, Integer size, Integer page, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/reporting/usage/minute"
 
         // query params
@@ -109,11 +113,11 @@ if (!"null".equals(String.valueOf(page)))
         }
 
         if (!"null".equals(String.valueOf(startDate)))
-            queryParams.put("startDate", String.valueOf(startDate))
+            queryParams.put("start_date", String.valueOf(startDate))
 if (!"null".equals(String.valueOf(endDate)))
-            queryParams.put("endDate", String.valueOf(endDate))
+            queryParams.put("end_date", String.valueOf(endDate))
 if (!"null".equals(String.valueOf(combineEndpoints)))
-            queryParams.put("combineEndpoints", String.valueOf(combineEndpoints))
+            queryParams.put("combine_endpoints", String.valueOf(combineEndpoints))
 if (!"null".equals(String.valueOf(method)))
             queryParams.put("method", String.valueOf(method))
 if (!"null".equals(String.valueOf(url)))
@@ -124,13 +128,15 @@ if (!"null".equals(String.valueOf(page)))
             queryParams.put("page", String.valueOf(page))
 
 
+        // Also still TODO: form params, body param
+
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "GET", "",
                     PageResourceUsageInfo.class )
                     
     }
     def getUsageByMonth ( Long startDate, Long endDate, Boolean combineEndpoints, String method, String url, Integer size, Integer page, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/reporting/usage/month"
 
         // query params
@@ -147,11 +153,11 @@ if (!"null".equals(String.valueOf(page)))
         }
 
         if (!"null".equals(String.valueOf(startDate)))
-            queryParams.put("startDate", String.valueOf(startDate))
+            queryParams.put("start_date", String.valueOf(startDate))
 if (!"null".equals(String.valueOf(endDate)))
-            queryParams.put("endDate", String.valueOf(endDate))
+            queryParams.put("end_date", String.valueOf(endDate))
 if (!"null".equals(String.valueOf(combineEndpoints)))
-            queryParams.put("combineEndpoints", String.valueOf(combineEndpoints))
+            queryParams.put("combine_endpoints", String.valueOf(combineEndpoints))
 if (!"null".equals(String.valueOf(method)))
             queryParams.put("method", String.valueOf(method))
 if (!"null".equals(String.valueOf(url)))
@@ -162,13 +168,15 @@ if (!"null".equals(String.valueOf(page)))
             queryParams.put("page", String.valueOf(page))
 
 
+        // Also still TODO: form params, body param
+
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "GET", "",
                     PageResourceUsageInfo.class )
                     
     }
     def getUsageByYear ( Long startDate, Long endDate, Boolean combineEndpoints, String method, String url, Integer size, Integer page, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/reporting/usage/year"
 
         // query params
@@ -185,11 +193,11 @@ if (!"null".equals(String.valueOf(page)))
         }
 
         if (!"null".equals(String.valueOf(startDate)))
-            queryParams.put("startDate", String.valueOf(startDate))
+            queryParams.put("start_date", String.valueOf(startDate))
 if (!"null".equals(String.valueOf(endDate)))
-            queryParams.put("endDate", String.valueOf(endDate))
+            queryParams.put("end_date", String.valueOf(endDate))
 if (!"null".equals(String.valueOf(combineEndpoints)))
-            queryParams.put("combineEndpoints", String.valueOf(combineEndpoints))
+            queryParams.put("combine_endpoints", String.valueOf(combineEndpoints))
 if (!"null".equals(String.valueOf(method)))
             queryParams.put("method", String.valueOf(method))
 if (!"null".equals(String.valueOf(url)))
@@ -200,13 +208,15 @@ if (!"null".equals(String.valueOf(page)))
             queryParams.put("page", String.valueOf(page))
 
 
+        // Also still TODO: form params, body param
+
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "GET", "",
                     PageResourceUsageInfo.class )
                     
     }
     def getUsageEndpoints ( Long startDate, Long endDate, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/reporting/usage/endpoints"
 
         // query params
@@ -223,10 +233,12 @@ if (!"null".equals(String.valueOf(page)))
         }
 
         if (!"null".equals(String.valueOf(startDate)))
-            queryParams.put("startDate", String.valueOf(startDate))
+            queryParams.put("start_date", String.valueOf(startDate))
 if (!"null".equals(String.valueOf(endDate)))
-            queryParams.put("endDate", String.valueOf(endDate))
+            queryParams.put("end_date", String.valueOf(endDate))
 
+
+        // Also still TODO: form params, body param
 
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "GET", "array",

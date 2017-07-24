@@ -17,7 +17,7 @@ class FulfillmentApi {
     String versionPath = "/api/v1"
 
     def createFulfillmentType ( FulfillmentType type, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/store/fulfillment/types"
 
         // query params
@@ -27,13 +27,15 @@ class FulfillmentApi {
 
         
 
+        // Also still TODO: form params, body param
+
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "POST", "",
                     FulfillmentType.class )
                     
     }
     def deleteFulfillmentType ( Integer id, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/store/fulfillment/types/{id}"
 
         // query params
@@ -46,6 +48,8 @@ class FulfillmentApi {
         }
 
         
+
+        // Also still TODO: form params, body param
 
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "DELETE", "",
@@ -53,7 +57,7 @@ class FulfillmentApi {
                     
     }
     def getFulfillmentType ( Integer id, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/store/fulfillment/types/{id}"
 
         // query params
@@ -67,13 +71,15 @@ class FulfillmentApi {
 
         
 
+        // Also still TODO: form params, body param
+
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "GET", "",
                     FulfillmentType.class )
                     
     }
     def getFulfillmentTypes ( Integer size, Integer page, String order, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/store/fulfillment/types"
 
         // query params
@@ -89,13 +95,15 @@ if (!"null".equals(String.valueOf(order)))
             queryParams.put("order", String.valueOf(order))
 
 
+        // Also still TODO: form params, body param
+
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "GET", "",
                     PageResourceFulfillmentType.class )
                     
     }
     def updateFulfillmentType ( Integer id, FulfillmentType fulfillmentType, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/store/fulfillment/types/{id}"
 
         // query params
@@ -108,6 +116,8 @@ if (!"null".equals(String.valueOf(order)))
         }
 
         
+
+        // Also still TODO: form params, body param
 
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "PUT", "",

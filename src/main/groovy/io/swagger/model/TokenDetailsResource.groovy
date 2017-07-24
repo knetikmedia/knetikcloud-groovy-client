@@ -8,6 +8,8 @@ import java.util.List;
 @Canonical
 class TokenDetailsResource {
 
+    String clientId = null
+
     List<String> roles = new ArrayList<String>()
 
     Integer userId = null

@@ -20,7 +20,7 @@ class StoreApi {
     String versionPath = "/api/v1"
 
     def createItemTemplate ( StoreItemTemplateResource itemTemplateResource, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/store/items/templates"
 
         // query params
@@ -30,13 +30,15 @@ class StoreApi {
 
         
 
+        // Also still TODO: form params, body param
+
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "POST", "",
                     StoreItemTemplateResource.class )
                     
     }
     def createStoreItem ( Boolean cascade, StoreItem storeItem, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/store/items"
 
         // query params
@@ -48,13 +50,15 @@ class StoreApi {
             queryParams.put("cascade", String.valueOf(cascade))
 
 
+        // Also still TODO: form params, body param
+
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "POST", "",
                     StoreItem.class )
                     
     }
     def deleteItemTemplate ( String id, String cascade, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/store/items/templates/{id}"
 
         // query params
@@ -70,13 +74,15 @@ class StoreApi {
             queryParams.put("cascade", String.valueOf(cascade))
 
 
+        // Also still TODO: form params, body param
+
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "DELETE", "",
                     null )
                     
     }
     def deleteStoreItem ( Integer id, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/store/items/{id}"
 
         // query params
@@ -90,13 +96,15 @@ class StoreApi {
 
         
 
+        // Also still TODO: form params, body param
+
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "DELETE", "",
                     null )
                     
     }
     def getBehaviors ( Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/store/items/behaviors"
 
         // query params
@@ -106,13 +114,15 @@ class StoreApi {
 
         
 
+        // Also still TODO: form params, body param
+
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "GET", "array",
                     BehaviorDefinitionResource.class )
                     
     }
     def getItemTemplate ( String id, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/store/items/templates/{id}"
 
         // query params
@@ -126,13 +136,15 @@ class StoreApi {
 
         
 
+        // Also still TODO: form params, body param
+
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "GET", "",
                     StoreItemTemplateResource.class )
                     
     }
     def getItemTemplates ( Integer size, Integer page, String order, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/store/items/templates"
 
         // query params
@@ -148,13 +160,15 @@ if (!"null".equals(String.valueOf(order)))
             queryParams.put("order", String.valueOf(order))
 
 
+        // Also still TODO: form params, body param
+
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "GET", "",
                     PageResourceStoreItemTemplateResource.class )
                     
     }
     def getStore ( Integer limit, Integer page, Boolean useCatalog, Boolean ignoreLocation, Boolean inStockOnly, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/store"
 
         // query params
@@ -167,12 +181,14 @@ if (!"null".equals(String.valueOf(order)))
 if (!"null".equals(String.valueOf(page)))
             queryParams.put("page", String.valueOf(page))
 if (!"null".equals(String.valueOf(useCatalog)))
-            queryParams.put("useCatalog", String.valueOf(useCatalog))
+            queryParams.put("use_catalog", String.valueOf(useCatalog))
 if (!"null".equals(String.valueOf(ignoreLocation)))
-            queryParams.put("ignoreLocation", String.valueOf(ignoreLocation))
+            queryParams.put("ignore_location", String.valueOf(ignoreLocation))
 if (!"null".equals(String.valueOf(inStockOnly)))
-            queryParams.put("inStockOnly", String.valueOf(inStockOnly))
+            queryParams.put("in_stock_only", String.valueOf(inStockOnly))
 
+
+        // Also still TODO: form params, body param
 
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "GET", "",
@@ -180,7 +196,7 @@ if (!"null".equals(String.valueOf(inStockOnly)))
                     
     }
     def getStoreItem ( Integer id, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/store/items/{id}"
 
         // query params
@@ -194,13 +210,15 @@ if (!"null".equals(String.valueOf(inStockOnly)))
 
         
 
+        // Also still TODO: form params, body param
+
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "GET", "",
                     StoreItem.class )
                     
     }
     def getStoreItems ( String filterNameSearch, String filterUniqueKey, Boolean filterPublished, Boolean filterDisplayable, String filterStart, String filterEnd, String filterStartDate, String filterStopDate, String filterSku, String filterPrice, String filterTag, String filterItemsByType, String filterBundledSkus, Integer filterVendor, Integer size, Integer page, String order, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/store/items"
 
         // query params
@@ -209,33 +227,33 @@ if (!"null".equals(String.valueOf(inStockOnly)))
     
 
         if (!"null".equals(String.valueOf(filterNameSearch)))
-            queryParams.put("filterNameSearch", String.valueOf(filterNameSearch))
+            queryParams.put("filter_name_search", String.valueOf(filterNameSearch))
 if (!"null".equals(String.valueOf(filterUniqueKey)))
-            queryParams.put("filterUniqueKey", String.valueOf(filterUniqueKey))
+            queryParams.put("filter_unique_key", String.valueOf(filterUniqueKey))
 if (!"null".equals(String.valueOf(filterPublished)))
-            queryParams.put("filterPublished", String.valueOf(filterPublished))
+            queryParams.put("filter_published", String.valueOf(filterPublished))
 if (!"null".equals(String.valueOf(filterDisplayable)))
-            queryParams.put("filterDisplayable", String.valueOf(filterDisplayable))
+            queryParams.put("filter_displayable", String.valueOf(filterDisplayable))
 if (!"null".equals(String.valueOf(filterStart)))
-            queryParams.put("filterStart", String.valueOf(filterStart))
+            queryParams.put("filter_start", String.valueOf(filterStart))
 if (!"null".equals(String.valueOf(filterEnd)))
-            queryParams.put("filterEnd", String.valueOf(filterEnd))
+            queryParams.put("filter_end", String.valueOf(filterEnd))
 if (!"null".equals(String.valueOf(filterStartDate)))
-            queryParams.put("filterStartDate", String.valueOf(filterStartDate))
+            queryParams.put("filter_start_date", String.valueOf(filterStartDate))
 if (!"null".equals(String.valueOf(filterStopDate)))
-            queryParams.put("filterStopDate", String.valueOf(filterStopDate))
+            queryParams.put("filter_stop_date", String.valueOf(filterStopDate))
 if (!"null".equals(String.valueOf(filterSku)))
-            queryParams.put("filterSku", String.valueOf(filterSku))
+            queryParams.put("filter_sku", String.valueOf(filterSku))
 if (!"null".equals(String.valueOf(filterPrice)))
-            queryParams.put("filterPrice", String.valueOf(filterPrice))
+            queryParams.put("filter_price", String.valueOf(filterPrice))
 if (!"null".equals(String.valueOf(filterTag)))
-            queryParams.put("filterTag", String.valueOf(filterTag))
+            queryParams.put("filter_tag", String.valueOf(filterTag))
 if (!"null".equals(String.valueOf(filterItemsByType)))
-            queryParams.put("filterItemsByType", String.valueOf(filterItemsByType))
+            queryParams.put("filter_items_by_type", String.valueOf(filterItemsByType))
 if (!"null".equals(String.valueOf(filterBundledSkus)))
-            queryParams.put("filterBundledSkus", String.valueOf(filterBundledSkus))
+            queryParams.put("filter_bundled_skus", String.valueOf(filterBundledSkus))
 if (!"null".equals(String.valueOf(filterVendor)))
-            queryParams.put("filterVendor", String.valueOf(filterVendor))
+            queryParams.put("filter_vendor", String.valueOf(filterVendor))
 if (!"null".equals(String.valueOf(size)))
             queryParams.put("size", String.valueOf(size))
 if (!"null".equals(String.valueOf(page)))
@@ -244,13 +262,15 @@ if (!"null".equals(String.valueOf(order)))
             queryParams.put("order", String.valueOf(order))
 
 
+        // Also still TODO: form params, body param
+
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "GET", "",
                     PageResourceStoreItem.class )
                     
     }
     def updateItemTemplate ( String id, StoreItemTemplateResource itemTemplateResource, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/store/items/templates/{id}"
 
         // query params
@@ -264,13 +284,15 @@ if (!"null".equals(String.valueOf(order)))
 
         
 
+        // Also still TODO: form params, body param
+
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "PUT", "",
                     StoreItemTemplateResource.class )
                     
     }
     def updateStoreItem ( Integer id, Boolean cascade, StoreItem storeItem, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/store/items/{id}"
 
         // query params
@@ -285,6 +307,8 @@ if (!"null".equals(String.valueOf(order)))
         if (!"null".equals(String.valueOf(cascade)))
             queryParams.put("cascade", String.valueOf(cascade))
 
+
+        // Also still TODO: form params, body param
 
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "PUT", "",

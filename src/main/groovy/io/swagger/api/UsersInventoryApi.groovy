@@ -25,7 +25,7 @@ class UsersInventoryApi {
     String versionPath = "/api/v1"
 
     def addItemToUserInventory ( Integer id, UserInventoryAddRequest userInventoryAddRequest, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/users/{id}/inventory"
 
         // query params
@@ -39,13 +39,15 @@ class UsersInventoryApi {
 
         
 
+        // Also still TODO: form params, body param
+
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "POST", "",
                     InvoiceResource.class )
                     
     }
     def checkUserEntitlementItem ( String userId, Integer itemId, String sku, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/users/{user_id}/entitlements/{item_id}/check"
 
         // query params
@@ -65,13 +67,15 @@ class UsersInventoryApi {
             queryParams.put("sku", String.valueOf(sku))
 
 
+        // Also still TODO: form params, body param
+
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "GET", "",
                     null )
                     
     }
     def createEntitlementItem ( Boolean cascade, EntitlementItem entitlementItem, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/entitlements"
 
         // query params
@@ -82,6 +86,8 @@ class UsersInventoryApi {
         if (!"null".equals(String.valueOf(cascade)))
             queryParams.put("cascade", String.valueOf(cascade))
 
+
+        // Also still TODO: form params, body param
 
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "POST", "",
@@ -89,7 +95,7 @@ class UsersInventoryApi {
                     
     }
     def createEntitlementTemplate ( ItemTemplateResource template, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/entitlements/templates"
 
         // query params
@@ -99,13 +105,15 @@ class UsersInventoryApi {
 
         
 
+        // Also still TODO: form params, body param
+
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "POST", "",
                     ItemTemplateResource.class )
                     
     }
     def deleteEntitlementItem ( Integer entitlementId, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/entitlements/{entitlement_id}"
 
         // query params
@@ -119,13 +127,15 @@ class UsersInventoryApi {
 
         
 
+        // Also still TODO: form params, body param
+
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "DELETE", "",
                     null )
                     
     }
     def deleteEntitlementTemplate ( String id, String cascade, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/entitlements/templates/{id}"
 
         // query params
@@ -141,13 +151,15 @@ class UsersInventoryApi {
             queryParams.put("cascade", String.valueOf(cascade))
 
 
+        // Also still TODO: form params, body param
+
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "DELETE", "",
                     null )
                     
     }
     def getEntitlementItem ( Integer entitlementId, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/entitlements/{entitlement_id}"
 
         // query params
@@ -161,13 +173,15 @@ class UsersInventoryApi {
 
         
 
+        // Also still TODO: form params, body param
+
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "GET", "",
                     EntitlementItem.class )
                     
     }
     def getEntitlementItems ( Integer size, Integer page, String order, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/entitlements"
 
         // query params
@@ -183,13 +197,15 @@ if (!"null".equals(String.valueOf(order)))
             queryParams.put("order", String.valueOf(order))
 
 
+        // Also still TODO: form params, body param
+
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "GET", "",
                     PageResourceEntitlementItem.class )
                     
     }
     def getEntitlementTemplate ( String id, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/entitlements/templates/{id}"
 
         // query params
@@ -203,13 +219,15 @@ if (!"null".equals(String.valueOf(order)))
 
         
 
+        // Also still TODO: form params, body param
+
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "GET", "",
                     ItemTemplateResource.class )
                     
     }
     def getEntitlementTemplates ( Integer size, Integer page, String order, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/entitlements/templates"
 
         // query params
@@ -225,13 +243,15 @@ if (!"null".equals(String.valueOf(order)))
             queryParams.put("order", String.valueOf(order))
 
 
+        // Also still TODO: form params, body param
+
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "GET", "",
                     PageResourceItemTemplateResource.class )
                     
     }
     def getUserInventories ( Integer id, Boolean inactive, Integer size, Integer page, String filterItemName, Integer filterItemId, String filterUsername, String filterGroup, String filterDate, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/users/{id}/inventory"
 
         // query params
@@ -250,16 +270,18 @@ if (!"null".equals(String.valueOf(size)))
 if (!"null".equals(String.valueOf(page)))
             queryParams.put("page", String.valueOf(page))
 if (!"null".equals(String.valueOf(filterItemName)))
-            queryParams.put("filterItemName", String.valueOf(filterItemName))
+            queryParams.put("filter_item_name", String.valueOf(filterItemName))
 if (!"null".equals(String.valueOf(filterItemId)))
-            queryParams.put("filterItemId", String.valueOf(filterItemId))
+            queryParams.put("filter_item_id", String.valueOf(filterItemId))
 if (!"null".equals(String.valueOf(filterUsername)))
-            queryParams.put("filterUsername", String.valueOf(filterUsername))
+            queryParams.put("filter_username", String.valueOf(filterUsername))
 if (!"null".equals(String.valueOf(filterGroup)))
-            queryParams.put("filterGroup", String.valueOf(filterGroup))
+            queryParams.put("filter_group", String.valueOf(filterGroup))
 if (!"null".equals(String.valueOf(filterDate)))
-            queryParams.put("filterDate", String.valueOf(filterDate))
+            queryParams.put("filter_date", String.valueOf(filterDate))
 
+
+        // Also still TODO: form params, body param
 
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "GET", "",
@@ -267,7 +289,7 @@ if (!"null".equals(String.valueOf(filterDate)))
                     
     }
     def getUserInventory ( Integer userId, Integer id, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/users/{user_id}/inventory/{id}"
 
         // query params
@@ -285,13 +307,15 @@ if (!"null".equals(String.valueOf(filterDate)))
 
         
 
+        // Also still TODO: form params, body param
+
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "GET", "",
                     UserInventoryResource.class )
                     
     }
     def getUserInventoryLog ( String userId, Integer id, Integer size, Integer page, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/users/{user_id}/inventory/{id}/log"
 
         // query params
@@ -313,13 +337,15 @@ if (!"null".equals(String.valueOf(page)))
             queryParams.put("page", String.valueOf(page))
 
 
+        // Also still TODO: form params, body param
+
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "GET", "",
                     PageResourceUserItemLogResource.class )
                     
     }
     def getUsersInventory ( Boolean inactive, Integer size, Integer page, String filterItemName, Integer filterItemId, String filterUsername, String filterGroup, String filterDate, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/inventories"
 
         // query params
@@ -334,16 +360,18 @@ if (!"null".equals(String.valueOf(size)))
 if (!"null".equals(String.valueOf(page)))
             queryParams.put("page", String.valueOf(page))
 if (!"null".equals(String.valueOf(filterItemName)))
-            queryParams.put("filterItemName", String.valueOf(filterItemName))
+            queryParams.put("filter_item_name", String.valueOf(filterItemName))
 if (!"null".equals(String.valueOf(filterItemId)))
-            queryParams.put("filterItemId", String.valueOf(filterItemId))
+            queryParams.put("filter_item_id", String.valueOf(filterItemId))
 if (!"null".equals(String.valueOf(filterUsername)))
-            queryParams.put("filterUsername", String.valueOf(filterUsername))
+            queryParams.put("filter_username", String.valueOf(filterUsername))
 if (!"null".equals(String.valueOf(filterGroup)))
-            queryParams.put("filterGroup", String.valueOf(filterGroup))
+            queryParams.put("filter_group", String.valueOf(filterGroup))
 if (!"null".equals(String.valueOf(filterDate)))
-            queryParams.put("filterDate", String.valueOf(filterDate))
+            queryParams.put("filter_date", String.valueOf(filterDate))
 
+
+        // Also still TODO: form params, body param
 
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "GET", "",
@@ -351,7 +379,7 @@ if (!"null".equals(String.valueOf(filterDate)))
                     
     }
     def grantUserEntitlement ( Integer userId, EntitlementGrantRequest grantRequest, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/users/{user_id}/entitlements"
 
         // query params
@@ -369,13 +397,15 @@ if (!"null".equals(String.valueOf(filterDate)))
 
         
 
+        // Also still TODO: form params, body param
+
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "POST", "",
                     null )
                     
     }
     def updateEntitlementItem ( Integer entitlementId, Boolean cascade, EntitlementItem entitlementItem, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/entitlements/{entitlement_id}"
 
         // query params
@@ -391,13 +421,15 @@ if (!"null".equals(String.valueOf(filterDate)))
             queryParams.put("cascade", String.valueOf(cascade))
 
 
+        // Also still TODO: form params, body param
+
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "PUT", "",
                     null )
                     
     }
     def updateEntitlementTemplate ( String id, ItemTemplateResource template, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/entitlements/templates/{id}"
 
         // query params
@@ -411,13 +443,15 @@ if (!"null".equals(String.valueOf(filterDate)))
 
         
 
+        // Also still TODO: form params, body param
+
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "PUT", "",
                     ItemTemplateResource.class )
                     
     }
     def updateUserInventoryBehaviorData ( Integer userId, Integer id, Object data, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/users/{user_id}/inventory/{id}/behavior-data"
 
         // query params
@@ -435,13 +469,15 @@ if (!"null".equals(String.valueOf(filterDate)))
 
         
 
+        // Also still TODO: form params, body param
+
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "PUT", "",
                     null )
                     
     }
     def updateUserInventoryExpires ( Integer userId, Integer id, Long timestamp, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/users/{user_id}/inventory/{id}/expires"
 
         // query params
@@ -459,13 +495,15 @@ if (!"null".equals(String.valueOf(filterDate)))
 
         
 
+        // Also still TODO: form params, body param
+
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "PUT", "",
                     null )
                     
     }
     def updateUserInventoryStatus ( Integer userId, Integer id, String inventoryStatus, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/users/{user_id}/inventory/{id}/status"
 
         // query params
@@ -483,13 +521,15 @@ if (!"null".equals(String.valueOf(filterDate)))
 
         
 
+        // Also still TODO: form params, body param
+
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "PUT", "",
                     null )
                     
     }
     def useUserEntitlementItem ( String userId, Integer itemId, String sku, String info, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/users/{user_id}/entitlements/{item_id}/use"
 
         // query params
@@ -510,6 +550,8 @@ if (!"null".equals(String.valueOf(filterDate)))
 if (!"null".equals(String.valueOf(info)))
             queryParams.put("info", String.valueOf(info))
 
+
+        // Also still TODO: form params, body param
 
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "POST", "",

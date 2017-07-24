@@ -17,7 +17,7 @@ class AuthTokensApi {
     String versionPath = "/api/v1"
 
     def deleteTokens ( String username, String clientId, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/auth/tokens"
 
         // query params
@@ -28,8 +28,10 @@ class AuthTokensApi {
         if (!"null".equals(String.valueOf(username)))
             queryParams.put("username", String.valueOf(username))
 if (!"null".equals(String.valueOf(clientId)))
-            queryParams.put("clientId", String.valueOf(clientId))
+            queryParams.put("client_id", String.valueOf(clientId))
 
+
+        // Also still TODO: form params, body param
 
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "DELETE", "",
@@ -37,7 +39,7 @@ if (!"null".equals(String.valueOf(clientId)))
                     
     }
     def getToken ( String username, String clientId, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/auth/tokens/{username}/{client_id}"
 
         // query params
@@ -55,13 +57,15 @@ if (!"null".equals(String.valueOf(clientId)))
 
         
 
+        // Also still TODO: form params, body param
+
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "GET", "",
                     OauthAccessTokenResource.class )
                     
     }
     def getTokens ( String filterClientId, String filterUsername, Integer size, Integer page, String order, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/auth/tokens"
 
         // query params
@@ -70,9 +74,9 @@ if (!"null".equals(String.valueOf(clientId)))
     
 
         if (!"null".equals(String.valueOf(filterClientId)))
-            queryParams.put("filterClientId", String.valueOf(filterClientId))
+            queryParams.put("filter_client_id", String.valueOf(filterClientId))
 if (!"null".equals(String.valueOf(filterUsername)))
-            queryParams.put("filterUsername", String.valueOf(filterUsername))
+            queryParams.put("filter_username", String.valueOf(filterUsername))
 if (!"null".equals(String.valueOf(size)))
             queryParams.put("size", String.valueOf(size))
 if (!"null".equals(String.valueOf(page)))
@@ -80,6 +84,8 @@ if (!"null".equals(String.valueOf(page)))
 if (!"null".equals(String.valueOf(order)))
             queryParams.put("order", String.valueOf(order))
 
+
+        // Also still TODO: form params, body param
 
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "GET", "",

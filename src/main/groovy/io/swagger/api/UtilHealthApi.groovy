@@ -15,7 +15,7 @@ class UtilHealthApi {
     String versionPath = "/api/v1"
 
     def getHealth ( Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/health"
 
         // query params
@@ -24,6 +24,8 @@ class UtilHealthApi {
     
 
         
+
+        // Also still TODO: form params, body param
 
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "GET", "",

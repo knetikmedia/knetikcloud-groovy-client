@@ -18,7 +18,7 @@ class DevicesApi {
     String versionPath = "/api/v1"
 
     def addDeviceUsers ( List<SimpleUserResource> userResources, Integer id, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/devices/{id}/users"
 
         // query params
@@ -36,13 +36,15 @@ class DevicesApi {
 
         
 
+        // Also still TODO: form params, body param
+
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "POST", "",
                     DeviceResource.class )
                     
     }
     def createDevice ( DeviceResource device, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/devices"
 
         // query params
@@ -56,13 +58,15 @@ class DevicesApi {
 
         
 
+        // Also still TODO: form params, body param
+
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "POST", "",
                     DeviceResource.class )
                     
     }
     def deleteDevice ( Integer id, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/devices/{id}"
 
         // query params
@@ -76,13 +80,15 @@ class DevicesApi {
 
         
 
+        // Also still TODO: form params, body param
+
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "DELETE", "",
                     null )
                     
     }
     def deleteDeviceUser ( Integer id, Integer userId, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/devices/{id}/users/{user_id}"
 
         // query params
@@ -100,13 +106,15 @@ class DevicesApi {
 
         
 
+        // Also still TODO: form params, body param
+
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "DELETE", "",
                     null )
                     
     }
     def deleteDeviceUsers ( Integer id, String filterId, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/devices/{id}/users"
 
         // query params
@@ -119,8 +127,10 @@ class DevicesApi {
         }
 
         if (!"null".equals(String.valueOf(filterId)))
-            queryParams.put("filterId", String.valueOf(filterId))
+            queryParams.put("filter_id", String.valueOf(filterId))
 
+
+        // Also still TODO: form params, body param
 
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "DELETE", "",
@@ -128,7 +138,7 @@ class DevicesApi {
                     
     }
     def getDevice ( Integer id, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/devices/{id}"
 
         // query params
@@ -142,13 +152,15 @@ class DevicesApi {
 
         
 
+        // Also still TODO: form params, body param
+
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "GET", "",
                     DeviceResource.class )
                     
     }
     def getDevices ( String filterMake, String filterModel, Integer size, Integer page, String order, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/devices"
 
         // query params
@@ -157,9 +169,9 @@ class DevicesApi {
     
 
         if (!"null".equals(String.valueOf(filterMake)))
-            queryParams.put("filterMake", String.valueOf(filterMake))
+            queryParams.put("filter_make", String.valueOf(filterMake))
 if (!"null".equals(String.valueOf(filterModel)))
-            queryParams.put("filterModel", String.valueOf(filterModel))
+            queryParams.put("filter_model", String.valueOf(filterModel))
 if (!"null".equals(String.valueOf(size)))
             queryParams.put("size", String.valueOf(size))
 if (!"null".equals(String.valueOf(page)))
@@ -168,13 +180,15 @@ if (!"null".equals(String.valueOf(order)))
             queryParams.put("order", String.valueOf(order))
 
 
+        // Also still TODO: form params, body param
+
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "GET", "",
                     PageResourceDeviceResource.class )
                     
     }
     def updateDevice ( DeviceResource device, Integer id, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/devices/{id}"
 
         // query params
@@ -191,6 +205,8 @@ if (!"null".equals(String.valueOf(order)))
         }
 
         
+
+        // Also still TODO: form params, body param
 
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "PUT", "",

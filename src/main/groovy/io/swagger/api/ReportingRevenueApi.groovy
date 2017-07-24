@@ -18,7 +18,7 @@ class ReportingRevenueApi {
     String versionPath = "/api/v1"
 
     def getItemRevenue ( String currencyCode, Long startDate, Long endDate, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/reporting/revenue/item-sales/{currency_code}"
 
         // query params
@@ -31,10 +31,12 @@ class ReportingRevenueApi {
         }
 
         if (!"null".equals(String.valueOf(startDate)))
-            queryParams.put("startDate", String.valueOf(startDate))
+            queryParams.put("start_date", String.valueOf(startDate))
 if (!"null".equals(String.valueOf(endDate)))
-            queryParams.put("endDate", String.valueOf(endDate))
+            queryParams.put("end_date", String.valueOf(endDate))
 
+
+        // Also still TODO: form params, body param
 
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "GET", "",
@@ -42,7 +44,7 @@ if (!"null".equals(String.valueOf(endDate)))
                     
     }
     def getRefundRevenue ( String currencyCode, Long startDate, Long endDate, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/reporting/revenue/refunds/{currency_code}"
 
         // query params
@@ -55,10 +57,12 @@ if (!"null".equals(String.valueOf(endDate)))
         }
 
         if (!"null".equals(String.valueOf(startDate)))
-            queryParams.put("startDate", String.valueOf(startDate))
+            queryParams.put("start_date", String.valueOf(startDate))
 if (!"null".equals(String.valueOf(endDate)))
-            queryParams.put("endDate", String.valueOf(endDate))
+            queryParams.put("end_date", String.valueOf(endDate))
 
+
+        // Also still TODO: form params, body param
 
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "GET", "",
@@ -66,7 +70,7 @@ if (!"null".equals(String.valueOf(endDate)))
                     
     }
     def getRevenueByCountry ( String currencyCode, Long startDate, Long endDate, Integer size, Integer page, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/reporting/revenue/countries/{currency_code}"
 
         // query params
@@ -79,14 +83,16 @@ if (!"null".equals(String.valueOf(endDate)))
         }
 
         if (!"null".equals(String.valueOf(startDate)))
-            queryParams.put("startDate", String.valueOf(startDate))
+            queryParams.put("start_date", String.valueOf(startDate))
 if (!"null".equals(String.valueOf(endDate)))
-            queryParams.put("endDate", String.valueOf(endDate))
+            queryParams.put("end_date", String.valueOf(endDate))
 if (!"null".equals(String.valueOf(size)))
             queryParams.put("size", String.valueOf(size))
 if (!"null".equals(String.valueOf(page)))
             queryParams.put("page", String.valueOf(page))
 
+
+        // Also still TODO: form params, body param
 
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "GET", "",
@@ -94,7 +100,7 @@ if (!"null".equals(String.valueOf(page)))
                     
     }
     def getRevenueByItem ( String currencyCode, Long startDate, Long endDate, Integer size, Integer page, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/reporting/revenue/products/{currency_code}"
 
         // query params
@@ -107,14 +113,16 @@ if (!"null".equals(String.valueOf(page)))
         }
 
         if (!"null".equals(String.valueOf(startDate)))
-            queryParams.put("startDate", String.valueOf(startDate))
+            queryParams.put("start_date", String.valueOf(startDate))
 if (!"null".equals(String.valueOf(endDate)))
-            queryParams.put("endDate", String.valueOf(endDate))
+            queryParams.put("end_date", String.valueOf(endDate))
 if (!"null".equals(String.valueOf(size)))
             queryParams.put("size", String.valueOf(size))
 if (!"null".equals(String.valueOf(page)))
             queryParams.put("page", String.valueOf(page))
 
+
+        // Also still TODO: form params, body param
 
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "GET", "",
@@ -122,7 +130,7 @@ if (!"null".equals(String.valueOf(page)))
                     
     }
     def getSubscriptionRevenue ( String currencyCode, Long startDate, Long endDate, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/reporting/revenue/subscription-sales/{currency_code}"
 
         // query params
@@ -135,10 +143,12 @@ if (!"null".equals(String.valueOf(page)))
         }
 
         if (!"null".equals(String.valueOf(startDate)))
-            queryParams.put("startDate", String.valueOf(startDate))
+            queryParams.put("start_date", String.valueOf(startDate))
 if (!"null".equals(String.valueOf(endDate)))
-            queryParams.put("endDate", String.valueOf(endDate))
+            queryParams.put("end_date", String.valueOf(endDate))
 
+
+        // Also still TODO: form params, body param
 
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "GET", "",

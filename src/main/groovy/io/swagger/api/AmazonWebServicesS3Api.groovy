@@ -16,7 +16,7 @@ class AmazonWebServicesS3Api {
     String versionPath = "/api/v1"
 
     def getSignedS3URL ( String filename, String contentType, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/amazon/s3/signedposturl"
 
         // query params
@@ -27,8 +27,10 @@ class AmazonWebServicesS3Api {
         if (!"null".equals(String.valueOf(filename)))
             queryParams.put("filename", String.valueOf(filename))
 if (!"null".equals(String.valueOf(contentType)))
-            queryParams.put("contentType", String.valueOf(contentType))
+            queryParams.put("content_type", String.valueOf(contentType))
 
+
+        // Also still TODO: form params, body param
 
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "GET", "",

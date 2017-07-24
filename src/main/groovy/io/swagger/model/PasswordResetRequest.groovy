@@ -4,7 +4,7 @@ import groovy.transform.Canonical
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 @Canonical
-class ARequestToResetAUsersPasswordByUsingAKnownUserProperty {
+class PasswordResetRequest {
 
   /* The user's email address */
   String email = null

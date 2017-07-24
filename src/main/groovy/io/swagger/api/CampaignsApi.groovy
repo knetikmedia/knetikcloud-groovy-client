@@ -20,7 +20,7 @@ class CampaignsApi {
     String versionPath = "/api/v1"
 
     def addChallengeToCampaign ( Long id, Long challengeId, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/campaigns/{id}/challenges"
 
         // query params
@@ -34,13 +34,15 @@ class CampaignsApi {
 
         
 
+        // Also still TODO: form params, body param
+
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "POST", "",
                     null )
                     
     }
     def createCampaign ( CampaignResource campaignResource, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/campaigns"
 
         // query params
@@ -50,13 +52,15 @@ class CampaignsApi {
 
         
 
+        // Also still TODO: form params, body param
+
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "POST", "",
                     CampaignResource.class )
                     
     }
     def createCampaignTemplate ( TemplateResource campaignTemplateResource, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/campaigns/templates"
 
         // query params
@@ -66,13 +70,15 @@ class CampaignsApi {
 
         
 
+        // Also still TODO: form params, body param
+
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "POST", "",
                     TemplateResource.class )
                     
     }
     def deleteCampaign ( Long id, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/campaigns/{id}"
 
         // query params
@@ -86,13 +92,15 @@ class CampaignsApi {
 
         
 
+        // Also still TODO: form params, body param
+
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "DELETE", "",
                     null )
                     
     }
     def deleteCampaignTemplate ( String id, String cascade, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/campaigns/templates/{id}"
 
         // query params
@@ -108,13 +116,15 @@ class CampaignsApi {
             queryParams.put("cascade", String.valueOf(cascade))
 
 
+        // Also still TODO: form params, body param
+
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "DELETE", "",
                     null )
                     
     }
     def getCampaign ( Long id, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/campaigns/{id}"
 
         // query params
@@ -128,13 +138,15 @@ class CampaignsApi {
 
         
 
+        // Also still TODO: form params, body param
+
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "GET", "",
                     CampaignResource.class )
                     
     }
     def getCampaignChallenges ( Long id, String filterStartDate, String filterEndDate, Integer size, Integer page, String order, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/campaigns/{id}/challenges"
 
         // query params
@@ -147,9 +159,9 @@ class CampaignsApi {
         }
 
         if (!"null".equals(String.valueOf(filterStartDate)))
-            queryParams.put("filterStartDate", String.valueOf(filterStartDate))
+            queryParams.put("filter_start_date", String.valueOf(filterStartDate))
 if (!"null".equals(String.valueOf(filterEndDate)))
-            queryParams.put("filterEndDate", String.valueOf(filterEndDate))
+            queryParams.put("filter_end_date", String.valueOf(filterEndDate))
 if (!"null".equals(String.valueOf(size)))
             queryParams.put("size", String.valueOf(size))
 if (!"null".equals(String.valueOf(page)))
@@ -158,13 +170,15 @@ if (!"null".equals(String.valueOf(order)))
             queryParams.put("order", String.valueOf(order))
 
 
+        // Also still TODO: form params, body param
+
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "GET", "",
                     PageResourceChallengeResource.class )
                     
     }
     def getCampaignTemplate ( String id, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/campaigns/templates/{id}"
 
         // query params
@@ -178,13 +192,15 @@ if (!"null".equals(String.valueOf(order)))
 
         
 
+        // Also still TODO: form params, body param
+
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "GET", "",
                     TemplateResource.class )
                     
     }
     def getCampaignTemplates ( Integer size, Integer page, String order, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/campaigns/templates"
 
         // query params
@@ -200,13 +216,15 @@ if (!"null".equals(String.valueOf(order)))
             queryParams.put("order", String.valueOf(order))
 
 
+        // Also still TODO: form params, body param
+
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "GET", "",
                     PageResourceTemplateResource.class )
                     
     }
     def getCampaigns ( Boolean filterActive, Integer size, Integer page, String order, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/campaigns"
 
         // query params
@@ -215,7 +233,7 @@ if (!"null".equals(String.valueOf(order)))
     
 
         if (!"null".equals(String.valueOf(filterActive)))
-            queryParams.put("filterActive", String.valueOf(filterActive))
+            queryParams.put("filter_active", String.valueOf(filterActive))
 if (!"null".equals(String.valueOf(size)))
             queryParams.put("size", String.valueOf(size))
 if (!"null".equals(String.valueOf(page)))
@@ -224,13 +242,15 @@ if (!"null".equals(String.valueOf(order)))
             queryParams.put("order", String.valueOf(order))
 
 
+        // Also still TODO: form params, body param
+
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "GET", "",
                     PageResourceCampaignResource.class )
                     
     }
     def removeChallengeFromCampaign ( Long campaignId, Long id, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/campaigns/{campaign_id}/challenges/{id}"
 
         // query params
@@ -248,13 +268,15 @@ if (!"null".equals(String.valueOf(order)))
 
         
 
+        // Also still TODO: form params, body param
+
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "DELETE", "",
                     null )
                     
     }
     def updateCampaign ( Long id, CampaignResource campaignResource, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/campaigns/{id}"
 
         // query params
@@ -268,13 +290,15 @@ if (!"null".equals(String.valueOf(order)))
 
         
 
+        // Also still TODO: form params, body param
+
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "PUT", "",
                     CampaignResource.class )
                     
     }
     def updateCampaignTemplate ( String id, TemplateResource campaignTemplateResource, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/campaigns/templates/{id}"
 
         // query params
@@ -287,6 +311,8 @@ if (!"null".equals(String.valueOf(order)))
         }
 
         
+
+        // Also still TODO: form params, body param
 
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "PUT", "",

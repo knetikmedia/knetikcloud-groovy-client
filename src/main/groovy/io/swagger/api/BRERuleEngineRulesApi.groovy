@@ -19,7 +19,7 @@ class BRERuleEngineRulesApi {
     String versionPath = "/api/v1"
 
     def createBRERule ( BreRule breRule, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/bre/rules"
 
         // query params
@@ -29,13 +29,15 @@ class BRERuleEngineRulesApi {
 
         
 
+        // Also still TODO: form params, body param
+
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "POST", "",
                     BreRule.class )
                     
     }
     def deleteBRERule ( String id, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/bre/rules/{id}"
 
         // query params
@@ -49,13 +51,15 @@ class BRERuleEngineRulesApi {
 
         
 
+        // Also still TODO: form params, body param
+
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "DELETE", "",
                     null )
                     
     }
     def getBREExpressionAsString ( Expressionobject expression, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/bre/rules/expression-as-string"
 
         // query params
@@ -65,13 +69,15 @@ class BRERuleEngineRulesApi {
 
         
 
+        // Also still TODO: form params, body param
+
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "POST", "",
                     String.class )
                     
     }
     def getBRERule ( String id, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/bre/rules/{id}"
 
         // query params
@@ -85,13 +91,15 @@ class BRERuleEngineRulesApi {
 
         
 
+        // Also still TODO: form params, body param
+
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "GET", "",
                     BreRule.class )
                     
     }
     def getBRERules ( String filterName, Boolean filterEnabled, Boolean filterSystem, String filterTrigger, String filterAction, String filterCondition, Integer size, Integer page, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/bre/rules"
 
         // query params
@@ -100,22 +108,24 @@ class BRERuleEngineRulesApi {
     
 
         if (!"null".equals(String.valueOf(filterName)))
-            queryParams.put("filterName", String.valueOf(filterName))
+            queryParams.put("filter_name", String.valueOf(filterName))
 if (!"null".equals(String.valueOf(filterEnabled)))
-            queryParams.put("filterEnabled", String.valueOf(filterEnabled))
+            queryParams.put("filter_enabled", String.valueOf(filterEnabled))
 if (!"null".equals(String.valueOf(filterSystem)))
-            queryParams.put("filterSystem", String.valueOf(filterSystem))
+            queryParams.put("filter_system", String.valueOf(filterSystem))
 if (!"null".equals(String.valueOf(filterTrigger)))
-            queryParams.put("filterTrigger", String.valueOf(filterTrigger))
+            queryParams.put("filter_trigger", String.valueOf(filterTrigger))
 if (!"null".equals(String.valueOf(filterAction)))
-            queryParams.put("filterAction", String.valueOf(filterAction))
+            queryParams.put("filter_action", String.valueOf(filterAction))
 if (!"null".equals(String.valueOf(filterCondition)))
-            queryParams.put("filterCondition", String.valueOf(filterCondition))
+            queryParams.put("filter_condition", String.valueOf(filterCondition))
 if (!"null".equals(String.valueOf(size)))
             queryParams.put("size", String.valueOf(size))
 if (!"null".equals(String.valueOf(page)))
             queryParams.put("page", String.valueOf(page))
 
+
+        // Also still TODO: form params, body param
 
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "GET", "",
@@ -123,7 +133,7 @@ if (!"null".equals(String.valueOf(page)))
                     
     }
     def setBRERule ( String id, BooleanResource enabled, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/bre/rules/{id}/enabled"
 
         // query params
@@ -137,13 +147,15 @@ if (!"null".equals(String.valueOf(page)))
 
         
 
+        // Also still TODO: form params, body param
+
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "PUT", "",
                     null )
                     
     }
     def updateBRERule ( String id, BreRule breRule, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/bre/rules/{id}"
 
         // query params
@@ -156,6 +168,8 @@ if (!"null".equals(String.valueOf(page)))
         }
 
         
+
+        // Also still TODO: form params, body param
 
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "PUT", "",

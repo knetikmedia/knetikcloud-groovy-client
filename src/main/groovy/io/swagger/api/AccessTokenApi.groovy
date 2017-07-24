@@ -15,7 +15,7 @@ class AccessTokenApi {
     String versionPath = "/api/v1"
 
     def getOAuthToken ( String grantType, String clientId, String clientSecret, String username, String password, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/oauth/token"
 
         // query params
@@ -32,6 +32,8 @@ class AccessTokenApi {
         }
 
         
+
+        // Also still TODO: form params, body param
 
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "POST", "",

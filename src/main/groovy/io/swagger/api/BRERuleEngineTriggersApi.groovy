@@ -17,7 +17,7 @@ class BRERuleEngineTriggersApi {
     String versionPath = "/api/v1"
 
     def createBRETrigger ( BreTriggerResource breTriggerResource, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/bre/triggers"
 
         // query params
@@ -27,13 +27,15 @@ class BRERuleEngineTriggersApi {
 
         
 
+        // Also still TODO: form params, body param
+
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "POST", "",
                     BreTriggerResource.class )
                     
     }
     def deleteBRETrigger ( String eventName, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/bre/triggers/{event_name}"
 
         // query params
@@ -46,6 +48,8 @@ class BRERuleEngineTriggersApi {
         }
 
         
+
+        // Also still TODO: form params, body param
 
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "DELETE", "",
@@ -53,7 +57,7 @@ class BRERuleEngineTriggersApi {
                     
     }
     def getBRETrigger ( String eventName, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/bre/triggers/{event_name}"
 
         // query params
@@ -67,13 +71,15 @@ class BRERuleEngineTriggersApi {
 
         
 
+        // Also still TODO: form params, body param
+
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "GET", "",
                     BreTriggerResource.class )
                     
     }
     def getBRETriggers ( Boolean filterSystem, String filterCategory, String filterTags, String filterName, String filterSearch, Integer size, Integer page, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/bre/triggers"
 
         // query params
@@ -82,20 +88,22 @@ class BRERuleEngineTriggersApi {
     
 
         if (!"null".equals(String.valueOf(filterSystem)))
-            queryParams.put("filterSystem", String.valueOf(filterSystem))
+            queryParams.put("filter_system", String.valueOf(filterSystem))
 if (!"null".equals(String.valueOf(filterCategory)))
-            queryParams.put("filterCategory", String.valueOf(filterCategory))
+            queryParams.put("filter_category", String.valueOf(filterCategory))
 if (!"null".equals(String.valueOf(filterTags)))
-            queryParams.put("filterTags", String.valueOf(filterTags))
+            queryParams.put("filter_tags", String.valueOf(filterTags))
 if (!"null".equals(String.valueOf(filterName)))
-            queryParams.put("filterName", String.valueOf(filterName))
+            queryParams.put("filter_name", String.valueOf(filterName))
 if (!"null".equals(String.valueOf(filterSearch)))
-            queryParams.put("filterSearch", String.valueOf(filterSearch))
+            queryParams.put("filter_search", String.valueOf(filterSearch))
 if (!"null".equals(String.valueOf(size)))
             queryParams.put("size", String.valueOf(size))
 if (!"null".equals(String.valueOf(page)))
             queryParams.put("page", String.valueOf(page))
 
+
+        // Also still TODO: form params, body param
 
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "GET", "",
@@ -103,7 +111,7 @@ if (!"null".equals(String.valueOf(page)))
                     
     }
     def updateBRETrigger ( String eventName, BreTriggerResource breTriggerResource, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/bre/triggers/{event_name}"
 
         // query params
@@ -116,6 +124,8 @@ if (!"null".equals(String.valueOf(page)))
         }
 
         
+
+        // Also still TODO: form params, body param
 
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "PUT", "",

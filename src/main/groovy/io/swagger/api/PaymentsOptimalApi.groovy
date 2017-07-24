@@ -16,7 +16,7 @@ class PaymentsOptimalApi {
     String versionPath = "/api/v1"
 
     def silentPostOptimal ( OptimalPaymentRequest request, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/payment/provider/optimal/silent"
 
         // query params
@@ -25,6 +25,8 @@ class PaymentsOptimalApi {
     
 
         
+
+        // Also still TODO: form params, body param
 
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "POST", "",

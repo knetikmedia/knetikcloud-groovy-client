@@ -15,8 +15,8 @@ class SocialGoogleApi {
     String basePath = "https://sandbox.knetikcloud.com"
     String versionPath = "/api/v1"
 
-    def linkAccounts1 ( GoogleToken facebookToken, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+    def linkAccounts1 ( GoogleToken googleToken, Closure onSuccess, Closure onFailure)  {
+        // create path and map path parameters (TODO)
         String resourcePath = "/social/google/users"
 
         // query params
@@ -25,6 +25,8 @@ class SocialGoogleApi {
     
 
         
+
+        // Also still TODO: form params, body param
 
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "POST", "",

@@ -25,7 +25,7 @@ class MediaVideosApi {
     String versionPath = "/api/v1"
 
     def addUserToVideoWhitelist ( Long id, Integer userId, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/media/videos/{id}/whitelist"
 
         // query params
@@ -39,13 +39,15 @@ class MediaVideosApi {
 
         
 
+        // Also still TODO: form params, body param
+
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "POST", "",
                     null )
                     
     }
     def addVideo ( VideoResource videoResource, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/media/videos"
 
         // query params
@@ -55,13 +57,15 @@ class MediaVideosApi {
 
         
 
+        // Also still TODO: form params, body param
+
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "POST", "",
                     VideoResource.class )
                     
     }
     def addVideoComment ( Integer videoId, CommentResource commentResource, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/media/videos/{video_id}/comments"
 
         // query params
@@ -75,13 +79,15 @@ class MediaVideosApi {
 
         
 
+        // Also still TODO: form params, body param
+
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "POST", "",
                     CommentResource.class )
                     
     }
     def addVideoContributor ( Long videoId, ContributionResource contributionResource, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/media/videos/{video_id}/contributors"
 
         // query params
@@ -95,13 +101,15 @@ class MediaVideosApi {
 
         
 
+        // Also still TODO: form params, body param
+
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "POST", "",
                     null )
                     
     }
     def addVideoFlag ( Long videoId, String reason, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/media/videos/{video_id}/moderation"
 
         // query params
@@ -115,13 +123,15 @@ class MediaVideosApi {
 
         
 
+        // Also still TODO: form params, body param
+
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "POST", "",
                     FlagResource.class )
                     
     }
     def addVideoRelationships ( Long videoId, VideoRelationshipResource videoRelationshipResource, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/media/videos/{video_id}/related"
 
         // query params
@@ -135,13 +145,15 @@ class MediaVideosApi {
 
         
 
+        // Also still TODO: form params, body param
+
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "POST", "",
                     VideoRelationshipResource.class )
                     
     }
     def createVideoDisposition ( Integer videoId, DispositionResource dispositionResource, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/media/videos/{video_id}/dispositions"
 
         // query params
@@ -155,13 +167,15 @@ class MediaVideosApi {
 
         
 
+        // Also still TODO: form params, body param
+
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "POST", "",
                     DispositionResource.class )
                     
     }
     def deleteVideo ( Long id, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/media/videos/{id}"
 
         // query params
@@ -175,13 +189,15 @@ class MediaVideosApi {
 
         
 
+        // Also still TODO: form params, body param
+
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "DELETE", "",
                     null )
                     
     }
     def deleteVideoComment ( Long videoId, Long id, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/media/videos/{video_id}/comments/{id}"
 
         // query params
@@ -199,13 +215,15 @@ class MediaVideosApi {
 
         
 
+        // Also still TODO: form params, body param
+
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "DELETE", "",
                     null )
                     
     }
     def deleteVideoDisposition ( Long dispositionId, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/media/videos/{video_id}/dispositions/{disposition_id}"
 
         // query params
@@ -219,13 +237,15 @@ class MediaVideosApi {
 
         
 
+        // Also still TODO: form params, body param
+
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "DELETE", "",
                     null )
                     
     }
     def deleteVideoFlag ( Long videoId, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/media/videos/{video_id}/moderation"
 
         // query params
@@ -239,13 +259,15 @@ class MediaVideosApi {
 
         
 
+        // Also still TODO: form params, body param
+
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "DELETE", "",
                     null )
                     
     }
     def deleteVideoRelationship ( Long videoId, Long id, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/media/videos/{video_id}/related/{id}"
 
         // query params
@@ -263,13 +285,15 @@ class MediaVideosApi {
 
         
 
+        // Also still TODO: form params, body param
+
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "DELETE", "",
                     null )
                     
     }
     def getUserVideos ( Integer userId, Boolean excludeFlagged, Integer size, Integer page, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/users/{user_id}/videos"
 
         // query params
@@ -282,12 +306,14 @@ class MediaVideosApi {
         }
 
         if (!"null".equals(String.valueOf(excludeFlagged)))
-            queryParams.put("excludeFlagged", String.valueOf(excludeFlagged))
+            queryParams.put("exclude_flagged", String.valueOf(excludeFlagged))
 if (!"null".equals(String.valueOf(size)))
             queryParams.put("size", String.valueOf(size))
 if (!"null".equals(String.valueOf(page)))
             queryParams.put("page", String.valueOf(page))
 
+
+        // Also still TODO: form params, body param
 
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "GET", "",
@@ -295,7 +321,7 @@ if (!"null".equals(String.valueOf(page)))
                     
     }
     def getVideo ( Long id, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/media/videos/{id}"
 
         // query params
@@ -309,13 +335,15 @@ if (!"null".equals(String.valueOf(page)))
 
         
 
+        // Also still TODO: form params, body param
+
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "GET", "",
                     VideoResource.class )
                     
     }
     def getVideoComments ( Integer videoId, Integer size, Integer page, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/media/videos/{video_id}/comments"
 
         // query params
@@ -333,13 +361,15 @@ if (!"null".equals(String.valueOf(page)))
             queryParams.put("page", String.valueOf(page))
 
 
+        // Also still TODO: form params, body param
+
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "GET", "",
                     PageResourceCommentResource.class )
                     
     }
     def getVideoDispositions ( Integer videoId, Integer size, Integer page, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/media/videos/{video_id}/dispositions"
 
         // query params
@@ -357,13 +387,15 @@ if (!"null".equals(String.valueOf(page)))
             queryParams.put("page", String.valueOf(page))
 
 
+        // Also still TODO: form params, body param
+
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "GET", "",
                     PageResourceDispositionResource.class )
                     
     }
     def getVideoRelationships ( Long videoId, Integer size, Integer page, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/media/videos/{video_id}/related"
 
         // query params
@@ -381,13 +413,15 @@ if (!"null".equals(String.valueOf(page)))
             queryParams.put("page", String.valueOf(page))
 
 
+        // Also still TODO: form params, body param
+
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "GET", "",
                     PageResourceVideoRelationshipResource.class )
                     
     }
-    def getVideos ( Boolean excludeFlagged, Object filterVideosByUploader, String filterCategory, String filterTagset, String filterVideosByName, Object filterVideosByContributor, Object filterVideosByAuthor, Boolean filterHasAuthor, Boolean filterHasUploader, String filterRelatedTo, Boolean filterFriends, String filterDisposition, Integer size, Integer page, String order, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+    def getVideos ( Boolean excludeFlagged, Integer filterVideosByUploader, String filterCategory, String filterTagset, String filterVideosByName, Integer filterVideosByContributor, Integer filterVideosByAuthor, Boolean filterHasAuthor, Boolean filterHasUploader, String filterRelatedTo, Boolean filterFriends, String filterDisposition, Integer size, Integer page, String order, Closure onSuccess, Closure onFailure)  {
+        // create path and map path parameters (TODO)
         String resourcePath = "/media/videos"
 
         // query params
@@ -396,29 +430,29 @@ if (!"null".equals(String.valueOf(page)))
     
 
         if (!"null".equals(String.valueOf(excludeFlagged)))
-            queryParams.put("excludeFlagged", String.valueOf(excludeFlagged))
+            queryParams.put("exclude_flagged", String.valueOf(excludeFlagged))
 if (!"null".equals(String.valueOf(filterVideosByUploader)))
-            queryParams.put("filterVideosByUploader", String.valueOf(filterVideosByUploader))
+            queryParams.put("filter_videos_by_uploader", String.valueOf(filterVideosByUploader))
 if (!"null".equals(String.valueOf(filterCategory)))
-            queryParams.put("filterCategory", String.valueOf(filterCategory))
+            queryParams.put("filter_category", String.valueOf(filterCategory))
 if (!"null".equals(String.valueOf(filterTagset)))
-            queryParams.put("filterTagset", String.valueOf(filterTagset))
+            queryParams.put("filter_tagset", String.valueOf(filterTagset))
 if (!"null".equals(String.valueOf(filterVideosByName)))
-            queryParams.put("filterVideosByName", String.valueOf(filterVideosByName))
+            queryParams.put("filter_videos_by_name", String.valueOf(filterVideosByName))
 if (!"null".equals(String.valueOf(filterVideosByContributor)))
-            queryParams.put("filterVideosByContributor", String.valueOf(filterVideosByContributor))
+            queryParams.put("filter_videos_by_contributor", String.valueOf(filterVideosByContributor))
 if (!"null".equals(String.valueOf(filterVideosByAuthor)))
-            queryParams.put("filterVideosByAuthor", String.valueOf(filterVideosByAuthor))
+            queryParams.put("filter_videos_by_author", String.valueOf(filterVideosByAuthor))
 if (!"null".equals(String.valueOf(filterHasAuthor)))
-            queryParams.put("filterHasAuthor", String.valueOf(filterHasAuthor))
+            queryParams.put("filter_has_author", String.valueOf(filterHasAuthor))
 if (!"null".equals(String.valueOf(filterHasUploader)))
-            queryParams.put("filterHasUploader", String.valueOf(filterHasUploader))
+            queryParams.put("filter_has_uploader", String.valueOf(filterHasUploader))
 if (!"null".equals(String.valueOf(filterRelatedTo)))
-            queryParams.put("filterRelatedTo", String.valueOf(filterRelatedTo))
+            queryParams.put("filter_related_to", String.valueOf(filterRelatedTo))
 if (!"null".equals(String.valueOf(filterFriends)))
-            queryParams.put("filterFriends", String.valueOf(filterFriends))
+            queryParams.put("filter_friends", String.valueOf(filterFriends))
 if (!"null".equals(String.valueOf(filterDisposition)))
-            queryParams.put("filterDisposition", String.valueOf(filterDisposition))
+            queryParams.put("filter_disposition", String.valueOf(filterDisposition))
 if (!"null".equals(String.valueOf(size)))
             queryParams.put("size", String.valueOf(size))
 if (!"null".equals(String.valueOf(page)))
@@ -427,13 +461,15 @@ if (!"null".equals(String.valueOf(order)))
             queryParams.put("order", String.valueOf(order))
 
 
+        // Also still TODO: form params, body param
+
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "GET", "",
                     PageResourceVideoResource.class )
                     
     }
     def removeUserFromVideoWhitelist ( Long videoId, Integer id, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/media/videos/{video_id}/whitelist/{id}"
 
         // query params
@@ -451,13 +487,15 @@ if (!"null".equals(String.valueOf(order)))
 
         
 
+        // Also still TODO: form params, body param
+
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "DELETE", "",
                     null )
                     
     }
     def removeVideoContributor ( Long videoId, Integer id, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/media/videos/{video_id}/contributors/{id}"
 
         // query params
@@ -475,13 +513,15 @@ if (!"null".equals(String.valueOf(order)))
 
         
 
+        // Also still TODO: form params, body param
+
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "DELETE", "",
                     null )
                     
     }
     def updateVideo ( Long id, VideoResource videoResource, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/media/videos/{id}"
 
         // query params
@@ -495,13 +535,15 @@ if (!"null".equals(String.valueOf(order)))
 
         
 
+        // Also still TODO: form params, body param
+
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "PUT", "",
                     null )
                     
     }
     def updateVideoComment ( Long videoId, Long id, String content, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/media/videos/{video_id}/comments/{id}/content"
 
         // query params
@@ -519,13 +561,15 @@ if (!"null".equals(String.valueOf(order)))
 
         
 
+        // Also still TODO: form params, body param
+
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "PUT", "",
                     null )
                     
     }
     def updateVideoRelationship ( Long videoId, Long relationshipId, String details, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/media/videos/{video_id}/related/{id}/relationship_details"
 
         // query params
@@ -543,13 +587,15 @@ if (!"null".equals(String.valueOf(order)))
 
         
 
+        // Also still TODO: form params, body param
+
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "PUT", "",
                     null )
                     
     }
     def viewVideo ( Long id, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/media/videos/{id}/views"
 
         // query params
@@ -562,6 +608,8 @@ if (!"null".equals(String.valueOf(order)))
         }
 
         
+
+        // Also still TODO: form params, body param
 
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "POST", "",

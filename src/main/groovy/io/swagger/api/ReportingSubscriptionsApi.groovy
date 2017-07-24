@@ -16,7 +16,7 @@ class ReportingSubscriptionsApi {
     String versionPath = "/api/v1"
 
     def getSubscriptionReports ( Integer size, Integer page, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/reporting/subscription"
 
         // query params
@@ -29,6 +29,8 @@ class ReportingSubscriptionsApi {
 if (!"null".equals(String.valueOf(page)))
             queryParams.put("page", String.valueOf(page))
 
+
+        // Also still TODO: form params, body param
 
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "GET", "",

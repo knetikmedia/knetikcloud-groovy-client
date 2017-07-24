@@ -16,7 +16,7 @@ class ReportingUsersApi {
     String versionPath = "/api/v1"
 
     def getUserRegistrations ( String granularity, Long startDate, Long endDate, Integer size, Integer page, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/reporting/users/registrations"
 
         // query params
@@ -27,14 +27,16 @@ class ReportingUsersApi {
         if (!"null".equals(String.valueOf(granularity)))
             queryParams.put("granularity", String.valueOf(granularity))
 if (!"null".equals(String.valueOf(startDate)))
-            queryParams.put("startDate", String.valueOf(startDate))
+            queryParams.put("start_date", String.valueOf(startDate))
 if (!"null".equals(String.valueOf(endDate)))
-            queryParams.put("endDate", String.valueOf(endDate))
+            queryParams.put("end_date", String.valueOf(endDate))
 if (!"null".equals(String.valueOf(size)))
             queryParams.put("size", String.valueOf(size))
 if (!"null".equals(String.valueOf(page)))
             queryParams.put("page", String.valueOf(page))
 
+
+        // Also still TODO: form params, body param
 
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "GET", "",

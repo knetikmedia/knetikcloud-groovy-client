@@ -19,7 +19,7 @@ class ContentArticlesApi {
     String versionPath = "/api/v1"
 
     def createArticle ( ArticleResource articleResource, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/content/articles"
 
         // query params
@@ -29,13 +29,15 @@ class ContentArticlesApi {
 
         
 
+        // Also still TODO: form params, body param
+
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "POST", "",
                     ArticleResource.class )
                     
     }
     def createArticleTemplate ( TemplateResource articleTemplateResource, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/content/articles/templates"
 
         // query params
@@ -45,13 +47,15 @@ class ContentArticlesApi {
 
         
 
+        // Also still TODO: form params, body param
+
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "POST", "",
                     TemplateResource.class )
                     
     }
     def deleteArticle ( String id, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/content/articles/{id}"
 
         // query params
@@ -65,13 +69,15 @@ class ContentArticlesApi {
 
         
 
+        // Also still TODO: form params, body param
+
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "DELETE", "",
                     null )
                     
     }
     def deleteArticleTemplate ( String id, String cascade, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/content/articles/templates/{id}"
 
         // query params
@@ -87,13 +93,15 @@ class ContentArticlesApi {
             queryParams.put("cascade", String.valueOf(cascade))
 
 
+        // Also still TODO: form params, body param
+
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "DELETE", "",
                     null )
                     
     }
     def getArticle ( String id, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/content/articles/{id}"
 
         // query params
@@ -107,13 +115,15 @@ class ContentArticlesApi {
 
         
 
+        // Also still TODO: form params, body param
+
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "GET", "",
                     ArticleResource.class )
                     
     }
     def getArticleTemplate ( String id, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/content/articles/templates/{id}"
 
         // query params
@@ -127,13 +137,15 @@ class ContentArticlesApi {
 
         
 
+        // Also still TODO: form params, body param
+
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "GET", "",
                     TemplateResource.class )
                     
     }
     def getArticleTemplates ( Integer size, Integer page, String order, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/content/articles/templates"
 
         // query params
@@ -149,13 +161,15 @@ if (!"null".equals(String.valueOf(order)))
             queryParams.put("order", String.valueOf(order))
 
 
+        // Also still TODO: form params, body param
+
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "GET", "",
                     PageResourceTemplateResource.class )
                     
     }
-    def getArticles ( String filterCategory, String filterTagset, String filterTitle, Integer size, Integer page, String order, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+    def getArticles ( String filterCategory, String filterTagset, String filterTagIntersection, String filterTagExclusion, String filterTitle, Integer size, Integer page, String order, Closure onSuccess, Closure onFailure)  {
+        // create path and map path parameters (TODO)
         String resourcePath = "/content/articles"
 
         // query params
@@ -164,11 +178,15 @@ if (!"null".equals(String.valueOf(order)))
     
 
         if (!"null".equals(String.valueOf(filterCategory)))
-            queryParams.put("filterCategory", String.valueOf(filterCategory))
+            queryParams.put("filter_category", String.valueOf(filterCategory))
 if (!"null".equals(String.valueOf(filterTagset)))
-            queryParams.put("filterTagset", String.valueOf(filterTagset))
+            queryParams.put("filter_tagset", String.valueOf(filterTagset))
+if (!"null".equals(String.valueOf(filterTagIntersection)))
+            queryParams.put("filter_tag_intersection", String.valueOf(filterTagIntersection))
+if (!"null".equals(String.valueOf(filterTagExclusion)))
+            queryParams.put("filter_tag_exclusion", String.valueOf(filterTagExclusion))
 if (!"null".equals(String.valueOf(filterTitle)))
-            queryParams.put("filterTitle", String.valueOf(filterTitle))
+            queryParams.put("filter_title", String.valueOf(filterTitle))
 if (!"null".equals(String.valueOf(size)))
             queryParams.put("size", String.valueOf(size))
 if (!"null".equals(String.valueOf(page)))
@@ -177,13 +195,15 @@ if (!"null".equals(String.valueOf(order)))
             queryParams.put("order", String.valueOf(order))
 
 
+        // Also still TODO: form params, body param
+
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "GET", "",
                     PageResourceArticleResource.class )
                     
     }
     def updateArticle ( String id, ArticleResource articleResource, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/content/articles/{id}"
 
         // query params
@@ -197,13 +217,15 @@ if (!"null".equals(String.valueOf(order)))
 
         
 
+        // Also still TODO: form params, body param
+
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "PUT", "",
                     ArticleResource.class )
                     
     }
     def updateArticleTemplate ( String id, TemplateResource articleTemplateResource, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/content/articles/templates/{id}"
 
         // query params
@@ -216,6 +238,8 @@ if (!"null".equals(String.valueOf(order)))
         }
 
         
+
+        // Also still TODO: form params, body param
 
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "PUT", "",

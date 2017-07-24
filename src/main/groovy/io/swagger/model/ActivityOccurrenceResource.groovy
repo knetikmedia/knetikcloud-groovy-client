@@ -9,7 +9,7 @@ import io.swagger.model.ArrayList;
 import io.swagger.model.SelectedSettingResource;
 import java.util.List;
 @Canonical
-class AOccurrenceOfAnActivityTheActualGameForExampleUsedToTrackScoresParticipantsAndProvideSettings {
+class ActivityOccurrenceResource {
 
   /* The id of the activity */
   Long activityId = null

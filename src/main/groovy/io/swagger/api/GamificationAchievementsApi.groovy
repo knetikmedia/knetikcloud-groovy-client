@@ -22,7 +22,7 @@ class GamificationAchievementsApi {
     String versionPath = "/api/v1"
 
     def createAchievement ( AchievementDefinitionResource achievement, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/achievements"
 
         // query params
@@ -32,13 +32,15 @@ class GamificationAchievementsApi {
 
         
 
+        // Also still TODO: form params, body param
+
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "POST", "",
                     AchievementDefinitionResource.class )
                     
     }
     def createAchievementTemplate ( TemplateResource template, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/achievements/templates"
 
         // query params
@@ -48,13 +50,15 @@ class GamificationAchievementsApi {
 
         
 
+        // Also still TODO: form params, body param
+
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "POST", "",
                     TemplateResource.class )
                     
     }
     def deleteAchievement ( String name, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/achievements/{name}"
 
         // query params
@@ -68,13 +72,15 @@ class GamificationAchievementsApi {
 
         
 
+        // Also still TODO: form params, body param
+
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "DELETE", "",
                     null )
                     
     }
     def deleteAchievementTemplate ( String id, String cascade, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/achievements/templates/{id}"
 
         // query params
@@ -90,13 +96,15 @@ class GamificationAchievementsApi {
             queryParams.put("cascade", String.valueOf(cascade))
 
 
+        // Also still TODO: form params, body param
+
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "DELETE", "",
                     null )
                     
     }
     def getAchievement ( String name, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/achievements/{name}"
 
         // query params
@@ -110,13 +118,15 @@ class GamificationAchievementsApi {
 
         
 
+        // Also still TODO: form params, body param
+
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "GET", "",
                     AchievementDefinitionResource.class )
                     
     }
     def getAchievementTemplate ( String id, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/achievements/templates/{id}"
 
         // query params
@@ -130,13 +140,15 @@ class GamificationAchievementsApi {
 
         
 
+        // Also still TODO: form params, body param
+
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "GET", "",
                     TemplateResource.class )
                     
     }
     def getAchievementTemplates ( Integer size, Integer page, String order, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/achievements/templates"
 
         // query params
@@ -152,13 +164,15 @@ if (!"null".equals(String.valueOf(order)))
             queryParams.put("order", String.valueOf(order))
 
 
+        // Also still TODO: form params, body param
+
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "GET", "",
                     PageResourceTemplateResource.class )
                     
     }
     def getAchievementTriggers ( Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/achievements/triggers"
 
         // query params
@@ -168,13 +182,15 @@ if (!"null".equals(String.valueOf(order)))
 
         
 
+        // Also still TODO: form params, body param
+
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "GET", "array",
                     BreTriggerResource.class )
                     
     }
     def getAchievements ( String filterTagset, String filterName, Boolean filterHidden, Integer size, Integer page, String order, Boolean filterDerived, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/achievements"
 
         // query params
@@ -183,11 +199,11 @@ if (!"null".equals(String.valueOf(order)))
     
 
         if (!"null".equals(String.valueOf(filterTagset)))
-            queryParams.put("filterTagset", String.valueOf(filterTagset))
+            queryParams.put("filter_tagset", String.valueOf(filterTagset))
 if (!"null".equals(String.valueOf(filterName)))
-            queryParams.put("filterName", String.valueOf(filterName))
+            queryParams.put("filter_name", String.valueOf(filterName))
 if (!"null".equals(String.valueOf(filterHidden)))
-            queryParams.put("filterHidden", String.valueOf(filterHidden))
+            queryParams.put("filter_hidden", String.valueOf(filterHidden))
 if (!"null".equals(String.valueOf(size)))
             queryParams.put("size", String.valueOf(size))
 if (!"null".equals(String.valueOf(page)))
@@ -195,8 +211,10 @@ if (!"null".equals(String.valueOf(page)))
 if (!"null".equals(String.valueOf(order)))
             queryParams.put("order", String.valueOf(order))
 if (!"null".equals(String.valueOf(filterDerived)))
-            queryParams.put("filterDerived", String.valueOf(filterDerived))
+            queryParams.put("filter_derived", String.valueOf(filterDerived))
 
+
+        // Also still TODO: form params, body param
 
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "GET", "",
@@ -204,7 +222,7 @@ if (!"null".equals(String.valueOf(filterDerived)))
                     
     }
     def getDerivedAchievements ( String name, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/achievements/derived/{name}"
 
         // query params
@@ -218,13 +236,15 @@ if (!"null".equals(String.valueOf(filterDerived)))
 
         
 
+        // Also still TODO: form params, body param
+
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "GET", "array",
                     AchievementDefinitionResource.class )
                     
     }
     def getUserAchievementProgress ( Integer userId, String achievementName, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/users/{user_id}/achievements/{achievement_name}"
 
         // query params
@@ -242,13 +262,15 @@ if (!"null".equals(String.valueOf(filterDerived)))
 
         
 
+        // Also still TODO: form params, body param
+
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "GET", "",
                     UserAchievementGroupResource.class )
                     
     }
     def getUserAchievementsProgress ( Integer userId, Boolean filterAchievementDerived, String filterAchievementTagset, String filterAchievementName, Integer size, Integer page, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/users/{user_id}/achievements"
 
         // query params
@@ -261,16 +283,18 @@ if (!"null".equals(String.valueOf(filterDerived)))
         }
 
         if (!"null".equals(String.valueOf(filterAchievementDerived)))
-            queryParams.put("filterAchievementDerived", String.valueOf(filterAchievementDerived))
+            queryParams.put("filter_achievement_derived", String.valueOf(filterAchievementDerived))
 if (!"null".equals(String.valueOf(filterAchievementTagset)))
-            queryParams.put("filterAchievementTagset", String.valueOf(filterAchievementTagset))
+            queryParams.put("filter_achievement_tagset", String.valueOf(filterAchievementTagset))
 if (!"null".equals(String.valueOf(filterAchievementName)))
-            queryParams.put("filterAchievementName", String.valueOf(filterAchievementName))
+            queryParams.put("filter_achievement_name", String.valueOf(filterAchievementName))
 if (!"null".equals(String.valueOf(size)))
             queryParams.put("size", String.valueOf(size))
 if (!"null".equals(String.valueOf(page)))
             queryParams.put("page", String.valueOf(page))
 
+
+        // Also still TODO: form params, body param
 
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "GET", "",
@@ -278,7 +302,7 @@ if (!"null".equals(String.valueOf(page)))
                     
     }
     def getUsersAchievementProgress ( String achievementName, Boolean filterAchievementDerived, String filterAchievementTagset, String filterAchievementName, Integer size, Integer page, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/users/achievements/{achievement_name}"
 
         // query params
@@ -291,16 +315,18 @@ if (!"null".equals(String.valueOf(page)))
         }
 
         if (!"null".equals(String.valueOf(filterAchievementDerived)))
-            queryParams.put("filterAchievementDerived", String.valueOf(filterAchievementDerived))
+            queryParams.put("filter_achievement_derived", String.valueOf(filterAchievementDerived))
 if (!"null".equals(String.valueOf(filterAchievementTagset)))
-            queryParams.put("filterAchievementTagset", String.valueOf(filterAchievementTagset))
+            queryParams.put("filter_achievement_tagset", String.valueOf(filterAchievementTagset))
 if (!"null".equals(String.valueOf(filterAchievementName)))
-            queryParams.put("filterAchievementName", String.valueOf(filterAchievementName))
+            queryParams.put("filter_achievement_name", String.valueOf(filterAchievementName))
 if (!"null".equals(String.valueOf(size)))
             queryParams.put("size", String.valueOf(size))
 if (!"null".equals(String.valueOf(page)))
             queryParams.put("page", String.valueOf(page))
 
+
+        // Also still TODO: form params, body param
 
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "GET", "",
@@ -308,7 +334,7 @@ if (!"null".equals(String.valueOf(page)))
                     
     }
     def getUsersAchievementsProgress ( Boolean filterAchievementDerived, String filterAchievementTagset, String filterAchievementName, Integer size, Integer page, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/users/achievements"
 
         // query params
@@ -317,16 +343,18 @@ if (!"null".equals(String.valueOf(page)))
     
 
         if (!"null".equals(String.valueOf(filterAchievementDerived)))
-            queryParams.put("filterAchievementDerived", String.valueOf(filterAchievementDerived))
+            queryParams.put("filter_achievement_derived", String.valueOf(filterAchievementDerived))
 if (!"null".equals(String.valueOf(filterAchievementTagset)))
-            queryParams.put("filterAchievementTagset", String.valueOf(filterAchievementTagset))
+            queryParams.put("filter_achievement_tagset", String.valueOf(filterAchievementTagset))
 if (!"null".equals(String.valueOf(filterAchievementName)))
-            queryParams.put("filterAchievementName", String.valueOf(filterAchievementName))
+            queryParams.put("filter_achievement_name", String.valueOf(filterAchievementName))
 if (!"null".equals(String.valueOf(size)))
             queryParams.put("size", String.valueOf(size))
 if (!"null".equals(String.valueOf(page)))
             queryParams.put("page", String.valueOf(page))
 
+
+        // Also still TODO: form params, body param
 
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "GET", "",
@@ -334,7 +362,7 @@ if (!"null".equals(String.valueOf(page)))
                     
     }
     def incrementAchievementProgress ( Integer userId, String achievementName, Integer progress, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/users/{user_id}/achievements/{achievement_name}/progress"
 
         // query params
@@ -351,6 +379,8 @@ if (!"null".equals(String.valueOf(page)))
         }
 
         
+
+        // Also still TODO: form params, body param
 
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "POST", "",
@@ -358,7 +388,7 @@ if (!"null".equals(String.valueOf(page)))
                     
     }
     def setAchievementProgress ( Integer userId, String achievementName, Integer progress, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/users/{user_id}/achievements/{achievement_name}/progress"
 
         // query params
@@ -376,13 +406,15 @@ if (!"null".equals(String.valueOf(page)))
 
         
 
+        // Also still TODO: form params, body param
+
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "PUT", "",
                     UserAchievementGroupResource.class )
                     
     }
     def updateAchievement ( String name, AchievementDefinitionResource achievement, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/achievements/{name}"
 
         // query params
@@ -396,13 +428,15 @@ if (!"null".equals(String.valueOf(page)))
 
         
 
+        // Also still TODO: form params, body param
+
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "PUT", "",
                     AchievementDefinitionResource.class )
                     
     }
     def updateAchievementTemplate ( String id, TemplateResource template, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/achievements/templates/{id}"
 
         // query params
@@ -415,6 +449,8 @@ if (!"null".equals(String.valueOf(page)))
         }
 
         
+
+        // Also still TODO: form params, body param
 
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "PUT", "",

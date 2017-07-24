@@ -21,7 +21,7 @@ class UsersGroupsApi {
     String versionPath = "/api/v1"
 
     def addMemberToGroup ( String uniqueName, GroupMemberResource user, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/users/groups/{unique_name}/members"
 
         // query params
@@ -39,13 +39,15 @@ class UsersGroupsApi {
 
         
 
+        // Also still TODO: form params, body param
+
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "POST", "",
                     GroupMemberResource.class )
                     
     }
     def addMembersToGroup ( String uniqueName, List<GroupMemberResource> users, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/users/groups/{unique_name}/members/batch-add"
 
         // query params
@@ -63,13 +65,15 @@ class UsersGroupsApi {
 
         
 
+        // Also still TODO: form params, body param
+
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "POST", "array",
                     GroupMemberResource.class )
                     
     }
     def createGroup ( GroupResource groupResource, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/users/groups"
 
         // query params
@@ -79,13 +83,15 @@ class UsersGroupsApi {
 
         
 
+        // Also still TODO: form params, body param
+
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "POST", "",
                     GroupResource.class )
                     
     }
     def createGroupTemplate ( TemplateResource groupTemplateResource, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/users/groups/templates"
 
         // query params
@@ -95,13 +101,15 @@ class UsersGroupsApi {
 
         
 
+        // Also still TODO: form params, body param
+
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "POST", "",
                     TemplateResource.class )
                     
     }
     def deleteGroup ( String uniqueName, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/users/groups/{unique_name}"
 
         // query params
@@ -115,13 +123,15 @@ class UsersGroupsApi {
 
         
 
+        // Also still TODO: form params, body param
+
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "DELETE", "",
                     null )
                     
     }
     def deleteGroupTemplate ( String id, String cascade, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/users/groups/templates/{id}"
 
         // query params
@@ -137,13 +147,15 @@ class UsersGroupsApi {
             queryParams.put("cascade", String.valueOf(cascade))
 
 
+        // Also still TODO: form params, body param
+
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "DELETE", "",
                     null )
                     
     }
     def getGroup ( String uniqueName, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/users/groups/{unique_name}"
 
         // query params
@@ -157,13 +169,15 @@ class UsersGroupsApi {
 
         
 
+        // Also still TODO: form params, body param
+
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "GET", "",
                     GroupResource.class )
                     
     }
     def getGroupMember ( String uniqueName, Integer userId, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/users/groups/{unique_name}/members/{user_id}"
 
         // query params
@@ -181,13 +195,15 @@ class UsersGroupsApi {
 
         
 
+        // Also still TODO: form params, body param
+
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "GET", "",
                     GroupMemberResource.class )
                     
     }
     def getGroupMembers ( String uniqueName, Integer size, Integer page, String order, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/users/groups/{unique_name}/members"
 
         // query params
@@ -207,13 +223,15 @@ if (!"null".equals(String.valueOf(order)))
             queryParams.put("order", String.valueOf(order))
 
 
+        // Also still TODO: form params, body param
+
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "GET", "",
                     PageResourceGroupMemberResource.class )
                     
     }
     def getGroupTemplate ( String id, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/users/groups/templates/{id}"
 
         // query params
@@ -227,13 +245,15 @@ if (!"null".equals(String.valueOf(order)))
 
         
 
+        // Also still TODO: form params, body param
+
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "GET", "",
                     TemplateResource.class )
                     
     }
     def getGroupTemplates ( Integer size, Integer page, String order, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/users/groups/templates"
 
         // query params
@@ -249,13 +269,15 @@ if (!"null".equals(String.valueOf(order)))
             queryParams.put("order", String.valueOf(order))
 
 
+        // Also still TODO: form params, body param
+
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "GET", "",
                     PageResourceTemplateResource.class )
                     
     }
     def getGroupsForUser ( Integer userId, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/users/{user_id}/groups"
 
         // query params
@@ -269,13 +291,15 @@ if (!"null".equals(String.valueOf(order)))
 
         
 
+        // Also still TODO: form params, body param
+
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "GET", "array",
                     String.class )
                     
     }
     def removeGroupMember ( String uniqueName, Integer userId, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/users/groups/{unique_name}/members/{user_id}"
 
         // query params
@@ -293,13 +317,15 @@ if (!"null".equals(String.valueOf(order)))
 
         
 
+        // Also still TODO: form params, body param
+
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "DELETE", "",
                     null )
                     
     }
     def updateGroup ( String uniqueName, GroupResource groupResource, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/users/groups/{unique_name}"
 
         // query params
@@ -313,13 +339,15 @@ if (!"null".equals(String.valueOf(order)))
 
         
 
+        // Also still TODO: form params, body param
+
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "PUT", "",
                     null )
                     
     }
     def updateGroupMemberStatus ( String uniqueName, Integer userId, String status, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/users/groups/{unique_name}/members/{user_id}/status"
 
         // query params
@@ -341,13 +369,15 @@ if (!"null".equals(String.valueOf(order)))
 
         
 
+        // Also still TODO: form params, body param
+
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "PUT", "",
                     null )
                     
     }
     def updateGroupTemplate ( String id, TemplateResource groupTemplateResource, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/users/groups/templates/{id}"
 
         // query params
@@ -361,13 +391,15 @@ if (!"null".equals(String.valueOf(order)))
 
         
 
+        // Also still TODO: form params, body param
+
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "PUT", "",
                     TemplateResource.class )
                     
     }
     def updateGroups ( String filterTemplate, String filterMemberCount, String filterName, String filterUniqueName, String filterParent, String filterStatus, Integer size, Integer page, String order, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/users/groups"
 
         // query params
@@ -376,17 +408,17 @@ if (!"null".equals(String.valueOf(order)))
     
 
         if (!"null".equals(String.valueOf(filterTemplate)))
-            queryParams.put("filterTemplate", String.valueOf(filterTemplate))
+            queryParams.put("filter_template", String.valueOf(filterTemplate))
 if (!"null".equals(String.valueOf(filterMemberCount)))
-            queryParams.put("filterMemberCount", String.valueOf(filterMemberCount))
+            queryParams.put("filter_member_count", String.valueOf(filterMemberCount))
 if (!"null".equals(String.valueOf(filterName)))
-            queryParams.put("filterName", String.valueOf(filterName))
+            queryParams.put("filter_name", String.valueOf(filterName))
 if (!"null".equals(String.valueOf(filterUniqueName)))
-            queryParams.put("filterUniqueName", String.valueOf(filterUniqueName))
+            queryParams.put("filter_unique_name", String.valueOf(filterUniqueName))
 if (!"null".equals(String.valueOf(filterParent)))
-            queryParams.put("filterParent", String.valueOf(filterParent))
+            queryParams.put("filter_parent", String.valueOf(filterParent))
 if (!"null".equals(String.valueOf(filterStatus)))
-            queryParams.put("filterStatus", String.valueOf(filterStatus))
+            queryParams.put("filter_status", String.valueOf(filterStatus))
 if (!"null".equals(String.valueOf(size)))
             queryParams.put("size", String.valueOf(size))
 if (!"null".equals(String.valueOf(page)))
@@ -394,6 +426,8 @@ if (!"null".equals(String.valueOf(page)))
 if (!"null".equals(String.valueOf(order)))
             queryParams.put("order", String.valueOf(order))
 
+
+        // Also still TODO: form params, body param
 
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "GET", "",

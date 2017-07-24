@@ -24,16 +24,13 @@ class PaymentMethodResource {
   /* The expiration year for the payment method. Typically used for credit card payment methods */
   Integer expirationYear = null
 
-  /* The unique ID for that resource */
+  /* The unique ID of the resource */
   Long id = null
 
   /* The last 4 digits of the account number for the payment method. Typically used for credit card payment methods */
   String last4 = null
 
-  /* The user friendly name of that resource. Defaults to blank string */
-  String longDescription = null
-
-  /* The user friendly name of that resource */
+  /* The user friendly name of the resource */
   String name = null
 
   /* The type of payment method. Must be a pre-existing value */
@@ -41,9 +38,6 @@ class PaymentMethodResource {
 
   /* The generic payment type. Default is card */
   String paymentType = null
-
-  /* The user friendly name of that resource. Defaults to blank string */
-  String shortDescription = null
 
   /* The sort value for the payment method */
   Integer sort = null

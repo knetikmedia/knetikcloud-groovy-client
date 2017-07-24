@@ -7,7 +7,7 @@ import io.swagger.model.ArrayList;
 import io.swagger.model.SettingOption;
 import java.util.List;
 @Canonical
-class TheDefinitionOfAnActivityParametersExDifficultyLevel {
+class AvailableSettingResource {
 
   /* Whether the setting is advanced. Default: false */
   Boolean advancedOption = null

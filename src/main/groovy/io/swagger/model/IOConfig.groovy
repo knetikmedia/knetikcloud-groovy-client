@@ -3,13 +3,16 @@ package io.swagger.model;
 import groovy.transform.Canonical
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import io.swagger.model.BroadcastableEvent;
 @Canonical
-class CacheClearEvent {
+class IOConfig {
 
-    Boolean customerSetup = null
+    String customer = null
 
-    Boolean customerTeardown = null
+    Boolean enabled = null
+
+    String environment = null
+
+    String product = null
   
 
 }

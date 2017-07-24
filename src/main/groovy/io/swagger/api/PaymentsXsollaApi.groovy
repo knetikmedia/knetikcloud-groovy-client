@@ -16,7 +16,7 @@ class PaymentsXsollaApi {
     String versionPath = "/api/v1"
 
     def createXsollaTokenUrl ( XsollaPaymentRequest request, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/payment/provider/xsolla/payment"
 
         // query params
@@ -26,13 +26,15 @@ class PaymentsXsollaApi {
 
         
 
+        // Also still TODO: form params, body param
+
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "POST", "",
                     String.class )
                     
     }
     def receiveXsollaNotification ( Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/payment/provider/xsolla/notifications"
 
         // query params
@@ -41,6 +43,8 @@ class PaymentsXsollaApi {
     
 
         
+
+        // Also still TODO: form params, body param
 
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "POST", "",

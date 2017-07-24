@@ -16,7 +16,7 @@ class GamificationMetricsApi {
     String versionPath = "/api/v1"
 
     def addMetric ( MetricResource metric, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/metrics"
 
         // query params
@@ -25,6 +25,8 @@ class GamificationMetricsApi {
     
 
         
+
+        // Also still TODO: form params, body param
 
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "POST", "",

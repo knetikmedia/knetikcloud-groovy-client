@@ -6,8 +6,6 @@ import io.swagger.annotations.ApiModelProperty;
 @Canonical
 class InvoiceItemResource {
 
-    Integer affiliateId = null
-
     String bundleSku = null
 
     String currentFulfillmentStatus = null

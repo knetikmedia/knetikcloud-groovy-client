@@ -16,7 +16,7 @@ class BRERuleEngineActionsApi {
     String versionPath = "/api/v1"
 
     def getBREActions ( String filterCategory, String filterName, String filterTags, String filterSearch, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/bre/actions"
 
         // query params
@@ -25,14 +25,16 @@ class BRERuleEngineActionsApi {
     
 
         if (!"null".equals(String.valueOf(filterCategory)))
-            queryParams.put("filterCategory", String.valueOf(filterCategory))
+            queryParams.put("filter_category", String.valueOf(filterCategory))
 if (!"null".equals(String.valueOf(filterName)))
-            queryParams.put("filterName", String.valueOf(filterName))
+            queryParams.put("filter_name", String.valueOf(filterName))
 if (!"null".equals(String.valueOf(filterTags)))
-            queryParams.put("filterTags", String.valueOf(filterTags))
+            queryParams.put("filter_tags", String.valueOf(filterTags))
 if (!"null".equals(String.valueOf(filterSearch)))
-            queryParams.put("filterSearch", String.valueOf(filterSearch))
+            queryParams.put("filter_search", String.valueOf(filterSearch))
 
+
+        // Also still TODO: form params, body param
 
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "GET", "array",

@@ -19,7 +19,7 @@ class PaymentsPayPalClassicApi {
     String versionPath = "/api/v1"
 
     def createPayPalBillingAgreementUrl ( CreateBillingAgreementRequest request, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/payment/provider/paypal/classic/agreements/start"
 
         // query params
@@ -29,13 +29,15 @@ class PaymentsPayPalClassicApi {
 
         
 
+        // Also still TODO: form params, body param
+
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "POST", "",
                     String.class )
                     
     }
     def createPayPalExpressCheckout ( CreatePayPalPaymentRequest request, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/payment/provider/paypal/classic/checkout/start"
 
         // query params
@@ -45,13 +47,15 @@ class PaymentsPayPalClassicApi {
 
         
 
+        // Also still TODO: form params, body param
+
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "POST", "",
                     String.class )
                     
     }
     def finalizePayPalBillingAgreement ( FinalizeBillingAgreementRequest request, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/payment/provider/paypal/classic/agreements/finish"
 
         // query params
@@ -61,13 +65,15 @@ class PaymentsPayPalClassicApi {
 
         
 
+        // Also still TODO: form params, body param
+
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "POST", "",
                     Integer.class )
                     
     }
     def finalizePayPalCheckout ( FinalizePayPalPaymentRequest request, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/payment/provider/paypal/classic/checkout/finish"
 
         // query params
@@ -76,6 +82,8 @@ class PaymentsPayPalClassicApi {
     
 
         
+
+        // Also still TODO: form params, body param
 
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "POST", "",

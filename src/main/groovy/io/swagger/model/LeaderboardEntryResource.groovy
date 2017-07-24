@@ -13,6 +13,9 @@ class LeaderboardEntryResource {
   /* The raw score in this leaderboard. Null means non-compete or disqualification */
   Long score = null
 
+  /* The date this score was recorded or updated. Unix timestamp in seconds */
+  Long updatedDate = null
+
   /* The player for this entry */
   SimpleUserResource user = null
   

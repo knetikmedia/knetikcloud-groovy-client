@@ -16,7 +16,7 @@ class ReportingOrdersApi {
     String versionPath = "/api/v1"
 
     def getInvoiceReports ( String currencyCode, String granularity, String filterPaymentStatus, String filterFulfillmentStatus, Long startDate, Long endDate, Integer size, Integer page, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/reporting/orders/count/{currency_code}"
 
         // query params
@@ -31,18 +31,20 @@ class ReportingOrdersApi {
         if (!"null".equals(String.valueOf(granularity)))
             queryParams.put("granularity", String.valueOf(granularity))
 if (!"null".equals(String.valueOf(filterPaymentStatus)))
-            queryParams.put("filterPaymentStatus", String.valueOf(filterPaymentStatus))
+            queryParams.put("filter_payment_status", String.valueOf(filterPaymentStatus))
 if (!"null".equals(String.valueOf(filterFulfillmentStatus)))
-            queryParams.put("filterFulfillmentStatus", String.valueOf(filterFulfillmentStatus))
+            queryParams.put("filter_fulfillment_status", String.valueOf(filterFulfillmentStatus))
 if (!"null".equals(String.valueOf(startDate)))
-            queryParams.put("startDate", String.valueOf(startDate))
+            queryParams.put("start_date", String.valueOf(startDate))
 if (!"null".equals(String.valueOf(endDate)))
-            queryParams.put("endDate", String.valueOf(endDate))
+            queryParams.put("end_date", String.valueOf(endDate))
 if (!"null".equals(String.valueOf(size)))
             queryParams.put("size", String.valueOf(size))
 if (!"null".equals(String.valueOf(page)))
             queryParams.put("page", String.valueOf(page))
 
+
+        // Also still TODO: form params, body param
 
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "GET", "",

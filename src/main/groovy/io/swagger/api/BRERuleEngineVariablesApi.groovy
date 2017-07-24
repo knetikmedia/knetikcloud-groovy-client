@@ -17,7 +17,7 @@ class BRERuleEngineVariablesApi {
     String versionPath = "/api/v1"
 
     def getBREVariableTypes ( Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/bre/variable-types"
 
         // query params
@@ -27,13 +27,15 @@ class BRERuleEngineVariablesApi {
 
         
 
+        // Also still TODO: form params, body param
+
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "GET", "array",
                     VariableTypeResource.class )
                     
     }
     def getBREVariableValues ( String name, String filterName, Integer size, Integer page, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/bre/variable-types/{name}/values"
 
         // query params
@@ -46,12 +48,14 @@ class BRERuleEngineVariablesApi {
         }
 
         if (!"null".equals(String.valueOf(filterName)))
-            queryParams.put("filterName", String.valueOf(filterName))
+            queryParams.put("filter_name", String.valueOf(filterName))
 if (!"null".equals(String.valueOf(size)))
             queryParams.put("size", String.valueOf(size))
 if (!"null".equals(String.valueOf(page)))
             queryParams.put("page", String.valueOf(page))
 
+
+        // Also still TODO: form params, body param
 
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "GET", "",

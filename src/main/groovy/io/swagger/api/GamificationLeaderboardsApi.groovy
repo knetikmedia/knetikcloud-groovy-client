@@ -17,7 +17,7 @@ class GamificationLeaderboardsApi {
     String versionPath = "/api/v1"
 
     def getLeaderboard ( String contextType, String contextId, Integer size, Integer page, String order, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/leaderboards/{context_type}/{context_id}"
 
         // query params
@@ -41,13 +41,15 @@ if (!"null".equals(String.valueOf(order)))
             queryParams.put("order", String.valueOf(order))
 
 
+        // Also still TODO: form params, body param
+
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "GET", "",
                     LeaderboardResource.class )
                     
     }
     def getLeaderboardRank ( String contextType, String contextId, String id, Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/leaderboards/{context_type}/{context_id}/users/{id}/rank"
 
         // query params
@@ -69,13 +71,15 @@ if (!"null".equals(String.valueOf(order)))
 
         
 
+        // Also still TODO: form params, body param
+
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "GET", "",
                     LeaderboardEntryResource.class )
                     
     }
     def getLeaderboardStrategies ( Closure onSuccess, Closure onFailure)  {
-        // create path and map variables
+        // create path and map path parameters (TODO)
         String resourcePath = "/leaderboards/strategies"
 
         // query params
@@ -84,6 +88,8 @@ if (!"null".equals(String.valueOf(order)))
     
 
         
+
+        // Also still TODO: form params, body param
 
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "GET", "array",
