@@ -9,6 +9,9 @@ class AmazonS3Activity {
   /* S3 action (i.e., 'PUT') associated with the activity */
   String action = null
 
+  /* URL for accessing the resource via CDN if configured (will default to the main url if not) */
+  String cdnUrl = null
+
   /* Date the resource was created in S3 */
   Long createdDate = null
 
@@ -21,7 +24,7 @@ class AmazonS3Activity {
   /* S3 object key for the resource */
   String objectKey = null
 
-  /* URL for accessing the S3 resource */
+  /* URL for posting and later accessing the S3 resource */
   String url = null
 
   /* The id of the user that created this S3 activity */

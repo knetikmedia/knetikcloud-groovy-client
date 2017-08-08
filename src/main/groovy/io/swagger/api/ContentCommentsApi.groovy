@@ -9,6 +9,7 @@ import io.swagger.model.CommentResource
 import io.swagger.model.CommentSearch
 import io.swagger.model.PageResourceCommentResource
 import io.swagger.model.Result
+import io.swagger.model.StringWrapper
 
 import java.util.*;
 
@@ -135,7 +136,7 @@ if (!"null".equals(String.valueOf(page)))
                     CommentSearch.class )
                     
     }
-    def updateComment ( Long id, String content, Closure onSuccess, Closure onFailure)  {
+    def updateComment ( Long id, StringWrapper content, Closure onSuccess, Closure onFailure)  {
         // create path and map path parameters (TODO)
         String resourcePath = "/comments/{id}/content"
 

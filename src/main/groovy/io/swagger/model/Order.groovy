@@ -8,6 +8,8 @@ class Order {
 
     Boolean ascending = null
 
+    Boolean descending = null
+
     String direction = null
 
     Boolean ignoreCase = null

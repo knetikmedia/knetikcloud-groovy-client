@@ -6,6 +6,7 @@ import static groovyx.net.http.Method.*
 import io.swagger.api.ApiUtils
 
 import io.swagger.model.BreTriggerResource
+import io.swagger.model.IntWrapper
 import io.swagger.model.LevelingResource
 import io.swagger.model.PageResourceLevelingResource
 import io.swagger.model.PageResourceUserLevelingResource
@@ -181,7 +182,7 @@ if (!"null".equals(String.valueOf(order)))
                     PageResourceUserLevelingResource.class )
                     
     }
-    def incrementProgress ( Integer userId, String name, Integer progress, Closure onSuccess, Closure onFailure)  {
+    def incrementProgress ( Integer userId, String name, IntWrapper progress, Closure onSuccess, Closure onFailure)  {
         // create path and map path parameters (TODO)
         String resourcePath = "/users/{user_id}/leveling/{name}/progress"
 
@@ -207,7 +208,7 @@ if (!"null".equals(String.valueOf(order)))
                     null )
                     
     }
-    def setProgress ( Integer userId, String name, Integer progress, Closure onSuccess, Closure onFailure)  {
+    def setProgress ( Integer userId, String name, IntWrapper progress, Closure onSuccess, Closure onFailure)  {
         // create path and map path parameters (TODO)
         String resourcePath = "/users/{user_id}/leveling/{name}/progress"
 

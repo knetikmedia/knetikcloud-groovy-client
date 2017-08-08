@@ -7,6 +7,7 @@ import io.swagger.api.ApiUtils
 
 import io.swagger.model.AchievementDefinitionResource
 import io.swagger.model.BreTriggerResource
+import io.swagger.model.IntWrapper
 import io.swagger.model.PageResourceAchievementDefinitionResource
 import io.swagger.model.PageResourceTemplateResource
 import io.swagger.model.PageResourceUserAchievementGroupResource
@@ -361,7 +362,7 @@ if (!"null".equals(String.valueOf(page)))
                     PageResourceUserAchievementGroupResource.class )
                     
     }
-    def incrementAchievementProgress ( Integer userId, String achievementName, Integer progress, Closure onSuccess, Closure onFailure)  {
+    def incrementAchievementProgress ( Integer userId, String achievementName, IntWrapper progress, Closure onSuccess, Closure onFailure)  {
         // create path and map path parameters (TODO)
         String resourcePath = "/users/{user_id}/achievements/{achievement_name}/progress"
 
@@ -387,7 +388,7 @@ if (!"null".equals(String.valueOf(page)))
                     UserAchievementGroupResource.class )
                     
     }
-    def setAchievementProgress ( Integer userId, String achievementName, Integer progress, Closure onSuccess, Closure onFailure)  {
+    def setAchievementProgress ( Integer userId, String achievementName, IntWrapper progress, Closure onSuccess, Closure onFailure)  {
         // create path and map path parameters (TODO)
         String resourcePath = "/users/{user_id}/achievements/{achievement_name}/progress"
 

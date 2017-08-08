@@ -15,6 +15,7 @@ import io.swagger.model.PageResourceQuestionTemplateResource
 import io.swagger.model.QuestionResource
 import io.swagger.model.QuestionTemplateResource
 import io.swagger.model.Result
+import io.swagger.model.StringWrapper
 
 import java.util.*;
 
@@ -45,7 +46,7 @@ class GamificationTriviaApi {
                     AnswerResource.class )
                     
     }
-    def addQuestionTag ( String id, String tag, Closure onSuccess, Closure onFailure)  {
+    def addQuestionTag ( String id, StringWrapper tag, Closure onSuccess, Closure onFailure)  {
         // create path and map path parameters (TODO)
         String resourcePath = "/trivia/questions/{id}/tags"
 
@@ -67,7 +68,7 @@ class GamificationTriviaApi {
                     null )
                     
     }
-    def addTagToQuestionsBatch ( String tag, String filterSearch, String filterIdset, String filterCategory, String filterTag, String filterTagset, String filterType, Boolean filterPublished, Long filterImportId, Closure onSuccess, Closure onFailure)  {
+    def addTagToQuestionsBatch ( StringWrapper tag, String filterSearch, String filterIdset, String filterCategory, String filterTag, String filterTagset, String filterType, Boolean filterPublished, Long filterImportId, Closure onSuccess, Closure onFailure)  {
         // create path and map path parameters (TODO)
         String resourcePath = "/trivia/questions/tags"
 

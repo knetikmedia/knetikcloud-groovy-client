@@ -7,6 +7,7 @@ import io.swagger.api.ApiUtils
 
 import io.swagger.model.PageResourceSimpleUserResource
 import io.swagger.model.Result
+import io.swagger.model.StringWrapper
 
 import java.util.*;
 
@@ -115,7 +116,7 @@ if (!"null".equals(String.valueOf(page)))
                     PageResourceSimpleUserResource.class )
                     
     }
-    def redeemFriendshipToken ( String userId, String token, Closure onSuccess, Closure onFailure)  {
+    def redeemFriendshipToken ( String userId, StringWrapper token, Closure onSuccess, Closure onFailure)  {
         // create path and map path parameters (TODO)
         String resourcePath = "/users/{user_id}/friends/tokens"
 

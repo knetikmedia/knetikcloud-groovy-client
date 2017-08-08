@@ -13,6 +13,7 @@ import io.swagger.model.PageResourceInvoiceLogEntry
 import io.swagger.model.PageResourceInvoiceResource
 import io.swagger.model.PayBySavedMethodRequest
 import io.swagger.model.Result
+import io.swagger.model.StringWrapper
 
 import java.util.*;
 
@@ -197,7 +198,7 @@ if (!"null".equals(String.valueOf(order)))
                     null )
                     
     }
-    def setBundledInvoiceItemFulfillmentStatus ( Integer id, String bundleSku, String sku, String status, Closure onSuccess, Closure onFailure)  {
+    def setBundledInvoiceItemFulfillmentStatus ( Integer id, String bundleSku, String sku, StringWrapper status, Closure onSuccess, Closure onFailure)  {
         // create path and map path parameters (TODO)
         String resourcePath = "/invoices/{id}/items/{bundleSku}/bundled-skus/{sku}/fulfillment-status"
 
@@ -231,7 +232,7 @@ if (!"null".equals(String.valueOf(order)))
                     null )
                     
     }
-    def setExternalRef ( Integer id, String externalRef, Closure onSuccess, Closure onFailure)  {
+    def setExternalRef ( Integer id, StringWrapper externalRef, Closure onSuccess, Closure onFailure)  {
         // create path and map path parameters (TODO)
         String resourcePath = "/invoices/{id}/external-ref"
 
@@ -253,7 +254,7 @@ if (!"null".equals(String.valueOf(order)))
                     null )
                     
     }
-    def setInvoiceItemFulfillmentStatus ( Integer id, String sku, String status, Closure onSuccess, Closure onFailure)  {
+    def setInvoiceItemFulfillmentStatus ( Integer id, String sku, StringWrapper status, Closure onSuccess, Closure onFailure)  {
         // create path and map path parameters (TODO)
         String resourcePath = "/invoices/{id}/items/{sku}/fulfillment-status"
 
@@ -283,7 +284,7 @@ if (!"null".equals(String.valueOf(order)))
                     null )
                     
     }
-    def setOrderNotes ( Integer id, String orderNotes, Closure onSuccess, Closure onFailure)  {
+    def setOrderNotes ( Integer id, StringWrapper orderNotes, Closure onSuccess, Closure onFailure)  {
         // create path and map path parameters (TODO)
         String resourcePath = "/invoices/{id}/order-notes"
 

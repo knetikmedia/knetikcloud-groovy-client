@@ -10,6 +10,7 @@ import io.swagger.model.PageResourceTemplateResource
 import io.swagger.model.PageResourceUserBaseResource
 import io.swagger.model.PasswordResetRequest
 import io.swagger.model.Result
+import io.swagger.model.StringWrapper
 import io.swagger.model.TemplateResource
 import io.swagger.model.UserResource
 
@@ -20,7 +21,7 @@ class UsersApi {
     String basePath = "https://sandbox.knetikcloud.com"
     String versionPath = "/api/v1"
 
-    def addUserTag ( Integer userId, String tag, Closure onSuccess, Closure onFailure)  {
+    def addUserTag ( Integer userId, StringWrapper tag, Closure onSuccess, Closure onFailure)  {
         // create path and map path parameters (TODO)
         String resourcePath = "/users/{user_id}/tags"
 
@@ -288,7 +289,7 @@ if (!"null".equals(String.valueOf(order)))
                     null )
                     
     }
-    def setPassword ( Integer id, String password, Closure onSuccess, Closure onFailure)  {
+    def setPassword ( Integer id, StringWrapper password, Closure onSuccess, Closure onFailure)  {
         // create path and map path parameters (TODO)
         String resourcePath = "/users/{id}/password"
 

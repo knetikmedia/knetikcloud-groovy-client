@@ -10,6 +10,7 @@ import io.swagger.model.PageResourceTemplateResource
 import io.swagger.model.PollResource
 import io.swagger.model.PollResponseResource
 import io.swagger.model.Result
+import io.swagger.model.StringWrapper
 import io.swagger.model.TemplateResource
 
 import java.util.*;
@@ -19,7 +20,7 @@ class ContentPollsApi {
     String basePath = "https://sandbox.knetikcloud.com"
     String versionPath = "/api/v1"
 
-    def answerPoll ( String id, String answerKey, Closure onSuccess, Closure onFailure)  {
+    def answerPoll ( String id, StringWrapper answerKey, Closure onSuccess, Closure onFailure)  {
         // create path and map path parameters (TODO)
         String resourcePath = "/media/polls/{id}/response"
 

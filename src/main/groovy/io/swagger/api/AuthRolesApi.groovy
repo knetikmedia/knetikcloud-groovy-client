@@ -104,7 +104,7 @@ class AuthRolesApi {
                     RoleResource.class )
                     
     }
-    def getRoles ( Integer size, Integer page, String order, Closure onSuccess, Closure onFailure)  {
+    def getRoles ( String filterName, String filterRole, Integer size, Integer page, String order, Closure onSuccess, Closure onFailure)  {
         // create path and map path parameters (TODO)
         String resourcePath = "/auth/roles"
 
@@ -113,7 +113,11 @@ class AuthRolesApi {
         def headerParams = [:]
     
 
-        if (!"null".equals(String.valueOf(size)))
+        if (!"null".equals(String.valueOf(filterName)))
+            queryParams.put("filter_name", String.valueOf(filterName))
+if (!"null".equals(String.valueOf(filterRole)))
+            queryParams.put("filter_role", String.valueOf(filterRole))
+if (!"null".equals(String.valueOf(size)))
             queryParams.put("size", String.valueOf(size))
 if (!"null".equals(String.valueOf(page)))
             queryParams.put("page", String.valueOf(page))

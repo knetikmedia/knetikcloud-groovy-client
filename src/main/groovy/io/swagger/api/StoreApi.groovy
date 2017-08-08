@@ -6,8 +6,10 @@ import static groovyx.net.http.Method.*
 import io.swagger.api.ApiUtils
 
 import io.swagger.model.BehaviorDefinitionResource
+import io.swagger.model.InvoiceResource
 import io.swagger.model.PageResourceStoreItem
 import io.swagger.model.PageResourceStoreItemTemplateResource
+import io.swagger.model.QuickBuyRequest
 import io.swagger.model.Result
 import io.swagger.model.StoreItem
 import io.swagger.model.StoreItemTemplateResource
@@ -267,6 +269,24 @@ if (!"null".equals(String.valueOf(order)))
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "GET", "",
                     PageResourceStoreItem.class )
+                    
+    }
+    def quickBuy ( QuickBuyRequest quickBuyRequest, Closure onSuccess, Closure onFailure)  {
+        // create path and map path parameters (TODO)
+        String resourcePath = "/store/quick-buy"
+
+        // query params
+        def queryParams = [:]
+        def headerParams = [:]
+    
+
+        
+
+        // Also still TODO: form params, body param
+
+        invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
+                    "POST", "",
+                    InvoiceResource.class )
                     
     }
     def updateItemTemplate ( String id, StoreItemTemplateResource itemTemplateResource, Closure onSuccess, Closure onFailure)  {

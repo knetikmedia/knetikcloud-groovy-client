@@ -9,11 +9,13 @@ import io.swagger.model.CommentResource
 import io.swagger.model.ContributionResource
 import io.swagger.model.DispositionResource
 import io.swagger.model.FlagResource
+import io.swagger.model.IntWrapper
 import io.swagger.model.PageResourceCommentResource
 import io.swagger.model.PageResourceDispositionResource
 import io.swagger.model.PageResourceVideoRelationshipResource
 import io.swagger.model.PageResourceVideoResource
 import io.swagger.model.Result
+import io.swagger.model.StringWrapper
 import io.swagger.model.VideoRelationshipResource
 import io.swagger.model.VideoResource
 
@@ -24,7 +26,7 @@ class MediaVideosApi {
     String basePath = "https://sandbox.knetikcloud.com"
     String versionPath = "/api/v1"
 
-    def addUserToVideoWhitelist ( Long id, Integer userId, Closure onSuccess, Closure onFailure)  {
+    def addUserToVideoWhitelist ( Long id, IntWrapper userId, Closure onSuccess, Closure onFailure)  {
         // create path and map path parameters (TODO)
         String resourcePath = "/media/videos/{id}/whitelist"
 
@@ -108,7 +110,7 @@ class MediaVideosApi {
                     null )
                     
     }
-    def addVideoFlag ( Long videoId, String reason, Closure onSuccess, Closure onFailure)  {
+    def addVideoFlag ( Long videoId, StringWrapper reason, Closure onSuccess, Closure onFailure)  {
         // create path and map path parameters (TODO)
         String resourcePath = "/media/videos/{video_id}/moderation"
 
@@ -542,7 +544,7 @@ if (!"null".equals(String.valueOf(order)))
                     null )
                     
     }
-    def updateVideoComment ( Long videoId, Long id, String content, Closure onSuccess, Closure onFailure)  {
+    def updateVideoComment ( Long videoId, Long id, StringWrapper content, Closure onSuccess, Closure onFailure)  {
         // create path and map path parameters (TODO)
         String resourcePath = "/media/videos/{video_id}/comments/{id}/content"
 
@@ -568,7 +570,7 @@ if (!"null".equals(String.valueOf(order)))
                     null )
                     
     }
-    def updateVideoRelationship ( Long videoId, Long relationshipId, String details, Closure onSuccess, Closure onFailure)  {
+    def updateVideoRelationship ( Long videoId, Long relationshipId, StringWrapper details, Closure onSuccess, Closure onFailure)  {
         // create path and map path parameters (TODO)
         String resourcePath = "/media/videos/{video_id}/related/{id}/relationship_details"
 

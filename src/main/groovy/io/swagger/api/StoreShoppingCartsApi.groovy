@@ -10,10 +10,12 @@ import io.swagger.model.CartItemRequest
 import io.swagger.model.CartShippableResponse
 import io.swagger.model.CartShippingAddressRequest
 import io.swagger.model.CouponDefinition
+import io.swagger.model.IntWrapper
 import io.swagger.model.PageResourceCartSummary
 import io.swagger.model.Result
 import io.swagger.model.SampleCountriesResponse
 import io.swagger.model.SkuRequest
+import io.swagger.model.StringWrapper
 
 import java.util.*;
 
@@ -228,7 +230,7 @@ if (!"null".equals(String.valueOf(order)))
                     null )
                     
     }
-    def setCartCurrency ( String id, String currencyCode, Closure onSuccess, Closure onFailure)  {
+    def setCartCurrency ( String id, StringWrapper currencyCode, Closure onSuccess, Closure onFailure)  {
         // create path and map path parameters (TODO)
         String resourcePath = "/carts/{id}/currency"
 
@@ -250,7 +252,7 @@ if (!"null".equals(String.valueOf(order)))
                     null )
                     
     }
-    def setCartOwner ( String id, Integer userId, Closure onSuccess, Closure onFailure)  {
+    def setCartOwner ( String id, IntWrapper userId, Closure onSuccess, Closure onFailure)  {
         // create path and map path parameters (TODO)
         String resourcePath = "/carts/{id}/owner"
 

@@ -5,10 +5,12 @@ import static groovyx.net.http.ContentType.*
 import static groovyx.net.http.Method.*
 import io.swagger.api.ApiUtils
 
+import io.swagger.model.IntWrapper
 import io.swagger.model.InventorySubscriptionResource
 import io.swagger.model.InvoiceResource
 import io.swagger.model.ReactivateSubscriptionRequest
 import io.swagger.model.Result
+import io.swagger.model.StringWrapper
 import io.swagger.model.SubscriptionPriceOverrideRequest
 
 import java.util.*;
@@ -122,7 +124,7 @@ class UsersSubscriptionsApi {
                     null )
                     
     }
-    def setSubscriptionPaymentMethod ( Integer userId, Integer inventoryId, Integer paymentMethodId, Closure onSuccess, Closure onFailure)  {
+    def setSubscriptionPaymentMethod ( Integer userId, Integer inventoryId, IntWrapper paymentMethodId, Closure onSuccess, Closure onFailure)  {
         // create path and map path parameters (TODO)
         String resourcePath = "/users/{user_id}/subscriptions/{inventory_id}/payment-method"
 
@@ -148,7 +150,7 @@ class UsersSubscriptionsApi {
                     null )
                     
     }
-    def setSubscriptionStatus ( Integer userId, Integer inventoryId, String status, Closure onSuccess, Closure onFailure)  {
+    def setSubscriptionStatus ( Integer userId, Integer inventoryId, StringWrapper status, Closure onSuccess, Closure onFailure)  {
         // create path and map path parameters (TODO)
         String resourcePath = "/users/{user_id}/subscriptions/{inventory_id}/status"
 
@@ -178,7 +180,7 @@ class UsersSubscriptionsApi {
                     null )
                     
     }
-    def setUserSubscriptionPlan ( Integer userId, Integer inventoryId, String planId, Closure onSuccess, Closure onFailure)  {
+    def setUserSubscriptionPlan ( Integer userId, Integer inventoryId, StringWrapper planId, Closure onSuccess, Closure onFailure)  {
         // create path and map path parameters (TODO)
         String resourcePath = "/users/{user_id}/subscriptions/{inventory_id}/plan"
 
