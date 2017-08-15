@@ -168,7 +168,7 @@ if (!"null".equals(String.valueOf(order)))
                     PageResourceTemplateResource.class )
                     
     }
-    def getArticles ( String filterCategory, String filterTagset, String filterTagIntersection, String filterTagExclusion, String filterTitle, Integer size, Integer page, String order, Closure onSuccess, Closure onFailure)  {
+    def getArticles ( Boolean filterActiveOnly, String filterCategory, String filterTagset, String filterTagIntersection, String filterTagExclusion, String filterTitle, Integer size, Integer page, String order, Closure onSuccess, Closure onFailure)  {
         // create path and map path parameters (TODO)
         String resourcePath = "/content/articles"
 
@@ -177,7 +177,9 @@ if (!"null".equals(String.valueOf(order)))
         def headerParams = [:]
     
 
-        if (!"null".equals(String.valueOf(filterCategory)))
+        if (!"null".equals(String.valueOf(filterActiveOnly)))
+            queryParams.put("filter_active_only", String.valueOf(filterActiveOnly))
+if (!"null".equals(String.valueOf(filterCategory)))
             queryParams.put("filter_category", String.valueOf(filterCategory))
 if (!"null".equals(String.valueOf(filterTagset)))
             queryParams.put("filter_tagset", String.valueOf(filterTagset))

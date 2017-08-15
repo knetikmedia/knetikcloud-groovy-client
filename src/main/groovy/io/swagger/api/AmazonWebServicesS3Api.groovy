@@ -15,6 +15,30 @@ class AmazonWebServicesS3Api {
     String basePath = "https://sandbox.knetikcloud.com"
     String versionPath = "/api/v1"
 
+    def getDownloadURL ( String bucket, String path, Integer expiration, Closure onSuccess, Closure onFailure)  {
+        // create path and map path parameters (TODO)
+        String resourcePath = "/amazon/s3/downloadurl"
+
+        // query params
+        def queryParams = [:]
+        def headerParams = [:]
+    
+
+        if (!"null".equals(String.valueOf(bucket)))
+            queryParams.put("bucket", String.valueOf(bucket))
+if (!"null".equals(String.valueOf(path)))
+            queryParams.put("path", String.valueOf(path))
+if (!"null".equals(String.valueOf(expiration)))
+            queryParams.put("expiration", String.valueOf(expiration))
+
+
+        // Also still TODO: form params, body param
+
+        invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
+                    "GET", "",
+                    String.class )
+                    
+    }
     def getSignedS3URL ( String filename, String contentType, Closure onSuccess, Closure onFailure)  {
         // create path and map path parameters (TODO)
         String resourcePath = "/amazon/s3/signedposturl"

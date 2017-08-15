@@ -4,6 +4,7 @@ import groovy.transform.Canonical
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import io.swagger.model.ArrayList;
+import io.swagger.model.Behavior;
 import io.swagger.model.HashMap;
 import io.swagger.model.Map;
 import io.swagger.model.Property;
@@ -17,6 +18,9 @@ class SubscriptionResource {
 
   /* Who can purchase this subscription */
   String availability = null
+
+  /* The behaviors linked to the item, describing various options and interactions. May not be included in item lists */
+  List<Behavior> behaviors = new ArrayList<Behavior>()
 
   /* A category for filtering items */
   String category = null
