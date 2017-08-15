@@ -14,7 +14,7 @@ class AccessTokenApi {
     String basePath = "https://sandbox.knetikcloud.com"
     String versionPath = "/api/v1"
 
-    def getOAuthToken ( String grantType, String clientId, String clientSecret, String username, String password, Closure onSuccess, Closure onFailure)  {
+    def getOAuthToken ( String grantType, String clientId, String clientSecret, String username, String password, String token, String refreshToken, Closure onSuccess, Closure onFailure)  {
         // create path and map path parameters (TODO)
         String resourcePath = "/oauth/token"
 
