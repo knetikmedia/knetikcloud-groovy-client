@@ -8,6 +8,9 @@ class PayBySavedMethodRequest {
 
   /* The id of the payment method to use. Must belong to the caller, be public or have PAYMENTS_ADMIN permission */
   Integer paymentMethod = null
+
+  /* The id of a user to bill. Must have PAYMENTS_ADMIN permission */
+  Integer userId = null
   
 
 }
