@@ -54,7 +54,7 @@ class CampaignsChallengesApi {
         }
 
         if (!"null".equals(String.valueOf(validateSettings)))
-            queryParams.put("validateSettings", String.valueOf(validateSettings))
+            queryParams.put("validate_settings", String.valueOf(validateSettings))
 
 
         // Also still TODO: form params, body param
@@ -492,7 +492,7 @@ if (!"null".equals(String.valueOf(order)))
                     ChallengeResource.class )
                     
     }
-    def updateChallengeActivity ( Long id, Long challengeId, ChallengeActivityResource challengeActivityResource, Closure onSuccess, Closure onFailure)  {
+    def updateChallengeActivity ( Long id, Long challengeId, ChallengeActivityResource challengeActivityResource, Boolean validateSettings, Closure onSuccess, Closure onFailure)  {
         // create path and map path parameters (TODO)
         String resourcePath = "/challenges/{challenge_id}/activities/{id}"
 
@@ -509,7 +509,9 @@ if (!"null".equals(String.valueOf(order)))
             throw new RuntimeException("missing required params challengeId")
         }
 
-        
+        if (!"null".equals(String.valueOf(validateSettings)))
+            queryParams.put("validateSettings", String.valueOf(validateSettings))
+
 
         // Also still TODO: form params, body param
 
