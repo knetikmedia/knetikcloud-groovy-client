@@ -13,7 +13,7 @@ import java.util.*;
 
 @Mixin(ApiUtils)
 class BRERuleEngineTriggersApi {
-    String basePath = "https://sandbox.knetikcloud.com"
+    String basePath = "https://devsandbox.knetikcloud.com"
     String versionPath = "/api/v1"
 
     def createBRETrigger ( BreTriggerResource breTriggerResource, Closure onSuccess, Closure onFailure)  {

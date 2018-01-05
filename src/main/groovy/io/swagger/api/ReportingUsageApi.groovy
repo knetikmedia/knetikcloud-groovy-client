@@ -12,7 +12,7 @@ import java.util.*;
 
 @Mixin(ApiUtils)
 class ReportingUsageApi {
-    String basePath = "https://sandbox.knetikcloud.com"
+    String basePath = "https://devsandbox.knetikcloud.com"
     String versionPath = "/api/v1"
 
     def getUsageByDay ( Long startDate, Long endDate, Boolean combineEndpoints, String method, String url, Integer size, Integer page, Closure onSuccess, Closure onFailure)  {

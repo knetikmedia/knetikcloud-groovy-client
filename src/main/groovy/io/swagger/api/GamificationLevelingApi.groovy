@@ -17,7 +17,7 @@ import java.util.*;
 
 @Mixin(ApiUtils)
 class GamificationLevelingApi {
-    String basePath = "https://sandbox.knetikcloud.com"
+    String basePath = "https://devsandbox.knetikcloud.com"
     String versionPath = "/api/v1"
 
     def createLevel ( LevelingResource level, Closure onSuccess, Closure onFailure)  {

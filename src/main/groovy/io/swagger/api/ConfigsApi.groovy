@@ -13,7 +13,7 @@ import java.util.*;
 
 @Mixin(ApiUtils)
 class ConfigsApi {
-    String basePath = "https://sandbox.knetikcloud.com"
+    String basePath = "https://devsandbox.knetikcloud.com"
     String versionPath = "/api/v1"
 
     def createConfig ( Config config, Closure onSuccess, Closure onFailure)  {

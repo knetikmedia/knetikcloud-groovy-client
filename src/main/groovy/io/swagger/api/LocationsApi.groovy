@@ -14,7 +14,7 @@ import java.util.*;
 
 @Mixin(ApiUtils)
 class LocationsApi {
-    String basePath = "https://sandbox.knetikcloud.com"
+    String basePath = "https://devsandbox.knetikcloud.com"
     String versionPath = "/api/v1"
 
     def getCountries ( Closure onSuccess, Closure onFailure)  {

@@ -12,7 +12,7 @@ import java.util.*;
 
 @Mixin(ApiUtils)
 class PaymentsGoogleApi {
-    String basePath = "https://sandbox.knetikcloud.com"
+    String basePath = "https://devsandbox.knetikcloud.com"
     String versionPath = "/api/v1"
 
     def handleGooglePayment ( GooglePaymentRequest request, Closure onSuccess, Closure onFailure)  {

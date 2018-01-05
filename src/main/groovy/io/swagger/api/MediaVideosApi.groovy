@@ -12,10 +12,12 @@ import io.swagger.model.FlagResource
 import io.swagger.model.IntWrapper
 import io.swagger.model.PageResourceCommentResource
 import io.swagger.model.PageResourceDispositionResource
+import io.swagger.model.PageResourceTemplateResource
 import io.swagger.model.PageResourceVideoRelationshipResource
 import io.swagger.model.PageResourceVideoResource
 import io.swagger.model.Result
 import io.swagger.model.StringWrapper
+import io.swagger.model.TemplateResource
 import io.swagger.model.VideoRelationshipResource
 import io.swagger.model.VideoResource
 
@@ -23,7 +25,7 @@ import java.util.*;
 
 @Mixin(ApiUtils)
 class MediaVideosApi {
-    String basePath = "https://sandbox.knetikcloud.com"
+    String basePath = "https://devsandbox.knetikcloud.com"
     String versionPath = "/api/v1"
 
     def addUserToVideoWhitelist ( Long id, IntWrapper userId, Closure onSuccess, Closure onFailure)  {
@@ -176,6 +178,24 @@ class MediaVideosApi {
                     DispositionResource.class )
                     
     }
+    def createVideoTemplate ( TemplateResource videoTemplateResource, Closure onSuccess, Closure onFailure)  {
+        // create path and map path parameters (TODO)
+        String resourcePath = "/media/videos/templates"
+
+        // query params
+        def queryParams = [:]
+        def headerParams = [:]
+    
+
+        
+
+        // Also still TODO: form params, body param
+
+        invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
+                    "POST", "",
+                    TemplateResource.class )
+                    
+    }
     def deleteVideo ( Long id, Closure onSuccess, Closure onFailure)  {
         // create path and map path parameters (TODO)
         String resourcePath = "/media/videos/{id}"
@@ -286,6 +306,30 @@ class MediaVideosApi {
         }
 
         
+
+        // Also still TODO: form params, body param
+
+        invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
+                    "DELETE", "",
+                    null )
+                    
+    }
+    def deleteVideoTemplate ( String id, String cascade, Closure onSuccess, Closure onFailure)  {
+        // create path and map path parameters (TODO)
+        String resourcePath = "/media/videos/templates/{id}"
+
+        // query params
+        def queryParams = [:]
+        def headerParams = [:]
+    
+        // verify required params are set
+        if (id == null) {
+            throw new RuntimeException("missing required params id")
+        }
+
+        if (!"null".equals(String.valueOf(cascade)))
+            queryParams.put("cascade", String.valueOf(cascade))
+
 
         // Also still TODO: form params, body param
 
@@ -420,6 +464,52 @@ if (!"null".equals(String.valueOf(page)))
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "GET", "",
                     PageResourceVideoRelationshipResource.class )
+                    
+    }
+    def getVideoTemplate ( String id, Closure onSuccess, Closure onFailure)  {
+        // create path and map path parameters (TODO)
+        String resourcePath = "/media/videos/templates/{id}"
+
+        // query params
+        def queryParams = [:]
+        def headerParams = [:]
+    
+        // verify required params are set
+        if (id == null) {
+            throw new RuntimeException("missing required params id")
+        }
+
+        
+
+        // Also still TODO: form params, body param
+
+        invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
+                    "GET", "",
+                    TemplateResource.class )
+                    
+    }
+    def getVideoTemplates ( Integer size, Integer page, String order, Closure onSuccess, Closure onFailure)  {
+        // create path and map path parameters (TODO)
+        String resourcePath = "/media/videos/templates"
+
+        // query params
+        def queryParams = [:]
+        def headerParams = [:]
+    
+
+        if (!"null".equals(String.valueOf(size)))
+            queryParams.put("size", String.valueOf(size))
+if (!"null".equals(String.valueOf(page)))
+            queryParams.put("page", String.valueOf(page))
+if (!"null".equals(String.valueOf(order)))
+            queryParams.put("order", String.valueOf(order))
+
+
+        // Also still TODO: form params, body param
+
+        invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
+                    "GET", "",
+                    PageResourceTemplateResource.class )
                     
     }
     def getVideos ( Boolean excludeFlagged, Integer filterVideosByUploader, String filterCategory, String filterTagset, String filterVideosByName, Integer filterVideosByContributor, Integer filterVideosByAuthor, Boolean filterHasAuthor, Boolean filterHasUploader, String filterRelatedTo, Boolean filterFriends, String filterDisposition, Integer size, Integer page, String order, Closure onSuccess, Closure onFailure)  {
@@ -594,6 +684,28 @@ if (!"null".equals(String.valueOf(order)))
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "PUT", "",
                     null )
+                    
+    }
+    def updateVideoTemplate ( String id, TemplateResource videoTemplateResource, Closure onSuccess, Closure onFailure)  {
+        // create path and map path parameters (TODO)
+        String resourcePath = "/media/videos/templates/{id}"
+
+        // query params
+        def queryParams = [:]
+        def headerParams = [:]
+    
+        // verify required params are set
+        if (id == null) {
+            throw new RuntimeException("missing required params id")
+        }
+
+        
+
+        // Also still TODO: form params, body param
+
+        invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
+                    "PUT", "",
+                    TemplateResource.class )
                     
     }
     def viewVideo ( Long id, Closure onSuccess, Closure onFailure)  {

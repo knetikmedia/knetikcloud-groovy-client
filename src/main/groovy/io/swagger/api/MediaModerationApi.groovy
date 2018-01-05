@@ -15,7 +15,7 @@ import java.util.*;
 
 @Mixin(ApiUtils)
 class MediaModerationApi {
-    String basePath = "https://sandbox.knetikcloud.com"
+    String basePath = "https://devsandbox.knetikcloud.com"
     String versionPath = "/api/v1"
 
     def addFlag ( FlagResource flagResource, Closure onSuccess, Closure onFailure)  {

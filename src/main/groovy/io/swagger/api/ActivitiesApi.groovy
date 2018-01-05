@@ -21,7 +21,7 @@ import java.util.*;
 
 @Mixin(ApiUtils)
 class ActivitiesApi {
-    String basePath = "https://sandbox.knetikcloud.com"
+    String basePath = "https://devsandbox.knetikcloud.com"
     String versionPath = "/api/v1"
 
     def createActivity ( ActivityResource activityResource, Closure onSuccess, Closure onFailure)  {

@@ -15,7 +15,7 @@ import java.util.*;
 
 @Mixin(ApiUtils)
 class MediaArtistsApi {
-    String basePath = "https://sandbox.knetikcloud.com"
+    String basePath = "https://devsandbox.knetikcloud.com"
     String versionPath = "/api/v1"
 
     def addArtist ( ArtistResource artistResource, Closure onSuccess, Closure onFailure)  {

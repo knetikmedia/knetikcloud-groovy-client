@@ -13,7 +13,7 @@ import java.util.*;
 
 @Mixin(ApiUtils)
 class UsersAddressesApi {
-    String basePath = "https://sandbox.knetikcloud.com"
+    String basePath = "https://devsandbox.knetikcloud.com"
     String versionPath = "/api/v1"
 
     def createAddress ( String userId, SavedAddressResource savedAddressResource, Closure onSuccess, Closure onFailure)  {

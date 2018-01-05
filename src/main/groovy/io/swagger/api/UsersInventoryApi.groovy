@@ -21,7 +21,7 @@ import java.util.*;
 
 @Mixin(ApiUtils)
 class UsersInventoryApi {
-    String basePath = "https://sandbox.knetikcloud.com"
+    String basePath = "https://devsandbox.knetikcloud.com"
     String versionPath = "/api/v1"
 
     def addItemToUserInventory ( Integer id, UserInventoryAddRequest userInventoryAddRequest, Closure onSuccess, Closure onFailure)  {

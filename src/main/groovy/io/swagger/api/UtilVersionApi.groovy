@@ -12,7 +12,7 @@ import java.util.*;
 
 @Mixin(ApiUtils)
 class UtilVersionApi {
-    String basePath = "https://sandbox.knetikcloud.com"
+    String basePath = "https://devsandbox.knetikcloud.com"
     String versionPath = "/api/v1"
 
     def getVersion ( Closure onSuccess, Closure onFailure)  {

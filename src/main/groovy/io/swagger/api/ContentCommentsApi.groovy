@@ -14,7 +14,7 @@ import java.util.*;
 
 @Mixin(ApiUtils)
 class ContentCommentsApi {
-    String basePath = "https://sandbox.knetikcloud.com"
+    String basePath = "https://devsandbox.knetikcloud.com"
     String versionPath = "/api/v1"
 
     def addComment ( CommentResource commentResource, Closure onSuccess, Closure onFailure)  {
@@ -110,28 +110,6 @@ if (!"null".equals(String.valueOf(page)))
 
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "GET", "",
-                    PageResourceCommentResource.class )
-                    
-    }
-    def searchComments ( Object query, Integer size, Integer page, Closure onSuccess, Closure onFailure)  {
-        // create path and map path parameters (TODO)
-        String resourcePath = "/comments/search"
-
-        // query params
-        def queryParams = [:]
-        def headerParams = [:]
-    
-
-        if (!"null".equals(String.valueOf(size)))
-            queryParams.put("size", String.valueOf(size))
-if (!"null".equals(String.valueOf(page)))
-            queryParams.put("page", String.valueOf(page))
-
-
-        // Also still TODO: form params, body param
-
-        invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
-                    "POST", "",
                     PageResourceCommentResource.class )
                     
     }

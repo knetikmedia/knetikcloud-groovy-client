@@ -13,7 +13,7 @@ import java.util.*;
 
 @Mixin(ApiUtils)
 class BRERuleEngineExpressionsApi {
-    String basePath = "https://sandbox.knetikcloud.com"
+    String basePath = "https://devsandbox.knetikcloud.com"
     String versionPath = "/api/v1"
 
     def getBREExpression ( String type, Closure onSuccess, Closure onFailure)  {

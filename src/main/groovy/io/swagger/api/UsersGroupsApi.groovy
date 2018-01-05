@@ -18,7 +18,7 @@ import java.util.*;
 
 @Mixin(ApiUtils)
 class UsersGroupsApi {
-    String basePath = "https://sandbox.knetikcloud.com"
+    String basePath = "https://devsandbox.knetikcloud.com"
     String versionPath = "/api/v1"
 
     def addMemberToGroup ( String uniqueName, GroupMemberResource user, Closure onSuccess, Closure onFailure)  {

@@ -19,7 +19,7 @@ import java.util.*;
 
 @Mixin(ApiUtils)
 class CampaignsChallengesApi {
-    String basePath = "https://sandbox.knetikcloud.com"
+    String basePath = "https://devsandbox.knetikcloud.com"
     String versionPath = "/api/v1"
 
     def createChallenge ( ChallengeResource challengeResource, Closure onSuccess, Closure onFailure)  {

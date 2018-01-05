@@ -12,7 +12,7 @@ import java.util.*;
 
 @Mixin(ApiUtils)
 class AmazonWebServicesS3Api {
-    String basePath = "https://sandbox.knetikcloud.com"
+    String basePath = "https://devsandbox.knetikcloud.com"
     String versionPath = "/api/v1"
 
     def getDownloadURL ( String bucket, String path, Integer expiration, Closure onSuccess, Closure onFailure)  {

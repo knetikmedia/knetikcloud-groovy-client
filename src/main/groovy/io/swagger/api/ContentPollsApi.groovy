@@ -17,7 +17,7 @@ import java.util.*;
 
 @Mixin(ApiUtils)
 class ContentPollsApi {
-    String basePath = "https://sandbox.knetikcloud.com"
+    String basePath = "https://devsandbox.knetikcloud.com"
     String versionPath = "/api/v1"
 
     def answerPoll ( String id, StringWrapper answerKey, Closure onSuccess, Closure onFailure)  {

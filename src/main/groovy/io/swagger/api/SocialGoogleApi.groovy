@@ -12,7 +12,7 @@ import java.util.*;
 
 @Mixin(ApiUtils)
 class SocialGoogleApi {
-    String basePath = "https://sandbox.knetikcloud.com"
+    String basePath = "https://devsandbox.knetikcloud.com"
     String versionPath = "/api/v1"
 
     def linkAccounts1 ( GoogleToken googleToken, Closure onSuccess, Closure onFailure)  {

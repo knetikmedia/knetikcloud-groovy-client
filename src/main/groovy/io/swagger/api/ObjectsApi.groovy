@@ -15,7 +15,7 @@ import java.util.*;
 
 @Mixin(ApiUtils)
 class ObjectsApi {
-    String basePath = "https://sandbox.knetikcloud.com"
+    String basePath = "https://devsandbox.knetikcloud.com"
     String versionPath = "/api/v1"
 
     def createObjectItem ( String templateId, Boolean cascade, ObjectResource objectItem, Closure onSuccess, Closure onFailure)  {

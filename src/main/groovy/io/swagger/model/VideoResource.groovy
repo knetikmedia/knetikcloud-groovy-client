@@ -6,6 +6,9 @@ import io.swagger.annotations.ApiModelProperty;
 import io.swagger.model.ArrayList;
 import io.swagger.model.CommentResource;
 import io.swagger.model.ContributionResource;
+import io.swagger.model.HashMap;
+import io.swagger.model.Map;
+import io.swagger.model.Property;
 import io.swagger.model.SimpleReferenceResourcelong;
 import io.swagger.model.SimpleReferenceResourcestring;
 import io.swagger.model.SimpleUserResource;
@@ -15,6 +18,9 @@ class VideoResource {
 
   /* Whether the video is available, based on various factors */
   Boolean active = null
+
+  /* A map of additional properties, keyed on the property name.  Must match the names and types defined in the template for this item type */
+  Map<String, Property> additionalProperties = new HashMap<String, Property>()
 
   /* The original artist of the media */
   SimpleReferenceResourcelong author = null
@@ -81,6 +87,9 @@ class VideoResource {
 
   /* The tags for the video */
   List<String> tags = new ArrayList<String>()
+
+  /* A video template this video is validated against (private). May be null and no validation of additional_properties will be done */
+  String template = null
 
   /* The country of a thumbnail version. Typically a url */
   String thumbnail = null

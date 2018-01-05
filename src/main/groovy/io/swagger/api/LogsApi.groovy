@@ -17,7 +17,7 @@ import java.util.*;
 
 @Mixin(ApiUtils)
 class LogsApi {
-    String basePath = "https://sandbox.knetikcloud.com"
+    String basePath = "https://devsandbox.knetikcloud.com"
     String versionPath = "/api/v1"
 
     def addUserLog ( UserActionLog logEntry, Closure onSuccess, Closure onFailure)  {

@@ -14,7 +14,7 @@ import java.util.*;
 
 @Mixin(ApiUtils)
 class ReportingRevenueApi {
-    String basePath = "https://sandbox.knetikcloud.com"
+    String basePath = "https://devsandbox.knetikcloud.com"
     String versionPath = "/api/v1"
 
     def getItemRevenue ( String currencyCode, Long startDate, Long endDate, Closure onSuccess, Closure onFailure)  {
