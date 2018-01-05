@@ -28,6 +28,9 @@ class BreRule {
   /* The date the rule ceases to take effect, or null if never. Unix timestamp in seconds */
   Long endDate = null
 
+  /* How many times the rule has been evaluated (it's conditions checked, whether it then runs or not) */
+  Long evaluationCount = null
+
   /* The event name of the trigger this rule runs for. Affects which parameters are available */
   String eventName = null
 
@@ -36,6 +39,9 @@ class BreRule {
 
   /* The human readable name of the rule */
   String name = null
+
+  /* How many times the rule has run */
+  Long runCount = null
 
   /* Used to sort rules to control the order they run in. Larger numbered sort values run first.  Default 500 */
   Integer sort = null

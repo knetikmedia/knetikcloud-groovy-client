@@ -56,7 +56,7 @@ class CurrenciesApi {
                     null )
                     
     }
-    def getCurrencies ( Boolean filterEnabledCurrencies, String filterType, Integer size, Integer page, String order, Closure onSuccess, Closure onFailure)  {
+    def getCurrencies ( Boolean filterDefault, Boolean filterEnabledCurrencies, String filterType, Integer size, Integer page, String order, Closure onSuccess, Closure onFailure)  {
         // create path and map path parameters (TODO)
         String resourcePath = "/currencies"
 
@@ -65,7 +65,9 @@ class CurrenciesApi {
         def headerParams = [:]
     
 
-        if (!"null".equals(String.valueOf(filterEnabledCurrencies)))
+        if (!"null".equals(String.valueOf(filterDefault)))
+            queryParams.put("filter_default", String.valueOf(filterDefault))
+if (!"null".equals(String.valueOf(filterEnabledCurrencies)))
             queryParams.put("filter_enabled_currencies", String.valueOf(filterEnabledCurrencies))
 if (!"null".equals(String.valueOf(filterType)))
             queryParams.put("filter_type", String.valueOf(filterType))

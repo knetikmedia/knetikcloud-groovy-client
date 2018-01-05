@@ -5,7 +5,6 @@ import static groovyx.net.http.ContentType.*
 import static groovyx.net.http.Method.*
 import io.swagger.api.ApiUtils
 
-import io.swagger.model.EntitlementItem
 import io.swagger.model.ItemTemplateResource
 import io.swagger.model.ObjectResource
 import io.swagger.model.PageResourceItemTemplateResource
@@ -211,7 +210,7 @@ if (!"null".equals(String.valueOf(order)))
                     PageResourceItemTemplateResource.class )
                     
     }
-    def updateObjectItem ( String templateId, Integer entitlementId, Boolean cascade, EntitlementItem objectItem, Closure onSuccess, Closure onFailure)  {
+    def updateObjectItem ( String templateId, Integer objectId, Boolean cascade, ObjectResource objectItem, Closure onSuccess, Closure onFailure)  {
         // create path and map path parameters (TODO)
         String resourcePath = "/objects/{template_id}/{object_id}"
 
@@ -224,8 +223,8 @@ if (!"null".equals(String.valueOf(order)))
             throw new RuntimeException("missing required params templateId")
         }
         // verify required params are set
-        if (entitlementId == null) {
-            throw new RuntimeException("missing required params entitlementId")
+        if (objectId == null) {
+            throw new RuntimeException("missing required params objectId")
         }
 
         if (!"null".equals(String.valueOf(cascade)))

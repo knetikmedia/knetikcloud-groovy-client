@@ -3,6 +3,7 @@ package io.swagger.model;
 import groovy.transform.Canonical
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+import io.swagger.model.ArrayList;
 import io.swagger.model.HashMap;
 import io.swagger.model.Map;
 import io.swagger.model.Property;
@@ -34,10 +35,13 @@ class GroupResource {
   /* The number of users in child groups */
   Integer subMemberCount = null
 
+  /* Tags for search */
+  List<String> tags = new ArrayList<String>()
+
   /* A group template this group is validated against. May be null and no validation of additional_properties will be done */
   String template = null
 
-  /* Unique name used in url and references. Uppercase, lowercase, numbers and hyphens only. Max 50 characters. Cannot be altered once created */
+  /* Unique name used in url and references. Uppercase, lowercase, numbers and hyphens only. Max 50 characters. Cannot be altered once created. Default: random UUID */
   String uniqueName = null
   
 

@@ -219,6 +219,28 @@ class UsersGroupsApi {
                     GroupResource.class )
                     
     }
+    def getGroupAncestors ( String uniqueName, Closure onSuccess, Closure onFailure)  {
+        // create path and map path parameters (TODO)
+        String resourcePath = "/users/groups/{unique_name}/ancestors"
+
+        // query params
+        def queryParams = [:]
+        def headerParams = [:]
+    
+        // verify required params are set
+        if (uniqueName == null) {
+            throw new RuntimeException("missing required params uniqueName")
+        }
+
+        
+
+        // Also still TODO: form params, body param
+
+        invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
+                    "GET", "array",
+                    GroupResource.class )
+                    
+    }
     def getGroupMember ( String uniqueName, Integer userId, Closure onSuccess, Closure onFailure)  {
         // create path and map path parameters (TODO)
         String resourcePath = "/users/groups/{unique_name}/members/{user_id}"

@@ -6,6 +6,8 @@ import io.swagger.annotations.ApiModelProperty;
 import io.swagger.model.HashMap;
 import io.swagger.model.Map;
 import io.swagger.model.Property;
+import io.swagger.model.SimpleGroupResource;
+import io.swagger.model.SimpleUserResource;
 import java.util.List;
 @Canonical
 class GroupMemberResource {
@@ -13,14 +15,14 @@ class GroupMemberResource {
   /* A map of additional properties, keyed on the property name (private). Must match the names and types defined in the template for this type, or be an extra not from the template */
   Map<String, Property> additionalProperties = new HashMap<String, Property>()
 
-  /* The url of the user's avatar image */
-  String avatarUrl = null
+  /* The group. Id is the unique name */
+  SimpleGroupResource group = null
 
-  /* The public username of the user */
-  String displayName = null
+  /* Whether this membership is explicit (the user was added directly to the group) or implicit (the user was added only to one or more child groups) */
+  Boolean implicit = null
 
-  /* The id of the user */
-  Integer id = null
+  /* The id of the membership entry */
+  Long membershipId = null
 
   /* The position of the member in the group if applicable. Read notes for details */
   String order = null
@@ -31,8 +33,8 @@ class GroupMemberResource {
   /* A template this member additional properties are validated against (private). May be null and no validation of properties will be done */
   String template = null
 
-  /* The username of the user */
-  String username = null
+  /* The user */
+  SimpleUserResource user = null
   
 
 }

@@ -7,9 +7,7 @@ import io.swagger.model.BroadcastableEvent;
 @Canonical
 class CacheClearEvent {
 
-    Boolean customerSetup = null
-
-    Boolean customerTeardown = null
+    Boolean teardown = null
   
 
 }
