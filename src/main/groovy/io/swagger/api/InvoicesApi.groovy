@@ -19,7 +19,7 @@ import java.util.*;
 
 @Mixin(ApiUtils)
 class InvoicesApi {
-    String basePath = "https://devsandbox.knetikcloud.com"
+    String basePath = "https://sandbox.knetikcloud.com"
     String versionPath = "/api/v1"
 
     def createInvoice ( InvoiceCreateRequest req, Closure onSuccess, Closure onFailure)  {

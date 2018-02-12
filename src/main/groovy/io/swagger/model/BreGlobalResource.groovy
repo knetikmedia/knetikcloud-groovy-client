@@ -27,7 +27,7 @@ class BreGlobalResource {
   /* Where this global came from. System globals cannot be removed or updated */
   Boolean systemGlobal = null
 
-  /* The variable type the global stores. See the See Bre Variables enpoint for list */
+  /* The variable type the global stores. See the BRE variables endpoint for list */
   String type = null
   
 

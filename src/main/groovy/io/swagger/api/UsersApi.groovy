@@ -5,7 +5,10 @@ import static groovyx.net.http.ContentType.*
 import static groovyx.net.http.Method.*
 import io.swagger.api.ApiUtils
 
+import io.swagger.model.ChatMessageRequest
+import io.swagger.model.ChatMessageResource
 import io.swagger.model.NewPasswordRequest
+import io.swagger.model.PageResourceChatMessageResource
 import io.swagger.model.PageResourceTemplateResource
 import io.swagger.model.PageResourceUserBaseResource
 import io.swagger.model.PasswordResetRequest
@@ -18,7 +21,7 @@ import java.util.*;
 
 @Mixin(ApiUtils)
 class UsersApi {
-    String basePath = "https://devsandbox.knetikcloud.com"
+    String basePath = "https://sandbox.knetikcloud.com"
     String versionPath = "/api/v1"
 
     def addUserTag ( Integer userId, StringWrapper tag, Closure onSuccess, Closure onFailure)  {
@@ -87,6 +90,32 @@ class UsersApi {
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "DELETE", "",
                     null )
+                    
+    }
+    def getDirectMessages1 ( Integer recipientId, Integer size, Integer page, Closure onSuccess, Closure onFailure)  {
+        // create path and map path parameters (TODO)
+        String resourcePath = "/users/users/{recipient_id}/messages"
+
+        // query params
+        def queryParams = [:]
+        def headerParams = [:]
+    
+        // verify required params are set
+        if (recipientId == null) {
+            throw new RuntimeException("missing required params recipientId")
+        }
+
+        if (!"null".equals(String.valueOf(size)))
+            queryParams.put("size", String.valueOf(size))
+if (!"null".equals(String.valueOf(page)))
+            queryParams.put("page", String.valueOf(page))
+
+
+        // Also still TODO: form params, body param
+
+        invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
+                    "GET", "",
+                    PageResourceChatMessageResource.class )
                     
     }
     def getUser ( String id, Closure onSuccess, Closure onFailure)  {
@@ -247,6 +276,28 @@ if (!"null".equals(String.valueOf(order)))
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "PUT", "",
                     null )
+                    
+    }
+    def postUserMessage ( Integer recipientId, ChatMessageRequest chatMessageRequest, Closure onSuccess, Closure onFailure)  {
+        // create path and map path parameters (TODO)
+        String resourcePath = "/users/{recipient_id}/messages"
+
+        // query params
+        def queryParams = [:]
+        def headerParams = [:]
+    
+        // verify required params are set
+        if (recipientId == null) {
+            throw new RuntimeException("missing required params recipientId")
+        }
+
+        
+
+        // Also still TODO: form params, body param
+
+        invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
+                    "POST", "",
+                    ChatMessageResource.class )
                     
     }
     def registerUser ( UserResource userResource, Closure onSuccess, Closure onFailure)  {

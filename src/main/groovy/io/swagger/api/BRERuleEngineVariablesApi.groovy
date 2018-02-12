@@ -13,7 +13,7 @@ import java.util.*;
 
 @Mixin(ApiUtils)
 class BRERuleEngineVariablesApi {
-    String basePath = "https://devsandbox.knetikcloud.com"
+    String basePath = "https://sandbox.knetikcloud.com"
     String versionPath = "/api/v1"
 
     def getBREVariableTypes ( Closure onSuccess, Closure onFailure)  {

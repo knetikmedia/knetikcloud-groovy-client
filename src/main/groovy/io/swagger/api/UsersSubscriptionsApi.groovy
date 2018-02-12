@@ -17,7 +17,7 @@ import java.util.*;
 
 @Mixin(ApiUtils)
 class UsersSubscriptionsApi {
-    String basePath = "https://devsandbox.knetikcloud.com"
+    String basePath = "https://sandbox.knetikcloud.com"
     String versionPath = "/api/v1"
 
     def getUserSubscriptionDetails ( Integer userId, Integer inventoryId, Closure onSuccess, Closure onFailure)  {

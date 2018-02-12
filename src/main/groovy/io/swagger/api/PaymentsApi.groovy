@@ -15,7 +15,7 @@ import java.util.*;
 
 @Mixin(ApiUtils)
 class PaymentsApi {
-    String basePath = "https://devsandbox.knetikcloud.com"
+    String basePath = "https://sandbox.knetikcloud.com"
     String versionPath = "/api/v1"
 
     def createPaymentMethod ( Integer userId, PaymentMethodResource paymentMethod, Closure onSuccess, Closure onFailure)  {

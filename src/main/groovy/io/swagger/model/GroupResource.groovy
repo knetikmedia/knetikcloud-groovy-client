@@ -14,7 +14,7 @@ class GroupResource {
   /* A map of additional properties, keyed on the property name.  Must match the names and types defined in the template for this item type */
   Map<String, Property> additionalProperties = new HashMap<String, Property>()
 
-  /* A description of the group. Max 250 characters */
+  /* A description of the group */
   String description = null
 
   /* The number of users in the group */

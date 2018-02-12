@@ -12,7 +12,7 @@ import java.util.*;
 
 @Mixin(ApiUtils)
 class BRERuleEngineEventsApi {
-    String basePath = "https://devsandbox.knetikcloud.com"
+    String basePath = "https://sandbox.knetikcloud.com"
     String versionPath = "/api/v1"
 
     def sendBREEvent ( BreEvent breEvent, Closure onSuccess, Closure onFailure)  {

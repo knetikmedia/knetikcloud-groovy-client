@@ -17,7 +17,7 @@ import java.util.*;
 
 @Mixin(ApiUtils)
 class LogsApi {
-    String basePath = "https://devsandbox.knetikcloud.com"
+    String basePath = "https://sandbox.knetikcloud.com"
     String versionPath = "/api/v1"
 
     def addUserLog ( UserActionLog logEntry, Closure onSuccess, Closure onFailure)  {
@@ -60,7 +60,7 @@ class LogsApi {
                     BreEventLog.class )
                     
     }
-    def getBREEventLogs ( String filterStartDate, String filterEventName, String filterEventId, Integer size, Integer page, String order, Closure onSuccess, Closure onFailure)  {
+    def getBREEventLogs ( String filterStartDate, String filterEventName, String filterEventId, Integer size, Integer page, String order, String filterRuleId, Closure onSuccess, Closure onFailure)  {
         // create path and map path parameters (TODO)
         String resourcePath = "/bre/logs/event-log"
 
@@ -81,6 +81,8 @@ if (!"null".equals(String.valueOf(page)))
             queryParams.put("page", String.valueOf(page))
 if (!"null".equals(String.valueOf(order)))
             queryParams.put("order", String.valueOf(order))
+if (!"null".equals(String.valueOf(filterRuleId)))
+            queryParams.put("filter_rule_id", String.valueOf(filterRuleId))
 
 
         // Also still TODO: form params, body param
@@ -112,7 +114,7 @@ if (!"null".equals(String.valueOf(order)))
                     ForwardLog.class )
                     
     }
-    def getBREForwardLogs ( String filterStartDate, String filterEndDate, Integer filterStatusCode, Integer size, Integer page, String order, Closure onSuccess, Closure onFailure)  {
+    def getBREForwardLogs ( String filterStartDate, String filterEndDate, Integer filterStatusCode, Integer filterUrl, Integer size, Integer page, String order, Closure onSuccess, Closure onFailure)  {
         // create path and map path parameters (TODO)
         String resourcePath = "/bre/logs/forward-log"
 
@@ -127,6 +129,8 @@ if (!"null".equals(String.valueOf(filterEndDate)))
             queryParams.put("filter_end_date", String.valueOf(filterEndDate))
 if (!"null".equals(String.valueOf(filterStatusCode)))
             queryParams.put("filter_status_code", String.valueOf(filterStatusCode))
+if (!"null".equals(String.valueOf(filterUrl)))
+            queryParams.put("filter_url", String.valueOf(filterUrl))
 if (!"null".equals(String.valueOf(size)))
             queryParams.put("size", String.valueOf(size))
 if (!"null".equals(String.valueOf(page)))

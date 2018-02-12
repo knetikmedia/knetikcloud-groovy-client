@@ -6,24 +6,55 @@ import static groovyx.net.http.Method.*
 import io.swagger.api.ApiUtils
 
 import io.swagger.model.ActivityOccurrenceCreationFailure
+import io.swagger.model.ActivityOccurrenceJoinResult
 import io.swagger.model.ActivityOccurrenceResource
 import io.swagger.model.ActivityOccurrenceResults
 import io.swagger.model.ActivityOccurrenceResultsResource
+import io.swagger.model.ActivityOccurrenceSettingsResource
 import io.swagger.model.ActivityResource
+import io.swagger.model.ActivityUserResource
 import io.swagger.model.CreateActivityOccurrenceRequest
+import io.swagger.model.IntWrapper
 import io.swagger.model.PageResourceActivityOccurrenceResource
 import io.swagger.model.PageResourceBareActivityResource
 import io.swagger.model.PageResourceTemplateResource
 import io.swagger.model.Result
 import io.swagger.model.TemplateResource
+import io.swagger.model.ValueWrapperstring
 
 import java.util.*;
 
 @Mixin(ApiUtils)
 class ActivitiesApi {
-    String basePath = "https://devsandbox.knetikcloud.com"
+    String basePath = "https://sandbox.knetikcloud.com"
     String versionPath = "/api/v1"
 
+    def addUser ( Long activityOccurrenceId, Boolean test, Boolean bypassRestrictions, IntWrapper userId, Closure onSuccess, Closure onFailure)  {
+        // create path and map path parameters (TODO)
+        String resourcePath = "/activity-occurrences/{activity_occurrence_id}/users"
+
+        // query params
+        def queryParams = [:]
+        def headerParams = [:]
+    
+        // verify required params are set
+        if (activityOccurrenceId == null) {
+            throw new RuntimeException("missing required params activityOccurrenceId")
+        }
+
+        if (!"null".equals(String.valueOf(test)))
+            queryParams.put("test", String.valueOf(test))
+if (!"null".equals(String.valueOf(bypassRestrictions)))
+            queryParams.put("bypass_restrictions", String.valueOf(bypassRestrictions))
+
+
+        // Also still TODO: form params, body param
+
+        invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
+                    "POST", "",
+                    ActivityOccurrenceResource.class )
+                    
+    }
     def createActivity ( ActivityResource activityResource, Closure onSuccess, Closure onFailure)  {
         // create path and map path parameters (TODO)
         String resourcePath = "/activities"
@@ -278,6 +309,36 @@ if (!"null".equals(String.valueOf(order)))
                     PageResourceActivityOccurrenceResource.class )
                     
     }
+    def removeUser ( Long activityOccurrenceId, String userId, Boolean ban, Boolean bypassRestrictions, Closure onSuccess, Closure onFailure)  {
+        // create path and map path parameters (TODO)
+        String resourcePath = "/activity-occurrences/{activity_occurrence_id}/users/{user_id}"
+
+        // query params
+        def queryParams = [:]
+        def headerParams = [:]
+    
+        // verify required params are set
+        if (activityOccurrenceId == null) {
+            throw new RuntimeException("missing required params activityOccurrenceId")
+        }
+        // verify required params are set
+        if (userId == null) {
+            throw new RuntimeException("missing required params userId")
+        }
+
+        if (!"null".equals(String.valueOf(ban)))
+            queryParams.put("ban", String.valueOf(ban))
+if (!"null".equals(String.valueOf(bypassRestrictions)))
+            queryParams.put("bypass_restrictions", String.valueOf(bypassRestrictions))
+
+
+        // Also still TODO: form params, body param
+
+        invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
+                    "DELETE", "",
+                    null )
+                    
+    }
     def setActivityOccurrenceResults ( Long activityOccurrenceId, ActivityOccurrenceResultsResource activityOccurrenceResults, Closure onSuccess, Closure onFailure)  {
         // create path and map path parameters (TODO)
         String resourcePath = "/activity-occurrences/{activity_occurrence_id}/results"
@@ -298,6 +359,54 @@ if (!"null".equals(String.valueOf(order)))
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "POST", "",
                     ActivityOccurrenceResults.class )
+                    
+    }
+    def setActivityOccurrenceSettings ( Long activityOccurrenceId, ActivityOccurrenceSettingsResource settings, Closure onSuccess, Closure onFailure)  {
+        // create path and map path parameters (TODO)
+        String resourcePath = "/activity-occurrences/{activity_occurrence_id}/settings"
+
+        // query params
+        def queryParams = [:]
+        def headerParams = [:]
+    
+        // verify required params are set
+        if (activityOccurrenceId == null) {
+            throw new RuntimeException("missing required params activityOccurrenceId")
+        }
+
+        
+
+        // Also still TODO: form params, body param
+
+        invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
+                    "PUT", "",
+                    ActivityOccurrenceResource.class )
+                    
+    }
+    def setUserStatus ( Long activityOccurrenceId, String userId, String status, Closure onSuccess, Closure onFailure)  {
+        // create path and map path parameters (TODO)
+        String resourcePath = "/activity-occurrences/{activity_occurrence_id}/users/{user_id}/status"
+
+        // query params
+        def queryParams = [:]
+        def headerParams = [:]
+    
+        // verify required params are set
+        if (activityOccurrenceId == null) {
+            throw new RuntimeException("missing required params activityOccurrenceId")
+        }
+        // verify required params are set
+        if (userId == null) {
+            throw new RuntimeException("missing required params userId")
+        }
+
+        
+
+        // Also still TODO: form params, body param
+
+        invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
+                    "PUT", "",
+                    ActivityUserResource.class )
                     
     }
     def updateActivity ( Long id, ActivityResource activityResource, Closure onSuccess, Closure onFailure)  {
@@ -322,7 +431,7 @@ if (!"null".equals(String.valueOf(order)))
                     ActivityResource.class )
                     
     }
-    def updateActivityOccurrence ( Long activityOccurrenceId, String activityOccurrenceStatus, Closure onSuccess, Closure onFailure)  {
+    def updateActivityOccurrenceStatus ( Long activityOccurrenceId, ValueWrapperstring activityOccurrenceStatus, Closure onSuccess, Closure onFailure)  {
         // create path and map path parameters (TODO)
         String resourcePath = "/activity-occurrences/{activity_occurrence_id}/status"
 

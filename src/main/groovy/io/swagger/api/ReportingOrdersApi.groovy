@@ -12,7 +12,7 @@ import java.util.*;
 
 @Mixin(ApiUtils)
 class ReportingOrdersApi {
-    String basePath = "https://devsandbox.knetikcloud.com"
+    String basePath = "https://sandbox.knetikcloud.com"
     String versionPath = "/api/v1"
 
     def getInvoiceReports ( String currencyCode, String granularity, String filterPaymentStatus, String filterFulfillmentStatus, Long startDate, Long endDate, Integer size, Integer page, Closure onSuccess, Closure onFailure)  {

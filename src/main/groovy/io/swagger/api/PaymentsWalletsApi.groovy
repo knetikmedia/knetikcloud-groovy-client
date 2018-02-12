@@ -17,7 +17,7 @@ import java.util.*;
 
 @Mixin(ApiUtils)
 class PaymentsWalletsApi {
-    String basePath = "https://devsandbox.knetikcloud.com"
+    String basePath = "https://sandbox.knetikcloud.com"
     String versionPath = "/api/v1"
 
     def getUserWallet ( Integer userId, String currencyCode, Closure onSuccess, Closure onFailure)  {

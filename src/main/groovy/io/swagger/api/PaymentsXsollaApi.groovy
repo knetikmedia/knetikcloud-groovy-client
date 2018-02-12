@@ -12,7 +12,7 @@ import java.util.*;
 
 @Mixin(ApiUtils)
 class PaymentsXsollaApi {
-    String basePath = "https://devsandbox.knetikcloud.com"
+    String basePath = "https://sandbox.knetikcloud.com"
     String versionPath = "/api/v1"
 
     def createXsollaTokenUrl ( XsollaPaymentRequest request, Closure onSuccess, Closure onFailure)  {

@@ -12,7 +12,7 @@ import java.util.*;
 
 @Mixin(ApiUtils)
 class UtilMaintenanceApi {
-    String basePath = "https://devsandbox.knetikcloud.com"
+    String basePath = "https://sandbox.knetikcloud.com"
     String versionPath = "/api/v1"
 
     def deleteMaintenance ( Closure onSuccess, Closure onFailure)  {

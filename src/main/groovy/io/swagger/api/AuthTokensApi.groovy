@@ -13,7 +13,7 @@ import java.util.*;
 
 @Mixin(ApiUtils)
 class AuthTokensApi {
-    String basePath = "https://devsandbox.knetikcloud.com"
+    String basePath = "https://sandbox.knetikcloud.com"
     String versionPath = "/api/v1"
 
     def deleteTokens ( String username, String clientId, Closure onSuccess, Closure onFailure)  {

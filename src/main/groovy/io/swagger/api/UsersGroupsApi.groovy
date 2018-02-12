@@ -5,20 +5,24 @@ import static groovyx.net.http.ContentType.*
 import static groovyx.net.http.Method.*
 import io.swagger.api.ApiUtils
 
+import io.swagger.model.ChatMessageRequest
+import io.swagger.model.ChatMessageResource
 import io.swagger.model.GroupMemberResource
 import io.swagger.model.GroupResource
+import io.swagger.model.PageResourceChatMessageResource
 import io.swagger.model.PageResourceGroupMemberResource
 import io.swagger.model.PageResourceGroupResource
 import io.swagger.model.PageResourceTemplateResource
 import io.swagger.model.Result
 import io.swagger.model.StringWrapper
 import io.swagger.model.TemplateResource
+import io.swagger.model.ValueWrapperboolean
 
 import java.util.*;
 
 @Mixin(ApiUtils)
 class UsersGroupsApi {
-    String basePath = "https://devsandbox.knetikcloud.com"
+    String basePath = "https://sandbox.knetikcloud.com"
     String versionPath = "/api/v1"
 
     def addMemberToGroup ( String uniqueName, GroupMemberResource user, Closure onSuccess, Closure onFailure)  {
@@ -197,6 +201,36 @@ class UsersGroupsApi {
                     null )
                     
     }
+    def disableGroupNotification ( String uniqueName, String userId, ValueWrapperboolean disabled, Closure onSuccess, Closure onFailure)  {
+        // create path and map path parameters (TODO)
+        String resourcePath = "/users/groups/{unique_name}/members/{user_id}/messages/disabled"
+
+        // query params
+        def queryParams = [:]
+        def headerParams = [:]
+    
+        // verify required params are set
+        if (uniqueName == null) {
+            throw new RuntimeException("missing required params uniqueName")
+        }
+        // verify required params are set
+        if (userId == null) {
+            throw new RuntimeException("missing required params userId")
+        }
+        // verify required params are set
+        if (disabled == null) {
+            throw new RuntimeException("missing required params disabled")
+        }
+
+        
+
+        // Also still TODO: form params, body param
+
+        invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
+                    "PUT", "",
+                    null )
+                    
+    }
     def getGroup ( String uniqueName, Closure onSuccess, Closure onFailure)  {
         // create path and map path parameters (TODO)
         String resourcePath = "/users/groups/{unique_name}"
@@ -341,6 +375,32 @@ if (!"null".equals(String.valueOf(order)))
                     PageResourceGroupMemberResource.class )
                     
     }
+    def getGroupMessages ( String uniqueName, Integer size, Integer page, Closure onSuccess, Closure onFailure)  {
+        // create path and map path parameters (TODO)
+        String resourcePath = "/users/groups/{unique_name}/messages"
+
+        // query params
+        def queryParams = [:]
+        def headerParams = [:]
+    
+        // verify required params are set
+        if (uniqueName == null) {
+            throw new RuntimeException("missing required params uniqueName")
+        }
+
+        if (!"null".equals(String.valueOf(size)))
+            queryParams.put("size", String.valueOf(size))
+if (!"null".equals(String.valueOf(page)))
+            queryParams.put("page", String.valueOf(page))
+
+
+        // Also still TODO: form params, body param
+
+        invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
+                    "GET", "",
+                    PageResourceChatMessageResource.class )
+                    
+    }
     def getGroupTemplate ( String id, Closure onSuccess, Closure onFailure)  {
         // create path and map path parameters (TODO)
         String resourcePath = "/users/groups/templates/{id}"
@@ -445,6 +505,28 @@ if (!"null".equals(String.valueOf(order)))
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "GET", "",
                     PageResourceGroupResource.class )
+                    
+    }
+    def postGroupMessage ( String uniqueName, ChatMessageRequest chatMessageRequest, Closure onSuccess, Closure onFailure)  {
+        // create path and map path parameters (TODO)
+        String resourcePath = "/users/groups/{unique_name}/messages"
+
+        // query params
+        def queryParams = [:]
+        def headerParams = [:]
+    
+        // verify required params are set
+        if (uniqueName == null) {
+            throw new RuntimeException("missing required params uniqueName")
+        }
+
+        
+
+        // Also still TODO: form params, body param
+
+        invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
+                    "POST", "",
+                    ChatMessageResource.class )
                     
     }
     def removeGroupMember ( String uniqueName, Integer userId, Closure onSuccess, Closure onFailure)  {

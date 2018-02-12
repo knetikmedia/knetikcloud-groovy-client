@@ -21,7 +21,7 @@ import java.util.*;
 
 @Mixin(ApiUtils)
 class UsersInventoryApi {
-    String basePath = "https://devsandbox.knetikcloud.com"
+    String basePath = "https://sandbox.knetikcloud.com"
     String versionPath = "/api/v1"
 
     def addItemToUserInventory ( Integer id, UserInventoryAddRequest userInventoryAddRequest, Closure onSuccess, Closure onFailure)  {
@@ -290,7 +290,7 @@ if (!"null".equals(String.valueOf(filterDate)))
                     PageResourceUserInventoryResource.class )
                     
     }
-    def getUserInventory ( Integer userId, Integer id, Closure onSuccess, Closure onFailure)  {
+    def getUserInventory ( String userId, Integer id, Closure onSuccess, Closure onFailure)  {
         // create path and map path parameters (TODO)
         String resourcePath = "/users/{user_id}/inventory/{id}"
 

@@ -12,7 +12,7 @@ import java.util.*;
 
 @Mixin(ApiUtils)
 class ReportingChallengesApi {
-    String basePath = "https://devsandbox.knetikcloud.com"
+    String basePath = "https://sandbox.knetikcloud.com"
     String versionPath = "/api/v1"
 
     def getChallengeEventLeaderboard ( Long filterEvent, Integer size, Integer page, String order, Closure onSuccess, Closure onFailure)  {

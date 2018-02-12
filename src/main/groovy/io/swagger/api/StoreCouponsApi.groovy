@@ -14,7 +14,7 @@ import java.util.*;
 
 @Mixin(ApiUtils)
 class StoreCouponsApi {
-    String basePath = "https://devsandbox.knetikcloud.com"
+    String basePath = "https://sandbox.knetikcloud.com"
     String versionPath = "/api/v1"
 
     def createCouponItem ( Boolean cascade, CouponItem couponItem, Closure onSuccess, Closure onFailure)  {

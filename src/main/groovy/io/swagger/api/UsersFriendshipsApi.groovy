@@ -13,7 +13,7 @@ import java.util.*;
 
 @Mixin(ApiUtils)
 class UsersFriendshipsApi {
-    String basePath = "https://devsandbox.knetikcloud.com"
+    String basePath = "https://sandbox.knetikcloud.com"
     String versionPath = "/api/v1"
 
     def addFriend ( String userId, Integer id, Closure onSuccess, Closure onFailure)  {

@@ -6,7 +6,7 @@ import io.swagger.annotations.ApiModelProperty;
 @Canonical
 class Config {
 
-  /* The description of the config.  Max 140 characters */
+  /* The description of the config.  Max 255 characters */
   String description = null
 
   /* The name of the config */

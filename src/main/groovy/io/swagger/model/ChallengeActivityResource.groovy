@@ -5,6 +5,7 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import io.swagger.model.ActivityEntitlementResource;
 import io.swagger.model.ArrayList;
+import io.swagger.model.CoreChallengeActivitySettings;
 import io.swagger.model.HashMap;
 import io.swagger.model.Map;
 import io.swagger.model.Property;
@@ -22,6 +23,9 @@ class ChallengeActivityResource {
 
   /* The id of the challenge */
   Long challengeId = null
+
+  /* Defines core settings about the activity that affect how it can be created/played by users. Values may be left null to inherit from parent activity. */
+  CoreChallengeActivitySettings coreSettings = null
 
   /* The entitlement item needed to participate in the activity as part of this event. Null indicates free entry. When creating/updating only id is used. Item must be pre-existing */
   ActivityEntitlementResource entitlement = null

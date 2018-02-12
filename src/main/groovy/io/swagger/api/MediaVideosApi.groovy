@@ -25,7 +25,7 @@ import java.util.*;
 
 @Mixin(ApiUtils)
 class MediaVideosApi {
-    String basePath = "https://devsandbox.knetikcloud.com"
+    String basePath = "https://sandbox.knetikcloud.com"
     String versionPath = "/api/v1"
 
     def addUserToVideoWhitelist ( Long id, IntWrapper userId, Closure onSuccess, Closure onFailure)  {

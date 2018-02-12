@@ -15,6 +15,9 @@ class TemplateEmailResource {
   /* A list of user ids to send the message to. */
   List<Integer> recipients = new ArrayList<Integer>()
 
+  /* The subject for email */
+  String subject = null
+
   /* The key for the template */
   String templateKey = null
 

@@ -12,7 +12,7 @@ import java.util.*;
 
 @Mixin(ApiUtils)
 class SocialFacebookApi {
-    String basePath = "https://devsandbox.knetikcloud.com"
+    String basePath = "https://sandbox.knetikcloud.com"
     String versionPath = "/api/v1"
 
     def linkAccounts ( FacebookToken facebookToken, Closure onSuccess, Closure onFailure)  {

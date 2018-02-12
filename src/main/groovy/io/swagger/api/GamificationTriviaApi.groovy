@@ -20,7 +20,7 @@ import java.util.*;
 
 @Mixin(ApiUtils)
 class GamificationTriviaApi {
-    String basePath = "https://devsandbox.knetikcloud.com"
+    String basePath = "https://sandbox.knetikcloud.com"
     String versionPath = "/api/v1"
 
     def addQuestionAnswers ( String questionId, AnswerResource answer, Closure onSuccess, Closure onFailure)  {

@@ -13,7 +13,7 @@ import java.util.*;
 
 @Mixin(ApiUtils)
 class CurrenciesApi {
-    String basePath = "https://devsandbox.knetikcloud.com"
+    String basePath = "https://sandbox.knetikcloud.com"
     String versionPath = "/api/v1"
 
     def createCurrency ( CurrencyResource currency, Closure onSuccess, Closure onFailure)  {

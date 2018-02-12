@@ -21,7 +21,7 @@ import java.util.*;
 
 @Mixin(ApiUtils)
 class StoreShoppingCartsApi {
-    String basePath = "https://devsandbox.knetikcloud.com"
+    String basePath = "https://sandbox.knetikcloud.com"
     String versionPath = "/api/v1"
 
     def addCustomDiscount ( String id, CouponDefinition customDiscount, Closure onSuccess, Closure onFailure)  {

@@ -15,7 +15,7 @@ import java.util.*;
 
 @Mixin(ApiUtils)
 class BRERuleEngineCategoriesApi {
-    String basePath = "https://devsandbox.knetikcloud.com"
+    String basePath = "https://sandbox.knetikcloud.com"
     String versionPath = "/api/v1"
 
     def createBRECategoryTemplate ( TemplateResource template, Closure onSuccess, Closure onFailure)  {

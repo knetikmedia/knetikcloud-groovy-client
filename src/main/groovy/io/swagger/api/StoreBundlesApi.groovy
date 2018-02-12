@@ -14,7 +14,7 @@ import java.util.*;
 
 @Mixin(ApiUtils)
 class StoreBundlesApi {
-    String basePath = "https://devsandbox.knetikcloud.com"
+    String basePath = "https://sandbox.knetikcloud.com"
     String versionPath = "/api/v1"
 
     def createBundleItem ( Boolean cascade, BundleItem bundleItem, Closure onSuccess, Closure onFailure)  {

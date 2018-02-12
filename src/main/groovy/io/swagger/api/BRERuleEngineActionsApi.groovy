@@ -12,7 +12,7 @@ import java.util.*;
 
 @Mixin(ApiUtils)
 class BRERuleEngineActionsApi {
-    String basePath = "https://devsandbox.knetikcloud.com"
+    String basePath = "https://sandbox.knetikcloud.com"
     String versionPath = "/api/v1"
 
     def getBREActions ( String filterCategory, String filterName, String filterTags, String filterSearch, Closure onSuccess, Closure onFailure)  {

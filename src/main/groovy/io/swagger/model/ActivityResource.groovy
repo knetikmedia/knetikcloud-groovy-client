@@ -6,6 +6,7 @@ import io.swagger.annotations.ApiModelProperty;
 import io.swagger.model.ActivityEntitlementResource;
 import io.swagger.model.ArrayList;
 import io.swagger.model.AvailableSettingResource;
+import io.swagger.model.CoreActivitySettings;
 import io.swagger.model.HashMap;
 import io.swagger.model.Map;
 import io.swagger.model.Property;
@@ -16,6 +17,9 @@ class ActivityResource {
 
   /* A map of additional properties keyed on the property name. Used to further describe an activity. While settings will vary from one activity occurrence (a game) to another, additional properties are shared by all the occurrences of this activity. Ex: Activity Logo, Disclaimer, Greeting, etc. Validated against template if one exists for activities */
   Map<String, Property> additionalProperties = new HashMap<String, Property>()
+
+  /* Defines core settings about the activity that affect how it can be created/played by users. */
+  CoreActivitySettings coreSettings = null
 
   /* The date/time this resource was created in seconds since unix epoch */
   Long createdDate = null

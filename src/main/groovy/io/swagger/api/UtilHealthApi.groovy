@@ -11,7 +11,7 @@ import java.util.*;
 
 @Mixin(ApiUtils)
 class UtilHealthApi {
-    String basePath = "https://devsandbox.knetikcloud.com"
+    String basePath = "https://sandbox.knetikcloud.com"
     String versionPath = "/api/v1"
 
     def getHealth ( Closure onSuccess, Closure onFailure)  {

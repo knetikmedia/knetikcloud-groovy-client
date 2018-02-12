@@ -6,7 +6,9 @@ import io.swagger.annotations.ApiModelProperty;
 import io.swagger.model.ActivityEntitlementResource;
 import io.swagger.model.ActivityUserResource;
 import io.swagger.model.ArrayList;
+import io.swagger.model.CoreActivityOccurrenceSettings;
 import io.swagger.model.SelectedSettingResource;
+import io.swagger.model.SimpleUserResource;
 import java.util.List;
 @Canonical
 class ActivityOccurrenceResource {
@@ -14,8 +16,14 @@ class ActivityOccurrenceResource {
   /* The id of the activity */
   Long activityId = null
 
+  /* The ids of banned users that cannot join the occurrence. See occurrence-user delete endpoint */
+  List<Integer> bans = new ArrayList<Integer>()
+
   /* The id of the challenge activity (as part of the event, required if eventId set) */
   Long challengeActivityId = null
+
+  /* Defines core settings about the activity occurrence that affect how it behaves in the system. Validated against core settings in activity/challenge-activity. */
+  CoreActivityOccurrenceSettings coreSettings = null
 
   /* The date this occurrence was created, unix timestamp in seconds */
   Long createdDate = null
@@ -25,6 +33,9 @@ class ActivityOccurrenceResource {
 
   /* The id of the event */
   Long eventId = null
+
+  /* The host of the occurrence, if not a participant (will be left out of users array). Must be the caller that creates the occurrence unless admin. Requires activity/challenge to allow host_option of 'non_player' if not admin as well */
+  SimpleUserResource host = null
 
   /* The id of the activity occurrence */
   Long id = null

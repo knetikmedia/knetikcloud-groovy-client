@@ -4,15 +4,13 @@ import groovy.transform.Canonical
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 @Canonical
-class IOConfig {
+class ChatMessageRequest {
 
-    String customer = null
+  /* The content of the message */
+  Object content = null
 
-    Boolean enabled = null
-
-    String environment = null
-
-    String product = null
+  /* The type of the message set by the client */
+  String messageType = null
   
 
 }
