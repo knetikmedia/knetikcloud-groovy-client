@@ -12,7 +12,7 @@ import java.util.*;
 
 @Mixin(ApiUtils)
 class ReportingUsersApi {
-    String basePath = "https://sandbox.knetikcloud.com"
+    String basePath = "https://jsapi-integration.us-east-1.elasticbeanstalk.com"
     String versionPath = "/api/v1"
 
     def getUserRegistrations ( String granularity, Long startDate, Long endDate, Integer size, Integer page, Closure onSuccess, Closure onFailure)  {

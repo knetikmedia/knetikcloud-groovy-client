@@ -21,7 +21,7 @@ import java.util.*;
 
 @Mixin(ApiUtils)
 class UsersApi {
-    String basePath = "https://sandbox.knetikcloud.com"
+    String basePath = "https://jsapi-integration.us-east-1.elasticbeanstalk.com"
     String versionPath = "/api/v1"
 
     def addUserTag ( Integer userId, StringWrapper tag, Closure onSuccess, Closure onFailure)  {
@@ -94,7 +94,7 @@ class UsersApi {
     }
     def getDirectMessages1 ( Integer recipientId, Integer size, Integer page, Closure onSuccess, Closure onFailure)  {
         // create path and map path parameters (TODO)
-        String resourcePath = "/users/users/{recipient_id}/messages"
+        String resourcePath = "/users/{recipient_id}/messages"
 
         // query params
         def queryParams = [:]

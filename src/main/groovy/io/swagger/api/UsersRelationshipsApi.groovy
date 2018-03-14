@@ -13,7 +13,7 @@ import java.util.*;
 
 @Mixin(ApiUtils)
 class UsersRelationshipsApi {
-    String basePath = "https://sandbox.knetikcloud.com"
+    String basePath = "https://jsapi-integration.us-east-1.elasticbeanstalk.com"
     String versionPath = "/api/v1"
 
     def createUserRelationship ( UserRelationshipResource relationship, Closure onSuccess, Closure onFailure)  {

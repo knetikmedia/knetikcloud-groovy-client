@@ -11,7 +11,7 @@ import java.util.*;
 
 @Mixin(ApiUtils)
 class AccessTokenApi {
-    String basePath = "https://sandbox.knetikcloud.com"
+    String basePath = "https://jsapi-integration.us-east-1.elasticbeanstalk.com"
     String versionPath = "/api/v1"
 
     def getOAuthToken ( String grantType, String clientId, String clientSecret, String username, String password, String token, String refreshToken, Closure onSuccess, Closure onFailure)  {

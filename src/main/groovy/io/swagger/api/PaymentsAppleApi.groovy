@@ -12,7 +12,7 @@ import java.util.*;
 
 @Mixin(ApiUtils)
 class PaymentsAppleApi {
-    String basePath = "https://sandbox.knetikcloud.com"
+    String basePath = "https://jsapi-integration.us-east-1.elasticbeanstalk.com"
     String versionPath = "/api/v1"
 
     def verifyAppleReceipt ( ApplyPaymentRequest request, Closure onSuccess, Closure onFailure)  {

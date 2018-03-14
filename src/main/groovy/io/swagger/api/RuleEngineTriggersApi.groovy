@@ -12,8 +12,8 @@ import io.swagger.model.Result
 import java.util.*;
 
 @Mixin(ApiUtils)
-class BRERuleEngineTriggersApi {
-    String basePath = "https://sandbox.knetikcloud.com"
+class RuleEngineTriggersApi {
+    String basePath = "https://jsapi-integration.us-east-1.elasticbeanstalk.com"
     String versionPath = "/api/v1"
 
     def createBRETrigger ( BreTriggerResource breTriggerResource, Closure onSuccess, Closure onFailure)  {

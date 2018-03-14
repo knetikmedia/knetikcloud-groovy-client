@@ -23,7 +23,7 @@ import java.util.*;
 
 @Mixin(ApiUtils)
 class MessagingApi {
-    String basePath = "https://sandbox.knetikcloud.com"
+    String basePath = "https://jsapi-integration.us-east-1.elasticbeanstalk.com"
     String versionPath = "/api/v1"
 
     def compileMessageTemplate ( MessageTemplateBulkRequest request, Closure onSuccess, Closure onFailure)  {
@@ -136,7 +136,7 @@ if (!"null".equals(String.valueOf(order)))
                     PageResourceMessageTemplateResource.class )
                     
     }
-    def sendMessage1 ( MessageResource messageResource, Closure onSuccess, Closure onFailure)  {
+    def sendMessage ( MessageResource messageResource, Closure onSuccess, Closure onFailure)  {
         // create path and map path parameters (TODO)
         String resourcePath = "/messaging/message"
 

@@ -7,6 +7,7 @@ import io.swagger.api.ApiUtils
 
 import io.swagger.model.EntitlementGrantRequest
 import io.swagger.model.EntitlementItem
+import io.swagger.model.InventoryStatusWrapper
 import io.swagger.model.InvoiceResource
 import io.swagger.model.ItemTemplateResource
 import io.swagger.model.PageResourceEntitlementItem
@@ -21,7 +22,7 @@ import java.util.*;
 
 @Mixin(ApiUtils)
 class UsersInventoryApi {
-    String basePath = "https://sandbox.knetikcloud.com"
+    String basePath = "https://jsapi-integration.us-east-1.elasticbeanstalk.com"
     String versionPath = "/api/v1"
 
     def addItemToUserInventory ( Integer id, UserInventoryAddRequest userInventoryAddRequest, Closure onSuccess, Closure onFailure)  {
@@ -504,7 +505,7 @@ if (!"null".equals(String.valueOf(filterDate)))
                     null )
                     
     }
-    def updateUserInventoryStatus ( Integer userId, Integer id, String inventoryStatus, Closure onSuccess, Closure onFailure)  {
+    def updateUserInventoryStatus ( Integer userId, Integer id, InventoryStatusWrapper inventoryStatus, Closure onSuccess, Closure onFailure)  {
         // create path and map path parameters (TODO)
         String resourcePath = "/users/{user_id}/inventory/{id}/status"
 

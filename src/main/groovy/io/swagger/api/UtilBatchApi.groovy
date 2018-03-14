@@ -14,7 +14,7 @@ import java.util.*;
 
 @Mixin(ApiUtils)
 class UtilBatchApi {
-    String basePath = "https://sandbox.knetikcloud.com"
+    String basePath = "https://jsapi-integration.us-east-1.elasticbeanstalk.com"
     String versionPath = "/api/v1"
 
     def getBatch ( String token, Closure onSuccess, Closure onFailure)  {

@@ -13,7 +13,7 @@ import java.util.*;
 
 @Mixin(ApiUtils)
 class UtilSecurityApi {
-    String basePath = "https://sandbox.knetikcloud.com"
+    String basePath = "https://jsapi-integration.us-east-1.elasticbeanstalk.com"
     String versionPath = "/api/v1"
 
     def getUserLocationLog ( Integer userId, Integer size, Integer page, String order, Closure onSuccess, Closure onFailure)  {

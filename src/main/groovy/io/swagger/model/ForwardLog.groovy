@@ -11,11 +11,17 @@ class ForwardLog {
 
     String errorMsg = null
 
+    String eventId = null
+
+    String headers = null
+
   /* The http status code the forward log entry */
   Integer httpStatusCode = null
 
   /* The id of the forward log entry */
   String id = null
+
+    String method = null
 
   /* The payload of the forward log entry */
   Object payload = null
@@ -26,8 +32,14 @@ class ForwardLog {
   /* The retry count of the forward log entry */
   Integer retryCount = null
 
+    Boolean retryable = null
+
+    String ruleId = null
+
   /* The start date of the forward log entry */
   Long startDate = null
+
+    Boolean success = null
 
   /* The endpoint url of the forward log entry */
   String url = null

@@ -5,19 +5,19 @@ import static groovyx.net.http.ContentType.*
 import static groovyx.net.http.Method.*
 import io.swagger.api.ApiUtils
 
-import io.swagger.model.GooglePaymentRequest
+import io.swagger.model.BreEvent
 import io.swagger.model.Result
 
 import java.util.*;
 
 @Mixin(ApiUtils)
-class PaymentsGoogleApi {
-    String basePath = "https://sandbox.knetikcloud.com"
+class RuleEngineEventsApi {
+    String basePath = "https://jsapi-integration.us-east-1.elasticbeanstalk.com"
     String versionPath = "/api/v1"
 
-    def handleGooglePayment ( GooglePaymentRequest request, Closure onSuccess, Closure onFailure)  {
+    def sendBREEvent ( BreEvent breEvent, Closure onSuccess, Closure onFailure)  {
         // create path and map path parameters (TODO)
-        String resourcePath = "/payment/provider/google/payments"
+        String resourcePath = "/bre/events"
 
         // query params
         def queryParams = [:]
@@ -30,7 +30,7 @@ class PaymentsGoogleApi {
 
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "POST", "",
-                    Integer.class )
+                    String.class )
                     
     }
 }

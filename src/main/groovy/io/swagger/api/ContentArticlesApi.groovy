@@ -6,6 +6,7 @@ import static groovyx.net.http.Method.*
 import io.swagger.api.ApiUtils
 
 import io.swagger.model.ArticleResource
+import io.swagger.model.BasicTemplatedResource
 import io.swagger.model.PageResourceArticleResource
 import io.swagger.model.PageResourceTemplateResource
 import io.swagger.model.Result
@@ -15,7 +16,7 @@ import java.util.*;
 
 @Mixin(ApiUtils)
 class ContentArticlesApi {
-    String basePath = "https://sandbox.knetikcloud.com"
+    String basePath = "https://jsapi-integration.us-east-1.elasticbeanstalk.com"
     String versionPath = "/api/v1"
 
     def createArticle ( ArticleResource articleResource, Closure onSuccess, Closure onFailure)  {
@@ -44,6 +45,28 @@ class ContentArticlesApi {
         def queryParams = [:]
         def headerParams = [:]
     
+
+        
+
+        // Also still TODO: form params, body param
+
+        invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
+                    "POST", "",
+                    TemplateResource.class )
+                    
+    }
+    def createTemplate ( String typeHint, TemplateResource template, Closure onSuccess, Closure onFailure)  {
+        // create path and map path parameters (TODO)
+        String resourcePath = "/templates/{type_hint}"
+
+        // query params
+        def queryParams = [:]
+        def headerParams = [:]
+    
+        // verify required params are set
+        if (typeHint == null) {
+            throw new RuntimeException("missing required params typeHint")
+        }
 
         
 
@@ -92,6 +115,32 @@ class ContentArticlesApi {
         if (!"null".equals(String.valueOf(cascade)))
             queryParams.put("cascade", String.valueOf(cascade))
 
+
+        // Also still TODO: form params, body param
+
+        invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
+                    "DELETE", "",
+                    null )
+                    
+    }
+    def deleteTemplate ( String typeHint, String id, String cascade, Closure onSuccess, Closure onFailure)  {
+        // create path and map path parameters (TODO)
+        String resourcePath = "/templates/{type_hint}/{id}"
+
+        // query params
+        def queryParams = [:]
+        def headerParams = [:]
+    
+        // verify required params are set
+        if (typeHint == null) {
+            throw new RuntimeException("missing required params typeHint")
+        }
+        // verify required params are set
+        if (id == null) {
+            throw new RuntimeException("missing required params id")
+        }
+
+        
 
         // Also still TODO: form params, body param
 
@@ -204,6 +253,60 @@ if (!"null".equals(String.valueOf(order)))
                     PageResourceArticleResource.class )
                     
     }
+    def getTemplate ( String typeHint, String id, Closure onSuccess, Closure onFailure)  {
+        // create path and map path parameters (TODO)
+        String resourcePath = "/templates/{type_hint}/{id}"
+
+        // query params
+        def queryParams = [:]
+        def headerParams = [:]
+    
+        // verify required params are set
+        if (typeHint == null) {
+            throw new RuntimeException("missing required params typeHint")
+        }
+        // verify required params are set
+        if (id == null) {
+            throw new RuntimeException("missing required params id")
+        }
+
+        
+
+        // Also still TODO: form params, body param
+
+        invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
+                    "GET", "",
+                    TemplateResource.class )
+                    
+    }
+    def getTemplates ( String typeHint, Integer size, Integer page, String order, Closure onSuccess, Closure onFailure)  {
+        // create path and map path parameters (TODO)
+        String resourcePath = "/templates/{type_hint}"
+
+        // query params
+        def queryParams = [:]
+        def headerParams = [:]
+    
+        // verify required params are set
+        if (typeHint == null) {
+            throw new RuntimeException("missing required params typeHint")
+        }
+
+        if (!"null".equals(String.valueOf(size)))
+            queryParams.put("size", String.valueOf(size))
+if (!"null".equals(String.valueOf(page)))
+            queryParams.put("page", String.valueOf(page))
+if (!"null".equals(String.valueOf(order)))
+            queryParams.put("order", String.valueOf(order))
+
+
+        // Also still TODO: form params, body param
+
+        invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
+                    "GET", "",
+                    PageResourceTemplateResource.class )
+                    
+    }
     def updateArticle ( String id, ArticleResource articleResource, Closure onSuccess, Closure onFailure)  {
         // create path and map path parameters (TODO)
         String resourcePath = "/content/articles/{id}"
@@ -246,6 +349,54 @@ if (!"null".equals(String.valueOf(order)))
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "PUT", "",
                     TemplateResource.class )
+                    
+    }
+    def updateTemplate ( String typeHint, String id, TemplateResource template, Closure onSuccess, Closure onFailure)  {
+        // create path and map path parameters (TODO)
+        String resourcePath = "/templates/{type_hint}/{id}"
+
+        // query params
+        def queryParams = [:]
+        def headerParams = [:]
+    
+        // verify required params are set
+        if (typeHint == null) {
+            throw new RuntimeException("missing required params typeHint")
+        }
+        // verify required params are set
+        if (id == null) {
+            throw new RuntimeException("missing required params id")
+        }
+
+        
+
+        // Also still TODO: form params, body param
+
+        invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
+                    "PUT", "",
+                    TemplateResource.class )
+                    
+    }
+    def validate ( String typeHint, BasicTemplatedResource resource, Closure onSuccess, Closure onFailure)  {
+        // create path and map path parameters (TODO)
+        String resourcePath = "/templates/{type_hint}/validate"
+
+        // query params
+        def queryParams = [:]
+        def headerParams = [:]
+    
+        // verify required params are set
+        if (typeHint == null) {
+            throw new RuntimeException("missing required params typeHint")
+        }
+
+        
+
+        // Also still TODO: form params, body param
+
+        invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
+                    "POST", "",
+                    null )
                     
     }
 }

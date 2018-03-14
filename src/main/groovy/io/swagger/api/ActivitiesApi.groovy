@@ -11,8 +11,10 @@ import io.swagger.model.ActivityOccurrenceResource
 import io.swagger.model.ActivityOccurrenceResults
 import io.swagger.model.ActivityOccurrenceResultsResource
 import io.swagger.model.ActivityOccurrenceSettingsResource
+import io.swagger.model.ActivityOccurrenceStatusWrapper
 import io.swagger.model.ActivityResource
 import io.swagger.model.ActivityUserResource
+import io.swagger.model.ActivityUserStatusWrapper
 import io.swagger.model.CreateActivityOccurrenceRequest
 import io.swagger.model.IntWrapper
 import io.swagger.model.PageResourceActivityOccurrenceResource
@@ -20,13 +22,12 @@ import io.swagger.model.PageResourceBareActivityResource
 import io.swagger.model.PageResourceTemplateResource
 import io.swagger.model.Result
 import io.swagger.model.TemplateResource
-import io.swagger.model.ValueWrapperstring
 
 import java.util.*;
 
 @Mixin(ApiUtils)
 class ActivitiesApi {
-    String basePath = "https://sandbox.knetikcloud.com"
+    String basePath = "https://jsapi-integration.us-east-1.elasticbeanstalk.com"
     String versionPath = "/api/v1"
 
     def addUser ( Long activityOccurrenceId, Boolean test, Boolean bypassRestrictions, IntWrapper userId, Closure onSuccess, Closure onFailure)  {
@@ -383,7 +384,7 @@ if (!"null".equals(String.valueOf(bypassRestrictions)))
                     ActivityOccurrenceResource.class )
                     
     }
-    def setUserStatus ( Long activityOccurrenceId, String userId, String status, Closure onSuccess, Closure onFailure)  {
+    def setUserStatus ( Long activityOccurrenceId, String userId, ActivityUserStatusWrapper status, Closure onSuccess, Closure onFailure)  {
         // create path and map path parameters (TODO)
         String resourcePath = "/activity-occurrences/{activity_occurrence_id}/users/{user_id}/status"
 
@@ -431,7 +432,7 @@ if (!"null".equals(String.valueOf(bypassRestrictions)))
                     ActivityResource.class )
                     
     }
-    def updateActivityOccurrenceStatus ( Long activityOccurrenceId, ValueWrapperstring activityOccurrenceStatus, Closure onSuccess, Closure onFailure)  {
+    def updateActivityOccurrenceStatus ( Long activityOccurrenceId, ActivityOccurrenceStatusWrapper activityOccurrenceStatus, Closure onSuccess, Closure onFailure)  {
         // create path and map path parameters (TODO)
         String resourcePath = "/activity-occurrences/{activity_occurrence_id}/status"
 

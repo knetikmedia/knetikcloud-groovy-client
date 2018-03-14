@@ -12,12 +12,13 @@ import io.swagger.model.ReactivateSubscriptionRequest
 import io.swagger.model.Result
 import io.swagger.model.StringWrapper
 import io.swagger.model.SubscriptionPriceOverrideRequest
+import io.swagger.model.SubscriptionStatusWrapper
 
 import java.util.*;
 
 @Mixin(ApiUtils)
 class UsersSubscriptionsApi {
-    String basePath = "https://sandbox.knetikcloud.com"
+    String basePath = "https://jsapi-integration.us-east-1.elasticbeanstalk.com"
     String versionPath = "/api/v1"
 
     def getUserSubscriptionDetails ( Integer userId, Integer inventoryId, Closure onSuccess, Closure onFailure)  {
@@ -150,7 +151,7 @@ class UsersSubscriptionsApi {
                     null )
                     
     }
-    def setSubscriptionStatus ( Integer userId, Integer inventoryId, StringWrapper status, Closure onSuccess, Closure onFailure)  {
+    def setSubscriptionStatus ( Integer userId, Integer inventoryId, SubscriptionStatusWrapper status, Closure onSuccess, Closure onFailure)  {
         // create path and map path parameters (TODO)
         String resourcePath = "/users/{user_id}/subscriptions/{inventory_id}/status"
 

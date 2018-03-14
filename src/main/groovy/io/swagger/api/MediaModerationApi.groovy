@@ -15,7 +15,7 @@ import java.util.*;
 
 @Mixin(ApiUtils)
 class MediaModerationApi {
-    String basePath = "https://sandbox.knetikcloud.com"
+    String basePath = "https://jsapi-integration.us-east-1.elasticbeanstalk.com"
     String versionPath = "/api/v1"
 
     def addFlag ( FlagResource flagResource, Closure onSuccess, Closure onFailure)  {
@@ -110,7 +110,7 @@ if (!"null".equals(String.valueOf(page)))
                     FlagReportResource.class )
                     
     }
-    def getModerationReports ( Boolean excludeResolved, String filterContext, String filterContextId, Integer size, Integer page, Closure onSuccess, Closure onFailure)  {
+    def getModerationReports ( Boolean excludeResolved, String filterContext, String filterContextId, Integer size, Integer page, String order, Closure onSuccess, Closure onFailure)  {
         // create path and map path parameters (TODO)
         String resourcePath = "/moderation/reports"
 
@@ -129,6 +129,8 @@ if (!"null".equals(String.valueOf(size)))
             queryParams.put("size", String.valueOf(size))
 if (!"null".equals(String.valueOf(page)))
             queryParams.put("page", String.valueOf(page))
+if (!"null".equals(String.valueOf(order)))
+            queryParams.put("order", String.valueOf(order))
 
 
         // Also still TODO: form params, body param

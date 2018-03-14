@@ -12,14 +12,14 @@ import io.swagger.model.PageResourceNotificationTypeResource
 import io.swagger.model.PageResourceNotificationUserTypeResource
 import io.swagger.model.PageResourceUserNotificationResource
 import io.swagger.model.Result
+import io.swagger.model.UserNotificationStatusWrapper
 import io.swagger.model.ValueWrapperboolean
-import io.swagger.model.ValueWrapperstring
 
 import java.util.*;
 
 @Mixin(ApiUtils)
 class NotificationsApi {
-    String basePath = "https://sandbox.knetikcloud.com"
+    String basePath = "https://jsapi-integration.us-east-1.elasticbeanstalk.com"
     String versionPath = "/api/v1"
 
     def createNotificationType ( NotificationTypeResource notificationType, Closure onSuccess, Closure onFailure)  {
@@ -210,7 +210,7 @@ if (!"null".equals(String.valueOf(order)))
                     NotificationResource.class )
                     
     }
-    def setUserNotificationStatus ( String userId, String notificationId, ValueWrapperstring notification, Closure onSuccess, Closure onFailure)  {
+    def setUserNotificationStatus ( String userId, String notificationId, UserNotificationStatusWrapper notification, Closure onSuccess, Closure onFailure)  {
         // create path and map path parameters (TODO)
         String resourcePath = "/users/{user_id}/notifications/{notification_id}/status"
 

@@ -15,7 +15,7 @@ import java.util.*;
 
 @Mixin(ApiUtils)
 class ChatApi {
-    String basePath = "https://sandbox.knetikcloud.com"
+    String basePath = "https://jsapi-integration.us-east-1.elasticbeanstalk.com"
     String versionPath = "/api/v1"
 
     def acknowledgeChatMessage ( String id, Integer readCount, Closure onSuccess, Closure onFailure)  {
@@ -288,7 +288,7 @@ if (!"null".equals(String.valueOf(order)))
                     null )
                     
     }
-    def sendMessage ( ChatMessageResource chatMessageResource, Closure onSuccess, Closure onFailure)  {
+    def sendChatMessage ( ChatMessageResource chatMessageResource, Closure onSuccess, Closure onFailure)  {
         // create path and map path parameters (TODO)
         String resourcePath = "/chat/messages"
 

@@ -11,8 +11,8 @@ import io.swagger.model.Result
 import java.util.*;
 
 @Mixin(ApiUtils)
-class BRERuleEngineActionsApi {
-    String basePath = "https://sandbox.knetikcloud.com"
+class RuleEngineActionsApi {
+    String basePath = "https://jsapi-integration.us-east-1.elasticbeanstalk.com"
     String versionPath = "/api/v1"
 
     def getBREActions ( String filterCategory, String filterName, String filterTags, String filterSearch, Closure onSuccess, Closure onFailure)  {

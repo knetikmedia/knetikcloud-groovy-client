@@ -13,7 +13,7 @@ import java.util.*;
 
 @Mixin(ApiUtils)
 class FulfillmentApi {
-    String basePath = "https://sandbox.knetikcloud.com"
+    String basePath = "https://jsapi-integration.us-east-1.elasticbeanstalk.com"
     String versionPath = "/api/v1"
 
     def createFulfillmentType ( FulfillmentType type, Closure onSuccess, Closure onFailure)  {

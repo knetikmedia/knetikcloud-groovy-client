@@ -16,7 +16,7 @@ import java.util.*;
 
 @Mixin(ApiUtils)
 class DevicesApi {
-    String basePath = "https://sandbox.knetikcloud.com"
+    String basePath = "https://jsapi-integration.us-east-1.elasticbeanstalk.com"
     String versionPath = "/api/v1"
 
     def addDeviceUsers ( List<SimpleUserResource> userResources, String id, Closure onSuccess, Closure onFailure)  {

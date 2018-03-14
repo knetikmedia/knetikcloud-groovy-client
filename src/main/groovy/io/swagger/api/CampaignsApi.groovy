@@ -16,7 +16,7 @@ import java.util.*;
 
 @Mixin(ApiUtils)
 class CampaignsApi {
-    String basePath = "https://sandbox.knetikcloud.com"
+    String basePath = "https://jsapi-integration.us-east-1.elasticbeanstalk.com"
     String versionPath = "/api/v1"
 
     def addChallengeToCampaign ( Long id, Long challengeId, Closure onSuccess, Closure onFailure)  {

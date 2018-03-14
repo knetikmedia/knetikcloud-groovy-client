@@ -5,22 +5,22 @@ import static groovyx.net.http.ContentType.*
 import static groovyx.net.http.Method.*
 import io.swagger.api.ApiUtils
 
-import io.swagger.model.BreCategoryResource
-import io.swagger.model.PageResourceBreCategoryResource
-import io.swagger.model.PageResourceTemplateResource
+import io.swagger.model.BooleanResource
+import io.swagger.model.BreRule
+import io.swagger.model.Expressionobject
+import io.swagger.model.PageResourceBreRule
 import io.swagger.model.Result
-import io.swagger.model.TemplateResource
 
 import java.util.*;
 
 @Mixin(ApiUtils)
-class BRERuleEngineCategoriesApi {
-    String basePath = "https://sandbox.knetikcloud.com"
+class RuleEngineRulesApi {
+    String basePath = "https://jsapi-integration.us-east-1.elasticbeanstalk.com"
     String versionPath = "/api/v1"
 
-    def createBRECategoryTemplate ( TemplateResource template, Closure onSuccess, Closure onFailure)  {
+    def createBRERule ( BreRule breRule, Closure onSuccess, Closure onFailure)  {
         // create path and map path parameters (TODO)
-        String resourcePath = "/bre/categories/templates"
+        String resourcePath = "/bre/rules"
 
         // query params
         def queryParams = [:]
@@ -33,12 +33,12 @@ class BRERuleEngineCategoriesApi {
 
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "POST", "",
-                    TemplateResource.class )
+                    BreRule.class )
                     
     }
-    def deleteBRECategoryTemplate ( String id, String cascade, Closure onSuccess, Closure onFailure)  {
+    def deleteBRERule ( String id, Closure onSuccess, Closure onFailure)  {
         // create path and map path parameters (TODO)
-        String resourcePath = "/bre/categories/templates/{id}"
+        String resourcePath = "/bre/rules/{id}"
 
         // query params
         def queryParams = [:]
@@ -49,9 +49,7 @@ class BRERuleEngineCategoriesApi {
             throw new RuntimeException("missing required params id")
         }
 
-        if (!"null".equals(String.valueOf(cascade)))
-            queryParams.put("cascade", String.valueOf(cascade))
-
+        
 
         // Also still TODO: form params, body param
 
@@ -60,53 +58,27 @@ class BRERuleEngineCategoriesApi {
                     null )
                     
     }
-    def getBRECategories ( Integer size, Integer page, Closure onSuccess, Closure onFailure)  {
+    def getBREExpressionAsString ( Expressionobject expression, Closure onSuccess, Closure onFailure)  {
         // create path and map path parameters (TODO)
-        String resourcePath = "/bre/categories"
+        String resourcePath = "/bre/rules/expression-as-string"
 
         // query params
         def queryParams = [:]
         def headerParams = [:]
     
-
-        if (!"null".equals(String.valueOf(size)))
-            queryParams.put("size", String.valueOf(size))
-if (!"null".equals(String.valueOf(page)))
-            queryParams.put("page", String.valueOf(page))
-
-
-        // Also still TODO: form params, body param
-
-        invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
-                    "GET", "",
-                    PageResourceBreCategoryResource.class )
-                    
-    }
-    def getBRECategory ( String name, Closure onSuccess, Closure onFailure)  {
-        // create path and map path parameters (TODO)
-        String resourcePath = "/bre/categories/{name}"
-
-        // query params
-        def queryParams = [:]
-        def headerParams = [:]
-    
-        // verify required params are set
-        if (name == null) {
-            throw new RuntimeException("missing required params name")
-        }
 
         
 
         // Also still TODO: form params, body param
 
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
-                    "GET", "",
-                    BreCategoryResource.class )
+                    "POST", "",
+                    String.class )
                     
     }
-    def getBRECategoryTemplate ( String id, Closure onSuccess, Closure onFailure)  {
+    def getBRERule ( String id, Closure onSuccess, Closure onFailure)  {
         // create path and map path parameters (TODO)
-        String resourcePath = "/bre/categories/templates/{id}"
+        String resourcePath = "/bre/rules/{id}"
 
         // query params
         def queryParams = [:]
@@ -123,58 +95,46 @@ if (!"null".equals(String.valueOf(page)))
 
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "GET", "",
-                    TemplateResource.class )
+                    BreRule.class )
                     
     }
-    def getBRECategoryTemplates ( Integer size, Integer page, String order, Closure onSuccess, Closure onFailure)  {
+    def getBRERules ( String filterName, Boolean filterEnabled, Boolean filterSystem, String filterTrigger, String filterAction, String filterCondition, Integer size, Integer page, Closure onSuccess, Closure onFailure)  {
         // create path and map path parameters (TODO)
-        String resourcePath = "/bre/categories/templates"
+        String resourcePath = "/bre/rules"
 
         // query params
         def queryParams = [:]
         def headerParams = [:]
     
 
-        if (!"null".equals(String.valueOf(size)))
+        if (!"null".equals(String.valueOf(filterName)))
+            queryParams.put("filter_name", String.valueOf(filterName))
+if (!"null".equals(String.valueOf(filterEnabled)))
+            queryParams.put("filter_enabled", String.valueOf(filterEnabled))
+if (!"null".equals(String.valueOf(filterSystem)))
+            queryParams.put("filter_system", String.valueOf(filterSystem))
+if (!"null".equals(String.valueOf(filterTrigger)))
+            queryParams.put("filter_trigger", String.valueOf(filterTrigger))
+if (!"null".equals(String.valueOf(filterAction)))
+            queryParams.put("filter_action", String.valueOf(filterAction))
+if (!"null".equals(String.valueOf(filterCondition)))
+            queryParams.put("filter_condition", String.valueOf(filterCondition))
+if (!"null".equals(String.valueOf(size)))
             queryParams.put("size", String.valueOf(size))
 if (!"null".equals(String.valueOf(page)))
             queryParams.put("page", String.valueOf(page))
-if (!"null".equals(String.valueOf(order)))
-            queryParams.put("order", String.valueOf(order))
 
 
         // Also still TODO: form params, body param
 
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "GET", "",
-                    PageResourceTemplateResource.class )
+                    PageResourceBreRule.class )
                     
     }
-    def updateBRECategory ( String name, BreCategoryResource category, Closure onSuccess, Closure onFailure)  {
+    def setBRERule ( String id, BooleanResource enabled, Closure onSuccess, Closure onFailure)  {
         // create path and map path parameters (TODO)
-        String resourcePath = "/bre/categories/{name}"
-
-        // query params
-        def queryParams = [:]
-        def headerParams = [:]
-    
-        // verify required params are set
-        if (name == null) {
-            throw new RuntimeException("missing required params name")
-        }
-
-        
-
-        // Also still TODO: form params, body param
-
-        invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
-                    "PUT", "",
-                    BreCategoryResource.class )
-                    
-    }
-    def updateBRECategoryTemplate ( String id, TemplateResource template, Closure onSuccess, Closure onFailure)  {
-        // create path and map path parameters (TODO)
-        String resourcePath = "/bre/categories/templates/{id}"
+        String resourcePath = "/bre/rules/{id}/enabled"
 
         // query params
         def queryParams = [:]
@@ -191,7 +151,29 @@ if (!"null".equals(String.valueOf(order)))
 
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "PUT", "",
-                    TemplateResource.class )
+                    null )
+                    
+    }
+    def updateBRERule ( String id, BreRule breRule, Closure onSuccess, Closure onFailure)  {
+        // create path and map path parameters (TODO)
+        String resourcePath = "/bre/rules/{id}"
+
+        // query params
+        def queryParams = [:]
+        def headerParams = [:]
+    
+        // verify required params are set
+        if (id == null) {
+            throw new RuntimeException("missing required params id")
+        }
+
+        
+
+        // Also still TODO: form params, body param
+
+        invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
+                    "PUT", "",
+                    BreRule.class )
                     
     }
 }

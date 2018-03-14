@@ -19,7 +19,7 @@ import java.util.*;
 
 @Mixin(ApiUtils)
 class CampaignsChallengesApi {
-    String basePath = "https://sandbox.knetikcloud.com"
+    String basePath = "https://jsapi-integration.us-east-1.elasticbeanstalk.com"
     String versionPath = "/api/v1"
 
     def createChallenge ( ChallengeResource challengeResource, Closure onSuccess, Closure onFailure)  {
@@ -517,7 +517,7 @@ if (!"null".equals(String.valueOf(order)))
 
         invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams,
                     "PUT", "",
-                    ChallengeActivityResource.class )
+                    null )
                     
     }
     def updateChallengeActivityTemplate ( String id, TemplateResource challengeActivityTemplateResource, Closure onSuccess, Closure onFailure)  {

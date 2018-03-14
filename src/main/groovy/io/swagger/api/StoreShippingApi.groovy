@@ -14,7 +14,7 @@ import java.util.*;
 
 @Mixin(ApiUtils)
 class StoreShippingApi {
-    String basePath = "https://sandbox.knetikcloud.com"
+    String basePath = "https://jsapi-integration.us-east-1.elasticbeanstalk.com"
     String versionPath = "/api/v1"
 
     def createShippingItem ( Boolean cascade, ShippingItem shippingItem, Closure onSuccess, Closure onFailure)  {

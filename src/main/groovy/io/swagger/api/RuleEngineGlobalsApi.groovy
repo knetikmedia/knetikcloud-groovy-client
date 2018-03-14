@@ -12,8 +12,8 @@ import io.swagger.model.Result
 import java.util.*;
 
 @Mixin(ApiUtils)
-class BRERuleEngineGlobalsApi {
-    String basePath = "https://sandbox.knetikcloud.com"
+class RuleEngineGlobalsApi {
+    String basePath = "https://jsapi-integration.us-east-1.elasticbeanstalk.com"
     String versionPath = "/api/v1"
 
     def createBREGlobal ( BreGlobalResource breGlobalResource, Closure onSuccess, Closure onFailure)  {

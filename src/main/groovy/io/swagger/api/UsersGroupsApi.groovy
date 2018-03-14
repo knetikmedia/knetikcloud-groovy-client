@@ -8,6 +8,7 @@ import io.swagger.api.ApiUtils
 import io.swagger.model.ChatMessageRequest
 import io.swagger.model.ChatMessageResource
 import io.swagger.model.GroupMemberResource
+import io.swagger.model.GroupMemberStatusWrapper
 import io.swagger.model.GroupResource
 import io.swagger.model.PageResourceChatMessageResource
 import io.swagger.model.PageResourceGroupMemberResource
@@ -22,7 +23,7 @@ import java.util.*;
 
 @Mixin(ApiUtils)
 class UsersGroupsApi {
-    String basePath = "https://sandbox.knetikcloud.com"
+    String basePath = "https://jsapi-integration.us-east-1.elasticbeanstalk.com"
     String versionPath = "/api/v1"
 
     def addMemberToGroup ( String uniqueName, GroupMemberResource user, Closure onSuccess, Closure onFailure)  {
@@ -637,7 +638,7 @@ if (!"null".equals(String.valueOf(order)))
                     null )
                     
     }
-    def updateGroupMemberStatus ( String uniqueName, Integer userId, String status, Closure onSuccess, Closure onFailure)  {
+    def updateGroupMemberStatus ( String uniqueName, Integer userId, GroupMemberStatusWrapper status, Closure onSuccess, Closure onFailure)  {
         // create path and map path parameters (TODO)
         String resourcePath = "/users/groups/{unique_name}/members/{user_id}/status"
 

@@ -12,7 +12,7 @@ import java.util.*;
 
 @Mixin(ApiUtils)
 class GamificationMetricsApi {
-    String basePath = "https://sandbox.knetikcloud.com"
+    String basePath = "https://jsapi-integration.us-east-1.elasticbeanstalk.com"
     String versionPath = "/api/v1"
 
     def addMetric ( MetricResource metric, Closure onSuccess, Closure onFailure)  {

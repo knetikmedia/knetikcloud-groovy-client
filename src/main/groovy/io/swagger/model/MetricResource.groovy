@@ -11,7 +11,7 @@ class MetricResource {
   /* The id of the activity occurence where this score/metric occurred */
   Long activityOccurenceId = null
 
-  /* Any tags for the metric. Each unique tag will translate into a unique leaderboard. Maximum 5 tags and 50 characters each */
+  /* Any tags for the metric. Each unique tag will translate into a unique leaderboard. Maximum 10 tags and 50 characters each */
   List<String> tags = new ArrayList<String>()
 
   /* The id of the user this metric is for. Default to caller and requires METRICS_ADMIN permission to specify another */

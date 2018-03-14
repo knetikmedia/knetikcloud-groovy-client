@@ -16,7 +16,7 @@ import java.util.*;
 
 @Mixin(ApiUtils)
 class CategoriesApi {
-    String basePath = "https://sandbox.knetikcloud.com"
+    String basePath = "https://jsapi-integration.us-east-1.elasticbeanstalk.com"
     String versionPath = "/api/v1"
 
     def createCategory ( CategoryResource category, Closure onSuccess, Closure onFailure)  {

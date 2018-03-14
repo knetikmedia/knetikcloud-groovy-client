@@ -15,7 +15,7 @@ import java.util.*;
 
 @Mixin(ApiUtils)
 class TaxesApi {
-    String basePath = "https://sandbox.knetikcloud.com"
+    String basePath = "https://jsapi-integration.us-east-1.elasticbeanstalk.com"
     String versionPath = "/api/v1"
 
     def createCountryTax ( CountryTaxResource taxResource, Closure onSuccess, Closure onFailure)  {

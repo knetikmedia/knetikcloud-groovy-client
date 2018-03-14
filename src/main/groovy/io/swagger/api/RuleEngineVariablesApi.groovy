@@ -12,8 +12,8 @@ import io.swagger.model.VariableTypeResource
 import java.util.*;
 
 @Mixin(ApiUtils)
-class BRERuleEngineVariablesApi {
-    String basePath = "https://sandbox.knetikcloud.com"
+class RuleEngineVariablesApi {
+    String basePath = "https://jsapi-integration.us-east-1.elasticbeanstalk.com"
     String versionPath = "/api/v1"
 
     def getBREVariableTypes ( Closure onSuccess, Closure onFailure)  {

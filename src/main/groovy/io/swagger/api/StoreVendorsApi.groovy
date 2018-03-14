@@ -15,7 +15,7 @@ import java.util.*;
 
 @Mixin(ApiUtils)
 class StoreVendorsApi {
-    String basePath = "https://sandbox.knetikcloud.com"
+    String basePath = "https://jsapi-integration.us-east-1.elasticbeanstalk.com"
     String versionPath = "/api/v1"
 
     def createVendor ( VendorResource vendor, Closure onSuccess, Closure onFailure)  {
